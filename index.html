@@ -815,6 +815,7 @@
     </section>
   </main>
 
+  <script src="data/mvv-ui-data.js"></script>
   <script>
     let companies = [];
 
@@ -1063,11 +1064,14 @@
       }
     }
 
-    async function loadCompanies() {
-      const response = await fetch("data/mvv-ui-data.json", { cache: "no-store" });
-      if (!response.ok) throw new Error(`Failed to load MVV data: ${response.status}`);
-      const data = await response.json();
-      companies = Array.isArray(data.companies) ? data.companies : [];
+    function loadCompanies() {
+      const data = window.__MVV_DATA;
+      if (!data || !Array.isArray(data.companies) || !data.companies.length) {
+        listEl.innerHTML = `<div class="empty">数据加载失败，请检查 data/mvv-ui-data.js。</div>`;
+        compareRows.innerHTML = "";
+        return;
+      }
+      companies = data.companies;
       document.querySelector("#totalCount").textContent = `${companies.length} 家企业`;
       if (!companies.some(company => company.id === selectedId) && companies.length) {
         selectedId = companies[0].id;
@@ -1084,11 +1088,7 @@
     });
 
     searchInput.addEventListener("input", render);
-    loadCompanies().catch(error => {
-      console.error(error);
-      listEl.innerHTML = `<div class="empty">数据加载失败，请检查 data/mvv-ui-data.json。</div>`;
-      compareRows.innerHTML = "";
-    });
+    loadCompanies();
   </script>
 </body>
 </html>

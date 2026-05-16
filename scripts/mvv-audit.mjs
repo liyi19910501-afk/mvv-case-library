@@ -13,6 +13,7 @@ const dataDir = path.join(rootDir, "data");
 const companiesDir = path.join(dataDir, "companies");
 const dbPath = path.join(dataDir, "mvv.sqlite");
 const uiDataPath = path.join(dataDir, "mvv-ui-data.json");
+const uiDataJsPath = path.join(dataDir, "mvv-ui-data.js");
 const indexPath = path.join(rootDir, "index.html");
 
 function parseArgs(argv) {
@@ -197,6 +198,15 @@ async function auditUi(companies, issues) {
   const uiCompanies = uiData.companies || [];
   if (uiCompanies.length !== companies.length) {
     addIssue(issues, "error", "ui_company_count_mismatch", `UI data has ${uiCompanies.length} companies, file data has ${companies.length}.`, rel(uiDataPath));
+  }
+
+  if (!(await pathExists(uiDataJsPath))) {
+    addIssue(issues, "error", "missing_ui_data_js", "data/mvv-ui-data.js is missing. Run `npm run sync`.", rel(uiDataJsPath));
+  } else {
+    const uiDataJs = await fs.readFile(uiDataJsPath, "utf8");
+    if (!uiDataJs.includes("window.__MVV_DATA")) {
+      addIssue(issues, "error", "bad_ui_data_js", "data/mvv-ui-data.js does not assign window.__MVV_DATA.", rel(uiDataJsPath));
+    }
   }
 
   for (const company of uiCompanies) {

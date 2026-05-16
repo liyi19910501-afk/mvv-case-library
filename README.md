@@ -4,15 +4,15 @@
 
 ## 本地查看
 
+直接双击打开 `index.html` 即可（数据通过 `data/mvv-ui-data.js` 以 `<script>` 标签加载，可在 `file://` 下工作）。
+
+如需用本地服务器预览，也可以运行：
+
 ```bash
 python3 -m http.server 8765
 ```
 
-然后打开：
-
-```text
-http://127.0.0.1:8765/index.html
-```
+然后打开 `http://127.0.0.1:8765/index.html`。
 
 ## 数据同步
 
@@ -28,7 +28,8 @@ npm run audit
 
 - `index.html`: 静态前端入口。
 - `data/companies/`: 公司档案、当前快照、历史版本、候选来源和证据资产。
-- `data/mvv-ui-data.json`: 前端静态数据导出。
+- `data/mvv-ui-data.json`: 前端静态数据导出（机器可读）。
+- `data/mvv-ui-data.js`: 同一份数据的 `window.__MVV_DATA` 包装，供 `index.html` 直接加载。
 - `data/mvv.sqlite`: 本地生成的结构化数据库快照，不提交到 git。
 - `scripts/`: 爬虫、历史 brief、数据库同步和审计脚本。
 - `docs/`: 数据规则、爬虫规则和研究流程文档。
