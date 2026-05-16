@@ -145,13 +145,13 @@ JSON 输出中还会包含便于上游 agent 判断质量的字段：
 修改爬虫、数据库、前端导出或公司数据后，先跑：
 
 ```bash
-node scripts/mvv-audit.mjs --json
+npm run audit
 ```
 
 如果要让 CI 或自动化任务在发现 warning 时也失败：
 
 ```bash
-node scripts/mvv-audit.mjs --strict
+npm run audit:strict
 ```
 
 Audit 会检查：

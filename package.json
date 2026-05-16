@@ -1,0 +1,16 @@
+{
+  "name": "mvv-case-library",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "sync": "node scripts/mvv-db-sync.mjs --rebuild --json",
+    "build": "node scripts/build-data.mjs",
+    "audit": "node scripts/mvv-audit.mjs --json",
+    "audit:strict": "node scripts/mvv-audit.mjs --json --strict",
+    "check": "node --check scripts/mvv-db-sync.mjs && node --check scripts/build-data.mjs && node --check scripts/mvv-audit.mjs && node --check scripts/mvv-crawler.mjs && node --check scripts/mvv-history-brief.mjs && node --check scripts/mvv-candidate-capture.mjs"
+  }
+}

@@ -138,7 +138,6 @@ async function listFilesIfExists(dir, predicate = () => true) {
 
 function createSchema(db) {
   db.exec(`
-    PRAGMA journal_mode = WAL;
     PRAGMA foreign_keys = ON;
 
     DROP TABLE IF EXISTS source_candidates;
@@ -570,9 +569,10 @@ function buildUiData(db) {
 
     const latestVersion = versions.at(-1);
     const values = JSON.parse(company.values_json || "[]");
-    const mission = company.mission || extractProfileStatementFromDbFallback(company.company_id, "Mission");
-    const vision = company.vision || extractProfileStatementFromDbFallback(company.company_id, "Vision");
-    const valuesText = values.length ? values.join("；") : extractProfileStatementFromDbFallback(company.company_id, "Values");
+    const profileMarkdown = fsSync.readFileSync(path.join(rootDir, company.profile_path), "utf8");
+    const mission = company.mission || extractProfileStatement(profileMarkdown, "Mission");
+    const vision = company.vision || extractProfileStatement(profileMarkdown, "Vision");
+    const valuesText = values.length ? values.join("；") : extractProfileStatement(profileMarkdown, "Values");
     const sourceUrls = safeJsonParse(company.source_urls_json, []);
     const officialUrls = safeJsonParse(company.official_urls_json, []);
     const evidenceAssets = safeJsonParse(company.evidence_assets_json, []);
@@ -668,15 +668,6 @@ function buildUiData(db) {
   });
 }
 
-function extractProfileStatementFromDbFallback(companyId, field) {
-  const row = globalThis.__mvvDb?.prepare("SELECT profile_path FROM companies WHERE company_id = ?").get(companyId);
-  if (!row?.profile_path) return "";
-  const fullPath = path.join(rootDir, row.profile_path);
-  if (!fsSync.existsSync(fullPath)) return "";
-  const markdown = fsSync.readFileSync(fullPath, "utf8");
-  return extractProfileStatement(markdown, field);
-}
-
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   await fs.mkdir(dataDir, { recursive: true });
@@ -685,7 +676,6 @@ async function main() {
   }
 
   const db = new DatabaseSync(dbPath);
-  globalThis.__mvvDb = db;
   createSchema(db);
 
   const dirs = await listCompanyDirs();

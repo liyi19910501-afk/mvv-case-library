@@ -19,9 +19,9 @@ http://127.0.0.1:8765/index.html
 修改公司档案、版本记录或证据后，运行：
 
 ```bash
-node scripts/mvv-db-sync.mjs --rebuild --json
-node scripts/build-data.mjs
-node scripts/mvv-audit.mjs --json
+npm run sync
+npm run build
+npm run audit
 ```
 
 ## 核心目录
@@ -29,15 +29,14 @@ node scripts/mvv-audit.mjs --json
 - `index.html`: 静态前端入口。
 - `data/companies/`: 公司档案、当前快照、历史版本、候选来源和证据资产。
 - `data/mvv-ui-data.json`: 前端静态数据导出。
-- `data/mvv.sqlite`: 结构化数据库快照。
+- `data/mvv.sqlite`: 本地生成的结构化数据库快照，不提交到 git。
 - `scripts/`: 爬虫、历史 brief、数据库同步和审计脚本。
 - `docs/`: 数据规则、爬虫规则和研究流程文档。
 
 ## GitHub Pages
 
-仓库推送到 GitHub 后，`main` 分支会通过 `.github/workflows/pages.yml` 自动发布静态页面。发布地址通常是：
+仓库推送到 GitHub 后，`main` 分支会先运行数据重建和 audit，再通过 `.github/workflows/pages.yml` 自动发布静态页面。发布地址通常是：
 
 ```text
 https://<github-user>.github.io/<repo-name>/
 ```
-

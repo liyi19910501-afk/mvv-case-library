@@ -25,6 +25,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Check scripts
+        run: npm run check
+
+      - name: Rebuild data
+        run: npm run sync
+
+      - name: Validate frontend data loading
+        run: npm run build
+
+      - name: Audit data
+        run: npm run audit:strict
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:

@@ -20,6 +20,8 @@ data/mvv-ui-data.json
 
 `data/mvv-ui-data.json` 是前端静态页面可读取/注入的数据导出。
 
+`data/mvv.sqlite` 是派生文件，由同步脚本本地重建，不提交到 git。主数据仍以 `data/companies/**` 和 `data/mvv-ui-data.json` 为准。
+
 公司 logo 仍保存在各公司目录下，例如：
 
 ```text
@@ -31,19 +33,19 @@ data/companies/<company_id>/assets/logo.svg
 ## 3. 同步命令
 
 ```bash
-node scripts/mvv-db-sync.mjs --rebuild
+npm run sync
 ```
 
-同步完成后再更新前端：
+同步完成后校验前端数据加载方式：
 
 ```bash
-node scripts/build-data.mjs
+npm run build
 ```
 
 完成同步后建议跑一次全量检查：
 
 ```bash
-node scripts/mvv-audit.mjs --json
+npm run audit
 ```
 
 ## 4. 核心表

@@ -280,7 +280,7 @@ async function main() {
     }
   }
 
-  if (args.strict && summary.errors > 0) process.exit(1);
+  if (args.strict && (summary.errors > 0 || summary.warnings > 0)) process.exit(1);
 }
 
 main().catch((error) => {

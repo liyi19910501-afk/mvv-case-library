@@ -54,10 +54,9 @@ https://example.github.io/mvv-case-library/
 每次推送前建议运行：
 
 ```bash
-node scripts/mvv-db-sync.mjs --rebuild --json
-node scripts/build-data.mjs
-node scripts/mvv-audit.mjs --json
+npm run sync
+npm run build
+npm run audit
 ```
 
-当前 GitHub Pages 发布的是静态文件；SQLite 数据库不会在页面里执行，但会作为可下载的数据快照保存在仓库中。
-
+当前 GitHub Pages 发布的是静态文件；SQLite 数据库不会在页面里执行。`data/mvv.sqlite` 不提交到 git，但发布 workflow 会在部署前重建数据并运行 audit。
