@@ -1,0 +1,12 @@
+{
+  "source_url": "https://openai.com/about/",
+  "source_note": "OpenAI About header logo",
+  "capture_method": "in_app_browser_header_crop",
+  "clip": {
+    "x": 16,
+    "y": 12,
+    "width": 146,
+    "height": 48
+  },
+  "captured_at": "2026-05-15T15:33:07.270Z"
+}

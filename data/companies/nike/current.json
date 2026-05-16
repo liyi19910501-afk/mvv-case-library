@@ -1,0 +1,33 @@
+{
+  "company_id": "nike",
+  "company_name_cn": "耐克",
+  "company_name_en": "Nike",
+  "captured_at": "2026-05-05T00:00:00.000Z",
+  "captured_date": "2026-05-05",
+  "primary_language": "en",
+  "classification": "partial_mvv",
+  "structured": {
+    "mission": "TO BRING INSPIRATION AND INNOVATION TO EVERY ATHLETE* IN THE WORLD.",
+    "vision": "",
+    "values": [],
+    "raw_terms": {
+      "mission": "version_verified"
+    }
+  },
+  "normalized_mvv_hash": "9e8500beb4489ff923a965f4c79fb77d18cfa7c1349a0f3112222c29ed4541bd",
+  "source_urls": [
+    {
+      "url": "https://about.nike.com/en/mission",
+      "final_url": "https://about.nike.com/en/mission",
+      "title": "Nike - Mission — NIKE, Inc.",
+      "status": null,
+      "text_length": 0
+    }
+  ],
+  "evidence_assets": [
+    "assets/2026-05-05-current-mission.png"
+  ],
+  "confidence_level": "high",
+  "review_status": "reviewed",
+  "analyst_note": "耐克 当前官方表述基线；官方 mission 页提供使命表述，vision 与 values 空缺。"
+}

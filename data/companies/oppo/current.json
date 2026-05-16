@@ -1,0 +1,36 @@
+{
+  "company_id": "oppo",
+  "company_name_cn": "OPPO",
+  "company_name_en": "OPPO",
+  "captured_at": "2026-05-05T00:00:00.000Z",
+  "captured_date": "2026-05-05",
+  "primary_language": "en",
+  "classification": "partial_mvv",
+  "structured": {
+    "mission": "OPPO empowers everyone to create and embrace the beauty of life by cutting-edge technology, paving the way for freedom and fulfilment.",
+    "vision": "",
+    "values": [
+      "\"Benfen\" is our core value and unwavering belief, user-centricity is our rock-solid principle and a passion for creating is our continuous driving force."
+    ],
+    "raw_terms": {
+      "mission": "version_verified",
+      "values": "version_verified"
+    }
+  },
+  "normalized_mvv_hash": "09bbca77463d670e20ef84a36a158cb29d1b9e83e8b5986a66dda52bd44540d4",
+  "source_urls": [
+    {
+      "url": "https://www.oppo.com/en/about/",
+      "final_url": "https://www.oppo.com/en/about/",
+      "title": "About OPPO",
+      "status": null,
+      "text_length": 0
+    }
+  ],
+  "evidence_assets": [
+    "assets/2026-05-15-current-about.png"
+  ],
+  "confidence_level": "high",
+  "review_status": "reviewed",
+  "analyst_note": "OPPO 当前官方表述基线；当前页面以品牌叙事表达 mission 与 core value，vision 空缺。"
+}

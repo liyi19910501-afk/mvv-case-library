@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://about.google/intl/en_us/company-info/",
+    "final_url": "https://about.google/intl/en_us/company-info/",
+    "title": "About Google: History, office locations, commitments, initiatives - About Google",
+    "status": 200,
+    "text_length": 2550,
+    "structured": {
+      "mission": "Our mission is to organize the world’s information and make it universally accessible and useful.",
+      "vision": "",
+      "values": [],
+      "raw_terms": {
+        "mission": "profile_verified"
+      }
+    }
+  }
+]

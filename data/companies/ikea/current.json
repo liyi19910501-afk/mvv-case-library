@@ -1,0 +1,43 @@
+{
+  "company_id": "ikea",
+  "company_name_cn": "宜家",
+  "company_name_en": "IKEA",
+  "captured_at": "2026-05-05T00:00:00.000Z",
+  "captured_date": "2026-05-05",
+  "primary_language": "en",
+  "classification": "partial_mvv",
+  "structured": {
+    "mission": "",
+    "vision": "To create a better everyday life for the many people.",
+    "values": [
+      "Togetherness",
+      "Caring for people and planet",
+      "Cost-consciousness",
+      "Simplicity",
+      "Renew and improve",
+      "Different with a meaning",
+      "Give and take responsibility",
+      "Lead by example."
+    ],
+    "raw_terms": {
+      "vision": "version_verified",
+      "values": "version_verified"
+    }
+  },
+  "normalized_mvv_hash": "fde89bd4ed13f4d8196741f0f4e467db921e9491147763dc74371acf06905431",
+  "source_urls": [
+    {
+      "url": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+      "final_url": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+      "title": "The IKEA vision and values",
+      "status": null,
+      "text_length": 0
+    }
+  ],
+  "evidence_assets": [
+    "assets/2026-05-15-current-vision-values.png"
+  ],
+  "confidence_level": "high",
+  "review_status": "reviewed",
+  "analyst_note": "宜家 当前官方表述基线；官方页面提供 vision 与 values，mission 空缺。"
+}

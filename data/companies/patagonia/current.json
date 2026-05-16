@@ -1,0 +1,45 @@
+{
+  "company_id": "patagonia",
+  "company_name_cn": "巴塔哥尼亚",
+  "company_name_en": "Patagonia",
+  "captured_at": "2026-05-15T00:00:00.000Z",
+  "captured_date": "2026-05-15",
+  "primary_language": "en",
+  "classification": "partial_mvv",
+  "structured": {
+    "mission": "We're in business to save our home planet.",
+    "vision": "",
+    "values": [
+      "Quality",
+      "Integrity",
+      "Environmentalism",
+      "Justice",
+      "Not bound by convention."
+    ],
+    "raw_terms": {
+      "mission": "version_verified",
+      "values": "version_verified"
+    }
+  },
+  "normalized_mvv_hash": "f0e9ca238c7aa81700678b03089de188fbc79547e3c383469fdd49c5fa75bb38",
+  "source_urls": [
+    {
+      "url": "https://www.patagonia.com/footer-quote.html",
+      "final_url": "https://www.patagonia.com/footer-quote.html",
+      "title": "Patagonia mission statement",
+      "status": null,
+      "text_length": 0
+    },
+    {
+      "url": "https://www.patagonia.com/core-values/",
+      "final_url": "https://www.patagonia.com/core-values/",
+      "title": "Patagonia core values",
+      "status": null,
+      "text_length": 0
+    }
+  ],
+  "evidence_assets": [],
+  "confidence_level": "high",
+  "review_status": "reviewed",
+  "analyst_note": "巴塔哥尼亚 当前官方表述基线；mission 与 core values 分别来自两个官方页面。"
+}

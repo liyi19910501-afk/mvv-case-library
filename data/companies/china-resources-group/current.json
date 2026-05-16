@@ -1,0 +1,52 @@
+{
+  "company_id": "china-resources-group",
+  "company_name_cn": "华润集团",
+  "company_name_en": "China Resources Group",
+  "captured_at": "2026-05-05T00:00:00.000Z",
+  "captured_date": "2026-05-05",
+  "primary_language": "zh",
+  "classification": "standard_mvv",
+  "structured": {
+    "mission": "引领商业进步 共创美好生活",
+    "vision": "成为大众信赖和喜爱的世界一流企业",
+    "values": [
+      "诚实守信",
+      "业绩导向",
+      "以人为本",
+      "合作共赢"
+    ],
+    "raw_terms": {
+      "mission": "version_verified",
+      "vision": "version_verified",
+      "values": "version_verified"
+    }
+  },
+  "normalized_mvv_hash": "ceaef41e77fe759a38affb3d402a307ce11dfd55f125ae4b754e2751af922778",
+  "source_urls": [
+    {
+      "url": "https://winfo.crc.com.cn/news/crc_dynamic/2024-12-17/1544976.html",
+      "final_url": "https://winfo.crc.com.cn/news/crc_dynamic/2024-12-17/1544976.html",
+      "title": "华润官方新闻：使命表述交叉确认",
+      "status": null,
+      "text_length": 0
+    },
+    {
+      "url": "https://prepsite.crc.com.cn/site_36/sw_culture/index.html",
+      "final_url": "https://prepsite.crc.com.cn/site_36/sw_culture/index.html",
+      "title": "华润企业文化理念体系",
+      "status": null,
+      "text_length": 0
+    },
+    {
+      "url": "https://winfo.crc.com.cn/news/crc_dynamic/2016-04-15/1180471.html",
+      "final_url": "https://winfo.crc.com.cn/news/crc_dynamic/2016-04-15/1180471.html",
+      "title": "华润集团举办企业文化理念体系发布会",
+      "status": null,
+      "text_length": 0
+    }
+  ],
+  "evidence_assets": [],
+  "confidence_level": "high",
+  "review_status": "reviewed",
+  "analyst_note": "华润集团 当前官方表述基线；当前记录以官方新闻与企业文化体系页面交叉确认。"
+}

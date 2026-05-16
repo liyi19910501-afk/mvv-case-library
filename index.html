@@ -1,0 +1,1874 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MVV 案例库</title>
+  <style>
+    :root {
+      --bg: #f5f7f8;
+      --surface: #ffffff;
+      --surface-2: #f8fafb;
+      --ink: #17201d;
+      --text: #2e3834;
+      --muted: #64716b;
+      --line: #dce3e0;
+      --line-strong: #c7d2ce;
+      --teal: #0e6b5f;
+      --teal-soft: #e4f2ef;
+      --blue: #2f5f91;
+      --blue-soft: #e7f0f8;
+      --amber: #8b5d00;
+      --amber-soft: #fff4d9;
+      --red: #934132;
+      --red-soft: #fae9e4;
+      --shadow: 0 16px 42px rgba(23, 32, 29, 0.08);
+      --radius: 8px;
+      font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .app {
+      width: min(1440px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 18px 0 56px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 68px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      background: #111;
+      object-fit: cover;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .top-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .meta-pill,
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) auto;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .search {
+      width: 100%;
+      height: 42px;
+      padding: 0 13px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .filter-button {
+      height: 42px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .filter-button.active {
+      border-color: #9acac0;
+      background: var(--teal-soft);
+      color: var(--teal);
+      font-weight: 800;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: 292px minmax(0, 1fr) 300px;
+      gap: 16px;
+      margin-top: 16px;
+      align-items: start;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-2);
+    }
+
+    .panel-head h2 {
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .company-list {
+      position: sticky;
+      top: 84px;
+      max-height: calc(100vh - 104px);
+      overflow: auto;
+    }
+
+    .company-button {
+      display: grid;
+      gap: 6px;
+      width: 100%;
+      padding: 14px 16px;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .company-button:last-child {
+      border-bottom: 0;
+    }
+
+    .company-button:hover,
+    .company-button.active {
+      background: #f0f7f5;
+    }
+
+    .company-button.active {
+      box-shadow: inset 4px 0 0 var(--teal);
+    }
+
+    .company-button strong {
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .company-button span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .detail {
+      min-width: 0;
+    }
+
+    .detail-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 270px;
+      gap: 18px;
+      padding: 24px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .company-heading {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .company-logo {
+      display: block;
+      width: auto;
+      max-width: 132px;
+      max-height: 46px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .company-title {
+      margin: 0;
+      font-size: clamp(26px, 4vw, 42px);
+      line-height: 1.1;
+      letter-spacing: 0;
+      min-width: 0;
+    }
+
+    .company-subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .company-note {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: 8px;
+      align-content: start;
+      justify-items: end;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .status.complete {
+      background: var(--teal-soft);
+      color: var(--teal);
+    }
+
+    .status.partial {
+      background: var(--amber-soft);
+      color: var(--amber);
+    }
+
+    .status.narrative {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .status.review {
+      background: var(--red-soft);
+      color: var(--red);
+    }
+
+    .statement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-bottom: 1px solid var(--line);
+    }
+
+    .statement {
+      min-height: 220px;
+      padding: 22px 24px;
+      border-right: 1px solid var(--line);
+    }
+
+    .statement:last-child {
+      border-right: 0;
+    }
+
+    .statement h3 {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .statement p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .statement .missing-statement {
+      color: var(--muted);
+    }
+
+    .value-list {
+      display: grid;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .value-list li {
+      margin: 0;
+    }
+
+    .statement .muted {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .context-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .context-block {
+      padding: 22px 24px;
+      border-right: 1px solid var(--line);
+    }
+
+    .context-block:last-child {
+      border-right: 0;
+    }
+
+    .context-block h3 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    .context-block p {
+      margin: 0;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .timeline {
+      padding: 18px 24px 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline h3 {
+      margin: 0 0 12px;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    .timeline-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 12px;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface-2);
+      font-size: 13px;
+    }
+
+    .timeline-date {
+      color: var(--muted);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .timeline-main {
+      min-width: 0;
+    }
+
+    .timeline-main strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .timeline-main p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .candidate-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .candidate-item {
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      font-size: 13px;
+    }
+
+    .candidate-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .candidate-item p {
+      margin: 6px 0 0;
+      color: var(--text);
+    }
+
+    .source-panel {
+      position: sticky;
+      top: 84px;
+    }
+
+    .evidence {
+      padding: 14px;
+    }
+
+    .shot {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #eef2f3;
+      object-fit: cover;
+    }
+
+    .shot-placeholder {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border: 1px dashed var(--line-strong);
+      border-radius: 6px;
+      background: #f7f9fa;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .source-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .source-item {
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      font-size: 13px;
+    }
+
+    .source-item span {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .official-links {
+      display: grid;
+      gap: 6px;
+    }
+
+    .source-item a {
+      overflow-wrap: anywhere;
+    }
+
+    .compare {
+      margin-top: 16px;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .compare-table th {
+      background: var(--surface-2);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .compare-table .value-list {
+      gap: 3px;
+    }
+
+    .empty {
+      padding: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 1120px) {
+      .workspace {
+        grid-template-columns: 260px minmax(0, 1fr);
+      }
+
+      .source-panel {
+        position: static;
+        grid-column: 1 / -1;
+      }
+
+      .evidence {
+        display: grid;
+        grid-template-columns: 320px minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .source-list {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .app {
+        width: min(100% - 20px, 1440px);
+      }
+
+      .topbar,
+      .toolbar,
+      .detail-hero,
+      .context-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        align-items: flex-start;
+      }
+
+      .top-meta,
+      .filter-row,
+      .hero-meta {
+        justify-content: flex-start;
+        justify-items: start;
+      }
+
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+
+      .company-list {
+        position: static;
+        max-height: none;
+      }
+
+      .statement-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .statement,
+      .context-block {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .statement:last-child,
+      .context-block:last-child {
+        border-bottom: 0;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .evidence {
+        grid-template-columns: 1fr;
+      }
+
+      .compare {
+        overflow-x: auto;
+      }
+
+      .compare-table {
+        min-width: 760px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <img class="brand-mark" src="assets/system2-logo.png" alt="系统2">
+        <div>
+          <h1>MVV 案例库</h1>
+          <p>企业 Mission / Vision / Values 官方表述与证据索引</p>
+        </div>
+      </div>
+      <div class="top-meta">
+        <span class="meta-pill">8 家企业</span>
+        <span class="meta-pill">官方来源</span>
+        <span class="meta-pill">当前快照</span>
+      </div>
+    </header>
+
+    <section class="toolbar" aria-label="检索与筛选">
+      <input class="search" id="searchInput" type="search" placeholder="搜索公司、行业、关键词">
+      <div class="filter-row">
+        <button class="filter-button active" type="button" data-filter="all">全部</button>
+        <button class="filter-button" type="button" data-filter="complete">标准 MVV</button>
+        <button class="filter-button" type="button" data-filter="partial">非标准 MVV</button>
+        <button class="filter-button" type="button" data-filter="review">需复核</button>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel company-list" aria-label="企业列表">
+        <div class="panel-head">
+          <h2>企业</h2>
+          <span class="count" id="visibleCount">8</span>
+        </div>
+        <div id="companyList"></div>
+      </aside>
+
+      <section class="panel detail" aria-live="polite">
+        <div class="detail-hero">
+          <div>
+            <div class="company-heading">
+              <img class="company-logo" id="companyLogo" alt="" hidden>
+              <h2 class="company-title" id="companyTitle"></h2>
+            </div>
+            <p class="company-subtitle" id="companySubtitle"></p>
+            <p class="company-note" id="companyNote"></p>
+          </div>
+          <div class="hero-meta">
+            <span class="status" id="statusBadge"></span>
+            <span class="tag" id="reviewedAt"></span>
+            <span class="tag" id="confidence"></span>
+          </div>
+        </div>
+
+        <div class="statement-grid">
+          <article class="statement">
+            <h3>Mission / Purpose</h3>
+            <p id="missionText"></p>
+          </article>
+          <article class="statement">
+            <h3>Vision / Aspiration</h3>
+            <p id="visionText"></p>
+          </article>
+          <article class="statement">
+            <h3>Values / Principles</h3>
+            <p id="valuesText"></p>
+          </article>
+        </div>
+
+        <div class="context-grid">
+          <article class="context-block">
+            <h3>相关表达</h3>
+            <p id="otherText"></p>
+          </article>
+          <article class="context-block">
+            <h3>研究判断</h3>
+            <p id="researchText"></p>
+          </article>
+        </div>
+
+        <div class="timeline">
+          <h3>版本时间线</h3>
+          <div class="timeline-list" id="timelineList"></div>
+        </div>
+
+        <div class="timeline">
+          <h3>历史候选来源</h3>
+          <div class="candidate-list" id="candidateList"></div>
+        </div>
+      </section>
+
+      <aside class="panel source-panel" aria-label="证据与来源">
+        <div class="panel-head">
+          <h2>证据与来源</h2>
+        </div>
+        <div class="evidence">
+          <div id="evidenceVisual"></div>
+          <div class="source-list">
+            <div class="source-item">
+              <span>官方来源</span>
+              <div class="official-links" id="officialLinks"></div>
+            </div>
+            <div class="source-item">
+              <span>本地档案</span>
+              <a id="profileLink" href="#"></a>
+            </div>
+            <div class="source-item">
+              <span>版本记录</span>
+              <a id="versionLink" href="#"></a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel compare" aria-label="横向对照">
+      <div class="panel-head">
+        <h2>横向对照</h2>
+        <span class="count">Mission / Vision / Values</span>
+      </div>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>企业</th>
+            <th>表达类型</th>
+            <th>Mission</th>
+            <th>Vision</th>
+            <th>Values</th>
+          </tr>
+        </thead>
+        <tbody id="compareRows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    const companies = [
+  {
+    "id": "anker-innovations",
+    "name": "安克创新",
+    "en": "Anker Innovations",
+    "region": "China",
+    "industry": "Consumer Electronics / Brand Company",
+    "type": "complete",
+    "typeLabel": "标准 MVV",
+    "classification": "standard_mvv",
+    "confidence": "high",
+    "reviewStatus": "reviewed",
+    "reviewed": "2026-05-15",
+    "capturedAt": "2026-05-15T08:21:26.465Z",
+    "mission": "极致创新，激发可能",
+    "vision": "搭建一个互相激发的创造者乐园，成为全球消费者热爱的品牌",
+    "values": "第一性；求极致；共成长",
+    "research": "安克创新 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。",
+    "source": "https://www.anker.com.cn/story",
+    "sourceTitle": "关于我们 - 安克创新",
+    "officialSources": [
+      {
+        "url": "https://www.anker.com.cn/story",
+        "title": "关于我们 - 安克创新",
+        "level": "official",
+        "type": "current"
+      },
+      {
+        "url": "https://www.anker.com.cn/pages/about?locale=zh-CN",
+        "title": "",
+        "level": "official",
+        "type": "profile"
+      },
+      {
+        "url": "https://www.anker.com.cn/pages/5-about",
+        "title": "",
+        "level": "official",
+        "type": "profile"
+      },
+      {
+        "url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223379891.PDF#page=10",
+        "title": "安克创新 2024 年年度报告",
+        "level": "A",
+        "type": "annual_report"
+      }
+    ],
+    "logo": "data/companies/anker-innovations/assets/logo.svg",
+    "logoSource": "https://www.anker.com.cn/story",
+    "profile": "data/companies/anker-innovations/profile.md",
+    "version": "data/companies/anker-innovations/versions/2026-05-15-current.md",
+    "evidence": "data/companies/anker-innovations/evidence/2026-05-15/mission-关于我们-安克创新.png",
+    "evidenceAssets": [
+      "data/companies/anker-innovations/evidence/2026-05-15/page-text-关于我们-安克创新.txt",
+      "data/companies/anker-innovations/evidence/2026-05-15/mission-关于我们-安克创新.png",
+      "data/companies/anker-innovations/evidence/2026-05-15/vision-关于我们-安克创新.png",
+      "data/companies/anker-innovations/evidence/2026-05-15/values-关于我们-安克创新.png",
+      "data/companies/anker-innovations/evidence/2026-05-15/metadata.json"
+    ],
+    "history": [
+      {
+        "date": "2024-12-31",
+        "changeType": "update",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "standard_mvv",
+        "sourceTitle": "安克创新 2024 年年度报告",
+        "sourceUrl": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223379891.PDF#page=10",
+        "note": "安克这次表述把“创新”从产品能力提升为组织使命，并用“创造者乐园”定义组织形态，说明公司文化叙事从单一硬件品牌走向全球化、多品类、人才与组织机制共同驱动的阶段。",
+        "file": "data/companies/anker-innovations/versions/2024-12-31-annual-report-mvv-upgrade.md"
+      },
+      {
+        "date": "2026-05-05",
+        "changeType": "new",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "",
+        "sourceTitle": "关于我们 - 安克创新",
+        "sourceUrl": "https://www.anker.com.cn/pages/about?locale=zh-CN",
+        "note": "本条仅记录当前官方页面可直接确认的文本",
+        "file": "data/companies/anker-innovations/versions/2026-05-05-current.md"
+      },
+      {
+        "date": "2026-05-15",
+        "changeType": "new",
+        "confidence": "high",
+        "reviewStatus": "reviewed",
+        "classification": "standard_mvv",
+        "sourceTitle": "关于我们 - 安克创新",
+        "sourceUrl": "https://www.anker.com.cn/story",
+        "note": "安克创新 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。",
+        "file": "data/companies/anker-innovations/versions/2026-05-15-current.md"
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "anker-2024-annual-report-mvv",
+        "found_at": "2026-05-15",
+        "source_level": "A",
+        "source_type": "annual_report",
+        "source_title": "安克创新 2024 年年度报告",
+        "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223379891.PDF#page=10",
+        "source_org": "安克创新科技股份有限公司",
+        "published_date": "2025-04-29",
+        "language": "zh",
+        "raw_mission": "极致创新，激发可能",
+        "raw_vision": "搭建一个互相激发的创造者乐园，成为全球消费者热爱的品牌",
+        "raw_values": "第一性；求极致；共成长",
+        "verification_note": "官方年度报告披露 2024 年组织使命与愿景升级，是当前官网 MVV 的高可信历史锚点。",
+        "recommended_action": "create_version",
+        "status": "promoted"
+      }
+    ]
+  },
+  {
+    "id": "china-resources-group",
+    "name": "华润集团",
+    "en": "China Resources Group",
+    "region": "China",
+    "industry": "Conglomerate / Service and Consumer Ecosystem",
+    "type": "complete",
+    "typeLabel": "标准 MVV",
+    "classification": "standard_mvv",
+    "confidence": "high",
+    "reviewStatus": "reviewed",
+    "reviewed": "2026-05-05",
+    "capturedAt": "2026-05-05T00:00:00.000Z",
+    "mission": "引领商业进步 共创美好生活",
+    "vision": "成为大众信赖和喜爱的世界一流企业",
+    "values": "诚实守信；业绩导向；以人为本；合作共赢",
+    "research": "华润集团 当前官方表述基线；当前记录以官方新闻与企业文化体系页面交叉确认。",
+    "source": "https://winfo.crc.com.cn/news/crc_dynamic/2024-12-17/1544976.html",
+    "sourceTitle": "华润官方新闻：使命表述交叉确认",
+    "officialSources": [
+      {
+        "url": "https://winfo.crc.com.cn/news/crc_dynamic/2024-12-17/1544976.html",
+        "title": "华润官方新闻：使命表述交叉确认",
+        "level": "official",
+        "type": "current"
+      },
+      {
+        "url": "https://prepsite.crc.com.cn/site_36/sw_culture/index.html",
+        "title": "华润企业文化理念体系",
+        "level": "official",
+        "type": "current"
+      },
+      {
+        "url": "https://winfo.crc.com.cn/news/crc_dynamic/2016-04-15/1180471.html",
+        "title": "华润集团举办企业文化理念体系发布会",
+        "level": "official",
+        "type": "current"
+      }
+    ],
+    "logo": "data/companies/china-resources-group/assets/logo.png",
+    "logoSource": "https://winfo.crc.com.cn/news/crc_dynamic/2016-04-15/1180471.html",
+    "profile": "data/companies/china-resources-group/profile.md",
+    "version": "data/companies/china-resources-group/versions/2026-05-05-current.md",
+    "evidence": "data/companies/china-resources-group/evidence/2026-05-15/candidates/china-resources-2016-culture-system/screenshot-华润集团欢迎您-中国华润有限公司.png",
+    "evidenceAssets": [],
+    "history": [
+      {
+        "date": "2016-04-15",
+        "changeType": "update",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "standard_mvv",
+        "sourceTitle": "华润集团举办企业文化理念体系发布会",
+        "sourceUrl": "https://winfo.crc.com.cn/news/crc_dynamic/2016-04-15/1180471.html",
+        "note": "2016 版文化体系服务于“十三五”战略落地，重点是全球化、创新发展和组织协同。与当前“世界一流企业”和“合作共赢”相比，后续表达明显从规模全球化转向信任、品质与生态关系。",
+        "file": "data/companies/china-resources-group/versions/2016-04-15-culture-system.md"
+      },
+      {
+        "date": "2026-05-05",
+        "changeType": "new",
+        "confidence": "medium",
+        "reviewStatus": "reviewed",
+        "classification": "",
+        "sourceTitle": "华润企业文化理念体系 / 华润官方新闻",
+        "sourceUrl": "https://winfo.crc.com.cn/news/crc_dynamic/2024-12-17/1544976.html",
+        "note": "当前使命表述已被 2024 华润官方新闻再次确认，整套理念体系待浏览器复核后再升为 confirmed",
+        "file": "data/companies/china-resources-group/versions/2026-05-05-current.md"
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "china-resources-2016-culture-system",
+        "found_at": "2026-05-15",
+        "source_level": "A",
+        "source_type": "official_news",
+        "source_title": "华润集团举办企业文化理念体系发布会",
+        "source_url": "https://winfo.crc.com.cn/news/crc_dynamic/2016-04-15/1180471.html",
+        "source_org": "华润集团",
+        "published_date": "2016-04-15",
+        "language": "zh",
+        "raw_mission": "引领商业进步，共创美好生活",
+        "raw_vision": "成为最受大众信赖和喜爱的全球化企业",
+        "raw_values": "诚实守信；业绩导向；以人为本；创新发展",
+        "verification_note": "华润官方新闻完整列出 2016 年文化理念体系，可作为当前版本之前的重要正式历史版本。",
+        "recommended_action": "create_version",
+        "status": "promoted"
+      }
+    ]
+  },
+  {
+    "id": "google",
+    "name": "谷歌",
+    "en": "Google",
+    "region": "United States",
+    "industry": "Brand / Technology",
+    "type": "partial",
+    "typeLabel": "非标准 MVV",
+    "classification": "partial_mvv",
+    "confidence": "high",
+    "reviewStatus": "reviewed",
+    "reviewed": "2026-05-15",
+    "capturedAt": "2026-05-15T08:21:29.347Z",
+    "mission": "Our mission is to organize the world’s information and make it universally accessible and useful.",
+    "vision": "当前 reviewed 官方页面未单列 `Vision` 字段。",
+    "values": "当前 reviewed 官方页面未单列 `Values` 字段。",
+    "research": "谷歌 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+    "source": "https://about.google/intl/en_us/company-info/",
+    "sourceTitle": "About Google: History, office locations, commitments, initiatives - About Google",
+    "officialSources": [
+      {
+        "url": "https://about.google/intl/en_us/company-info/",
+        "title": "About Google: History, office locations, commitments, initiatives - About Google",
+        "level": "official",
+        "type": "current"
+      },
+      {
+        "url": "https://about.google/company-info/our-story/",
+        "title": "How we started and where we are today - Google - About Google",
+        "level": "A",
+        "type": "official_history"
+      }
+    ],
+    "logo": "data/companies/google/assets/logo.svg",
+    "logoSource": "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg",
+    "profile": "data/companies/google/profile.md",
+    "version": "data/companies/google/versions/2026-05-15-current.md",
+    "evidence": "data/companies/google/evidence/2026-05-15/mission-about-google-history-office-locations-commitments-initiatives-about-go.png",
+    "evidenceAssets": [
+      "data/companies/google/evidence/2026-05-15/page-text-about-google-history-office-locations-commitments-initiatives-about-go.txt",
+      "data/companies/google/evidence/2026-05-15/mission-about-google-history-office-locations-commitments-initiatives-about-go.png",
+      "data/companies/google/evidence/2026-05-15/metadata.json"
+    ],
+    "history": [
+      {
+        "date": "1998-09-04",
+        "changeType": "new",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "partial_mvv",
+        "sourceTitle": "How we started and where we are today - Google - About Google",
+        "sourceUrl": "https://about.google/company-info/our-story/",
+        "note": "Google 的历史 mission 与当前 mission 在核心语义上高度连续，说明其最稳定的文化资产不是价值观清单，而是“组织信息并让其普遍可用”的长期问题定义。后续跟踪重点应放在 mission 是否被 AI、产品生态或责任叙事重新解释，而不是期待其标准化补出 Vision / Values。",
+        "file": "data/companies/google/versions/1998-09-04-founding-mission.md"
+      },
+      {
+        "date": "2026-05-05",
+        "changeType": "record",
+        "confidence": "",
+        "reviewStatus": "",
+        "classification": "",
+        "sourceTitle": "About Google: History, office locations, commitments, initiatives - About Google",
+        "sourceUrl": "https://about.google/intl/en_us/company-info/",
+        "note": "",
+        "file": "data/companies/google/versions/2026-05-05-current.md"
+      },
+      {
+        "date": "2026-05-15",
+        "changeType": "new",
+        "confidence": "high",
+        "reviewStatus": "reviewed",
+        "classification": "partial_mvv",
+        "sourceTitle": "About Google: History, office locations, commitments, initiatives - About Google",
+        "sourceUrl": "https://about.google/intl/en_us/company-info/",
+        "note": "谷歌 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+        "file": "data/companies/google/versions/2026-05-15-current.md"
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "google-1998-founding-mission",
+        "found_at": "2026-05-15",
+        "source_level": "A",
+        "source_type": "official_history",
+        "source_title": "How we started and where we are today",
+        "source_url": "https://about.google/company-info/our-story/",
+        "source_org": "Google",
+        "published_date": "1998",
+        "language": "en",
+        "raw_mission": "to organize the world’s information and make it universally accessible and useful",
+        "raw_vision": "",
+        "raw_values": "",
+        "verification_note": "Official Google history page links the founding story to Larry and Sergey’s mission. Treat as a high-confidence historical anchor for the mission wording, but add screenshot evidence before promoting to confirmed version.",
+        "recommended_action": "create_version",
+        "status": "promoted"
+      }
+    ]
+  },
+  {
+    "id": "ikea",
+    "name": "宜家",
+    "en": "IKEA",
+    "region": "Global",
+    "industry": "Retail / Home Furnishing",
+    "type": "partial",
+    "typeLabel": "非标准 MVV",
+    "classification": "partial_mvv",
+    "confidence": "high",
+    "reviewStatus": "reviewed",
+    "reviewed": "2026-05-05",
+    "capturedAt": "2026-05-05T00:00:00.000Z",
+    "mission": "当前官方页面未单列 `Mission` 字段。",
+    "vision": "To create a better everyday life for the many people.",
+    "values": "Togetherness；Caring for people and planet；Cost-consciousness；Simplicity；Renew and improve；Different with a meaning；Give and take responsibility；Lead by example.",
+    "research": "宜家 当前官方表述基线。",
+    "source": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+    "sourceTitle": "The IKEA vision and values",
+    "officialSources": [
+      {
+        "url": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+        "title": "The IKEA vision and values",
+        "level": "official",
+        "type": "official website"
+      },
+      {
+        "url": "https://www.ikea.com/global/en/stories/our-roots/ingvar-kamprad-100-years-260330/",
+        "title": "One man, One vision, 100 years",
+        "level": "A",
+        "type": "official_history"
+      }
+    ],
+    "logo": "data/companies/ikea/assets/logo.png",
+    "logoSource": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+    "profile": "data/companies/ikea/profile.md",
+    "version": "data/companies/ikea/versions/2026-05-05-current.md",
+    "evidence": "data/companies/ikea/assets/2026-05-15-current-vision-values.png",
+    "evidenceAssets": [
+      "data/companies/ikea/assets/2026-05-15-current-vision-values.png"
+    ],
+    "history": [
+      {
+        "date": "1976-01-01",
+        "changeType": "new",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "partial_mvv",
+        "sourceTitle": "One man, One vision, 100 years",
+        "sourceUrl": "https://www.ikea.com/global/en/stories/our-roots/ingvar-kamprad-100-years-260330/",
+        "note": "IKEA 的核心连续性很强：从创始语境到当前官网，中心始终是“many people”的日常生活改善。这是一种高度稳定的社会普惠型愿景，后续价值观更像围绕该愿景展开的组织行为规范。",
+        "file": "data/companies/ikea/versions/1976-01-01-founder-vision.md"
+      },
+      {
+        "date": "2026-05-05",
+        "changeType": "new",
+        "confidence": "high",
+        "reviewStatus": "reviewed",
+        "classification": "partial_mvv",
+        "sourceTitle": "The IKEA vision and values",
+        "sourceUrl": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+        "note": "",
+        "file": "data/companies/ikea/versions/2026-05-05-current.md"
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "ikea-1976-testament-vision-principles",
+        "found_at": "2026-05-15",
+        "source_level": "A",
+        "source_type": "official_history",
+        "source_title": "One man, One vision, 100 years",
+        "source_url": "https://www.ikea.com/global/en/stories/our-roots/ingvar-kamprad-100-years-260330/",
+        "source_org": "Inter IKEA Systems B.V.",
+        "published_date": "2026-03-30",
+        "language": "en",
+        "raw_mission": "",
+        "raw_vision": "To contribute to a better everyday life for the many people",
+        "raw_values": "",
+        "verification_note": "Official IKEA history story. Use it as a high-confidence historical anchor for the founding vision; do not promote exact 1976 values until the PDF can be captured without Cloudflare blocking.",
+        "recommended_action": "create_version",
+        "status": "promoted"
+      }
+    ]
+  },
+  {
+    "id": "nike",
+    "name": "耐克",
+    "en": "Nike",
+    "region": "United States",
+    "industry": "Brand / Sportswear",
+    "type": "partial",
+    "typeLabel": "非标准 MVV",
+    "classification": "partial_mvv",
+    "confidence": "high",
+    "reviewStatus": "reviewed",
+    "reviewed": "2026-05-05",
+    "capturedAt": "2026-05-05T00:00:00.000Z",
+    "mission": "TO BRING INSPIRATION AND INNOVATION TO EVERY ATHLETE* IN THE WORLD.",
+    "vision": "当前 reviewed 官方页面未单列 `Vision` 字段。",
+    "values": "当前 reviewed 官方页面未单列 `Values` 字段。",
+    "research": "耐克 当前官方表述基线。",
+    "source": "https://about.nike.com/en/mission",
+    "sourceTitle": "Nike - Mission — NIKE, Inc.",
+    "officialSources": [
+      {
+        "url": "https://about.nike.com/en/mission",
+        "title": "Nike - Mission — NIKE, Inc.",
+        "level": "official",
+        "type": "official website"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018721000028/nke-20210531.htm",
+        "title": "NIKE, Inc. 2021 Form 10-K",
+        "level": "A",
+        "type": "sec_filing"
+      }
+    ],
+    "logo": "data/companies/nike/assets/logo.svg",
+    "logoSource": "https://commons.wikimedia.org/wiki/File:Nike_wordmark.svg",
+    "profile": "data/companies/nike/profile.md",
+    "version": "data/companies/nike/versions/2026-05-05-current.md",
+    "evidence": "data/companies/nike/assets/2026-05-05-current-mission.png",
+    "evidenceAssets": [
+      "data/companies/nike/assets/2026-05-05-current-mission.png"
+    ],
+    "history": [
+      {
+        "date": "2021-07-20",
+        "changeType": "record",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "partial_mvv",
+        "sourceTitle": "NIKE, Inc. 2021 Form 10-K",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320187/000032018721000028/nke-20210531.htm",
+        "note": "Nike 的使命表述在 2021 到当前之间保持稳定，说明核心品牌角色没有明显改写：仍以 athlete 的广义定义扩展目标人群。真正变化更可能发生在执行议题上，如可持续、多元团队和社区影响，而不是使命句本身。",
+        "file": "data/companies/nike/versions/2021-07-20-form-10-k-mission.md"
+      },
+      {
+        "date": "2026-05-05",
+        "changeType": "record",
+        "confidence": "",
+        "reviewStatus": "",
+        "classification": "",
+        "sourceTitle": "Nike - Mission — NIKE, Inc.",
+        "sourceUrl": "https://about.nike.com/en/mission",
+        "note": "",
+        "file": "data/companies/nike/versions/2026-05-05-current.md"
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "nike-2021-annual-report-mission",
+        "found_at": "2026-05-15",
+        "source_level": "A",
+        "source_type": "sec_filing",
+        "source_title": "NIKE, Inc. 2021 Form 10-K",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/320187/000032018721000028/nke-20210531.htm",
+        "source_org": "NIKE, Inc. / U.S. SEC",
+        "published_date": "2021-07-20",
+        "language": "en",
+        "raw_mission": "Our mission is to bring inspiration and innovation to every athlete in the world.",
+        "raw_vision": "",
+        "raw_values": "",
+        "verification_note": "SEC-hosted official 10-K filing confirms the mission wording before the current 2026 capture. Values are referenced as Maxims but not enumerated on the page, so this remains a partial MVV record.",
+        "recommended_action": "create_version",
+        "status": "promoted"
+      }
+    ]
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "en": "OpenAI",
+    "region": "United States",
+    "industry": "AI Brand / Foundation Model",
+    "type": "partial",
+    "typeLabel": "非标准 MVV",
+    "classification": "partial_mvv",
+    "confidence": "high",
+    "reviewStatus": "reviewed",
+    "reviewed": "2026-05-05",
+    "capturedAt": "2026-05-05T00:00:00.000Z",
+    "mission": "Our mission is to ensure that artificial general intelligence benefits all of humanity.",
+    "vision": "当前官方页面使用了 `Our vision for the future of AGI` 作为节标题，但未提供独立的 vision sentence。",
+    "values": "当前 reviewed 官方页面未单列 `Values` 字段。",
+    "research": "OpenAI 当前官方表述基线。",
+    "source": "https://openai.com/about/",
+    "sourceTitle": "About | OpenAI",
+    "officialSources": [
+      {
+        "url": "https://openai.com/about/",
+        "title": "About | OpenAI",
+        "level": "official",
+        "type": "official website"
+      },
+      {
+        "url": "https://openai.com/charter/",
+        "title": "OpenAI Charter",
+        "level": "A",
+        "type": "official_charter"
+      },
+      {
+        "url": "https://openai.com/index/introducing-openai/",
+        "title": "Introducing OpenAI",
+        "level": "A",
+        "type": "official_blog"
+      }
+    ],
+    "logo": "data/companies/openai/assets/logo.svg",
+    "logoSource": "https://commons.wikimedia.org/wiki/File:OpenAI_logo_2025_(symbol).svg",
+    "profile": "data/companies/openai/profile.md",
+    "version": "data/companies/openai/versions/2026-05-05-current.md",
+    "evidence": "data/companies/openai/assets/2026-05-05-current-about.png",
+    "evidenceAssets": [
+      "data/companies/openai/assets/2026-05-05-current-about.png"
+    ],
+    "history": [
+      {
+        "date": "2015-12-11",
+        "changeType": "new",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "partial_mvv",
+        "sourceTitle": "Introducing OpenAI",
+        "sourceUrl": "https://openai.com/index/introducing-openai/",
+        "note": "OpenAI 2015 年的表述重点是“推进数字智能并使其整体有益于人类”，组织形态上强调非营利和不受财务回报约束。这一阶段的文化核心更像研究机构的公共利益承诺，而不是后来围绕 AGI 安全与治理展开的正式 mission/principles 体系。",
+        "file": "data/companies/openai/versions/2015-12-11-founding-goal.md"
+      },
+      {
+        "date": "2018-04-09",
+        "changeType": "update",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "partial_mvv",
+        "sourceTitle": "OpenAI Charter",
+        "sourceUrl": "https://openai.com/charter/",
+        "note": "2018 Charter 是 OpenAI 使命表达的一次结构化升级：对象从较宽泛的“digital intelligence”收束为 AGI，责任对象仍是 humanity，但执行逻辑转向安全、技术领导与合作导向。这说明 OpenAI 的文化表述从研究理想进入了治理约束与长期风险管理框架。",
+        "file": "data/companies/openai/versions/2018-04-09-charter-mission.md"
+      },
+      {
+        "date": "2026-05-05",
+        "changeType": "record",
+        "confidence": "",
+        "reviewStatus": "",
+        "classification": "",
+        "sourceTitle": "About | OpenAI",
+        "sourceUrl": "https://openai.com/about/",
+        "note": "",
+        "file": "data/companies/openai/versions/2026-05-05-current.md"
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "openai-2015-founding-goal",
+        "found_at": "2026-05-15",
+        "source_level": "A",
+        "source_type": "official_blog",
+        "source_title": "Introducing OpenAI",
+        "source_url": "https://openai.com/index/introducing-openai/",
+        "source_org": "OpenAI",
+        "published_date": "2015-12-11",
+        "language": "en",
+        "raw_mission": "advance digital intelligence in the way that is most likely to benefit humanity as a whole",
+        "raw_vision": "",
+        "raw_values": "",
+        "verification_note": "Official founding announcement. This is an early goal statement rather than the later AGI mission wording. Add screenshot evidence before confirmed promotion.",
+        "recommended_action": "create_version",
+        "status": "promoted"
+      },
+      {
+        "candidate_id": "openai-2018-charter-mission",
+        "found_at": "2026-05-15",
+        "source_level": "A",
+        "source_type": "official_charter",
+        "source_title": "OpenAI Charter",
+        "source_url": "https://openai.com/charter/",
+        "source_org": "OpenAI",
+        "published_date": "2018-04-09",
+        "language": "en",
+        "raw_mission": "ensure that artificial general intelligence benefits all of humanity",
+        "raw_vision": "",
+        "raw_values": "Broadly distributed benefits; Long-term safety; Technical leadership; Cooperative orientation",
+        "verification_note": "Official Charter. Publication date is supported by OpenAI policy/legal citations; capture page evidence before confirmed promotion.",
+        "recommended_action": "create_version",
+        "status": "promoted"
+      }
+    ]
+  },
+  {
+    "id": "oppo",
+    "name": "OPPO",
+    "en": "OPPO",
+    "region": "China",
+    "industry": "Consumer Electronics / Smartphone Brand",
+    "type": "partial",
+    "typeLabel": "非标准 MVV",
+    "classification": "partial_mvv",
+    "confidence": "high",
+    "reviewStatus": "reviewed",
+    "reviewed": "2026-05-05",
+    "capturedAt": "2026-05-05T00:00:00.000Z",
+    "mission": "当前官网未单列 `Mission` 标签；页面明确写出：OPPO empowers everyone to create and embrace the beauty of life by cutting-edge technology, paving the way for freedom and fulfilment.",
+    "vision": "当前官网未单列 `Vision` 标签。",
+    "values": "\\\"Benfen\\\" is our core value and unwavering belief, user-centricity is our rock-solid principle and a passion for creating is our continuous driving force.",
+    "research": "OPPO 当前官方表述基线。",
+    "source": "https://www.oppo.com/en/about/",
+    "sourceTitle": "About OPPO",
+    "officialSources": [
+      {
+        "url": "https://www.oppo.com/en/about/",
+        "title": "About OPPO",
+        "level": "official",
+        "type": "official website"
+      },
+      {
+        "url": "https://www.oppo.com/en/newsroom/press/oppo-showcases-three-concept-products-at-inno-day-2020/",
+        "title": "OPPO Showcases Three Concept Products at INNO DAY 2020",
+        "level": "A",
+        "type": "official_press_release"
+      }
+    ],
+    "logo": "data/companies/oppo/assets/logo.svg",
+    "logoSource": "https://commons.wikimedia.org/wiki/File:Oppo_(2019).svg",
+    "profile": "data/companies/oppo/profile.md",
+    "version": "data/companies/oppo/versions/2026-05-05-current.md",
+    "evidence": "data/companies/oppo/assets/2026-05-15-current-about.png",
+    "evidenceAssets": [
+      "data/companies/oppo/assets/2026-05-15-current-about.png"
+    ],
+    "history": [
+      {
+        "date": "2020-11-17",
+        "changeType": "update",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "partial_mvv",
+        "sourceTitle": "OPPO Showcases Three Concept Products at INNO DAY 2020",
+        "sourceUrl": "https://www.oppo.com/en/newsroom/press/oppo-showcases-three-concept-products-at-inno-day-2020/",
+        "note": "2020 年 OPPO 把使命表达从产品能力推进到“人本科技”和善意创新，说明品牌叙事开始服务于更大的技术生态战略，而不仅是手机硬件。它也解释了当前官网为何更像品牌信念叙事，而非传统 MVV 列表。",
+        "file": "data/companies/oppo/versions/2020-11-17-brand-mission.md"
+      },
+      {
+        "date": "2026-05-05",
+        "changeType": "new",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "",
+        "sourceTitle": "About OPPO",
+        "sourceUrl": "https://www.oppo.com/en/about/",
+        "note": "本条只记录当前官网可直接确认的原文，不将其强行改写成标准 MVV",
+        "file": "data/companies/oppo/versions/2026-05-05-current.md"
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "oppo-2020-brand-mission",
+        "found_at": "2026-05-15",
+        "source_level": "A",
+        "source_type": "official_press_release",
+        "source_title": "OPPO Showcases Three Concept Products at INNO DAY 2020",
+        "source_url": "https://www.oppo.com/en/newsroom/press/oppo-showcases-three-concept-products-at-inno-day-2020/",
+        "source_org": "OPPO",
+        "published_date": "2020-11-17",
+        "language": "en",
+        "raw_mission": "Technology for Mankind, Kindness for the World",
+        "raw_vision": "",
+        "raw_values": "",
+        "verification_note": "Official OPPO press release. Treat brand mission as Mission/Purpose under the simplified MVV rule; do not infer a separate Vision.",
+        "recommended_action": "create_version",
+        "status": "promoted"
+      }
+    ]
+  },
+  {
+    "id": "patagonia",
+    "name": "巴塔哥尼亚",
+    "en": "Patagonia",
+    "region": "United States",
+    "industry": "Brand / Outdoor Apparel",
+    "type": "partial",
+    "typeLabel": "非标准 MVV",
+    "classification": "partial_mvv",
+    "confidence": "high",
+    "reviewStatus": "reviewed",
+    "reviewed": "2026-05-15",
+    "capturedAt": "2026-05-15T00:00:00.000Z",
+    "mission": "We're in business to save our home planet.",
+    "vision": "当前 reviewed 官方页面未单列 `Vision` 字段。",
+    "values": "Quality；Integrity；Environmentalism；Justice；Not bound by convention.",
+    "research": "巴塔哥尼亚 当前官方表述基线；mission 与 core values 分别来自两个官方页面。",
+    "source": "https://www.patagonia.com/footer-quote.html",
+    "sourceTitle": "Patagonia mission statement",
+    "officialSources": [
+      {
+        "url": "https://www.patagonia.com/footer-quote.html",
+        "title": "Patagonia mission statement",
+        "level": "official",
+        "type": "current"
+      },
+      {
+        "url": "https://www.patagonia.com/core-values/",
+        "title": "Patagonia core values",
+        "level": "official",
+        "type": "current"
+      },
+      {
+        "url": "https://www.patagonia.com/stories/planet/activism/how-were-reducing-our-carbon-footprint/story-74099.html",
+        "title": "How We’re Reducing Our Carbon Footprint",
+        "level": "A",
+        "type": "official_story"
+      }
+    ],
+    "logo": "data/companies/patagonia/assets/logo.svg",
+    "logoSource": "https://commons.wikimedia.org/wiki/File:Patagonia_(Unternehmen)_logo.svg",
+    "profile": "data/companies/patagonia/profile.md",
+    "version": "data/companies/patagonia/versions/2026-05-15-current.md",
+    "evidence": "data/companies/patagonia/evidence/2026-05-15/candidates/patagonia-2022-core-values-update/screenshot-core-values.png",
+    "evidenceAssets": [],
+    "history": [
+      {
+        "date": "2018",
+        "changeType": "update",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "partial_mvv",
+        "sourceTitle": "How We’re Reducing Our Carbon Footprint",
+        "sourceUrl": "https://www.patagonia.com/stories/planet/activism/how-were-reducing-our-carbon-footprint/story-74099.html",
+        "note": "2018 年的 mission change 把 Patagonia 的环境立场从品牌价值偏好推到企业存在理由层面。它不是普通口号更新，而是把商业活动的合法性绑定到“拯救家园星球”的公共议题上，为后续所有产品、供应链和行动主义叙事提供了最高层级的解释框架。",
+        "file": "data/companies/patagonia/versions/2018-mission-change.md"
+      },
+      {
+        "date": "2022",
+        "changeType": "update",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "partial_mvv",
+        "sourceTitle": "Our Core Values",
+        "sourceUrl": "https://www.patagonia.com/core-values/",
+        "note": "2022 年的核心价值观更新把 Patagonia 的价值观从传统产品/环保导向扩展到更明确的社会正义与反惯例表达。这与 2018 年使命升级相互呼应：使命给出最高目的，价值观则把组织在产品质量、环境责任、社会议题和商业非惯例路径上的行为边界说清楚。",
+        "file": "data/companies/patagonia/versions/2022-core-values-update.md"
+      },
+      {
+        "date": "2026-05-15",
+        "changeType": "new",
+        "confidence": "high",
+        "reviewStatus": "confirmed",
+        "classification": "",
+        "sourceTitle": "Patagonia Mission / Our Core Values",
+        "sourceUrl": "https://www.patagonia.com/footer-quote.html",
+        "note": "官网对无头浏览器会显示等待页；本轮使用 in-app browser 读取官方页面 DOM 后导出并截图留档，链接在真实浏览器中可访问。",
+        "file": "data/companies/patagonia/versions/2026-05-15-current.md"
+      }
+    ],
+    "candidates": [
+      {
+        "candidate_id": "patagonia-2018-mission-change",
+        "found_at": "2026-05-15",
+        "source_level": "A",
+        "source_type": "official_story",
+        "source_title": "How We’re Reducing Our Carbon Footprint",
+        "source_url": "https://www.patagonia.com/stories/planet/activism/how-were-reducing-our-carbon-footprint/story-74099.html",
+        "source_org": "Patagonia",
+        "published_date": "2019-09-18",
+        "language": "en",
+        "raw_mission": "We’re in business to save our home planet.",
+        "raw_vision": "",
+        "raw_values": "",
+        "verification_note": "Official Patagonia story explicitly dates the mission change to 2018. Add screenshot/PDF evidence before confirmed promotion.",
+        "recommended_action": "create_version",
+        "status": "promoted"
+      },
+      {
+        "candidate_id": "patagonia-2022-core-values-update",
+        "found_at": "2026-05-15",
+        "source_level": "A",
+        "source_type": "official_values_page",
+        "source_title": "Our Core Values",
+        "source_url": "https://www.patagonia.com/core-values/",
+        "source_org": "Patagonia",
+        "published_date": "2022",
+        "language": "en",
+        "raw_mission": "",
+        "raw_vision": "",
+        "raw_values": "Quality; Integrity; Environmentalism; Justice; Not bound by convention",
+        "verification_note": "Official Patagonia values page. Current version already records these values; use this candidate to anchor the 2022 change date after screenshot capture.",
+        "recommended_action": "create_version",
+        "status": "promoted"
+      }
+    ]
+  }
+];
+
+    const listEl = document.querySelector("#companyList");
+    const compareRows = document.querySelector("#compareRows");
+    const searchInput = document.querySelector("#searchInput");
+    const filterButtons = [...document.querySelectorAll(".filter-button")];
+    const visibleCount = document.querySelector("#visibleCount");
+    let activeFilter = "all";
+    let selectedId = "ikea";
+
+    function statusClass(type) {
+      if (type === "complete") return "complete";
+      if (type === "partial") return "partial";
+      if (type === "review") return "review";
+      return "partial";
+    }
+
+    function visibleCompanies() {
+      const keyword = searchInput.value.trim().toLowerCase();
+      return companies.filter(company => {
+        const filterMatch = activeFilter === "all" || company.type === activeFilter;
+        const text = [
+          company.name,
+          company.en,
+          company.region,
+          company.industry,
+          company.typeLabel,
+          company.mission,
+          company.vision,
+          company.values,
+          company.other,
+          company.research
+        ].join(" ").toLowerCase();
+        return filterMatch && (!keyword || text.includes(keyword));
+      });
+    }
+
+    function setText(id, value) {
+      document.querySelector(id).textContent = value || "未记录";
+    }
+
+    function normalizeStatement(value) {
+      const raw = String(value || "").trim().replace(/\\"/g, "\"");
+      const explicit = raw.match(/页面明确写出[:：]\s*([\s\S]+)$/);
+      return (explicit ? explicit[1] : raw).trim();
+    }
+
+    function isMissingStatement(value) {
+      const text = normalizeStatement(value);
+      if (!text) return true;
+      return [
+        "未单列",
+        "未明确",
+        "未找到",
+        "未提供独立",
+        "空缺字段",
+        "不做推断"
+      ].some(pattern => text.includes(pattern));
+    }
+
+    function splitValues(value) {
+      return normalizeStatement(value)
+        .split(/\r?\n|；|;/)
+        .map(item => item.replace(/^-+\s*/, "").trim())
+        .filter(Boolean);
+    }
+
+    function statementHtml(value, options = {}) {
+      if (isMissingStatement(value)) return `<span class="missing-statement">/</span>`;
+      if (options.values) {
+        const items = splitValues(value);
+        if (items.length > 1) {
+          return `<ul class="value-list">${items.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+        }
+        return escapeHtml(items[0] || normalizeStatement(value));
+      }
+      return escapeHtml(normalizeStatement(value));
+    }
+
+    function setStatement(id, value, options = {}) {
+      const element = document.querySelector(id);
+      element.innerHTML = statementHtml(value, options);
+      element.classList.toggle("missing-statement", isMissingStatement(value));
+    }
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&#39;"
+      }[char]));
+    }
+
+    function sourceLabel(source) {
+      const url = source?.url || source || "";
+      if (source?.title) return source.title;
+      try {
+        const parsed = new URL(url);
+        const path = parsed.pathname.replace(/\/$/, "");
+        return `${parsed.hostname}${path && path !== "/" ? path : ""}`;
+      } catch {
+        return url || "未记录";
+      }
+    }
+
+    function renderOfficialSources(company) {
+      const officialLinks = document.querySelector("#officialLinks");
+      const sources = (company.officialSources || [])
+        .filter(source => source?.url)
+        .slice(0, 4);
+
+      const fallback = company.source ? [{ url: company.source, title: company.sourceTitle || "" }] : [];
+      const visibleSources = sources.length ? sources : fallback;
+
+      officialLinks.innerHTML = visibleSources.length
+        ? visibleSources.map(source => `
+          <a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(sourceLabel(source))}</a>
+        `).join("")
+        : `<span class="missing-statement">/</span>`;
+    }
+
+    function renderTimeline(company) {
+      const timeline = document.querySelector("#timelineList");
+      const history = company.history || [];
+      timeline.innerHTML = history.length ? history.slice().reverse().map(item => `
+        <div class="timeline-item">
+          <div class="timeline-date">${escapeHtml(item.date)}</div>
+          <div class="timeline-main">
+            <strong>${escapeHtml(item.changeType || "record")} · ${escapeHtml(item.classification || company.classification || company.typeLabel)}</strong>
+            <p>${escapeHtml(item.note || "已记录版本，点击查看详情。")}</p>
+            <a href="${escapeHtml(item.file)}" target="_blank" rel="noreferrer">查看版本记录</a>
+          </div>
+        </div>
+      `).join("") : `<div class="empty">暂无版本记录。</div>`;
+    }
+
+    function renderCandidates(company) {
+      const candidateList = document.querySelector("#candidateList");
+      const candidates = company.candidates || [];
+      candidateList.innerHTML = candidates.length ? candidates.slice().reverse().map(item => {
+        const mainText = item.raw_mission || item.raw_values || item.raw_vision || "待人工摘录";
+        return `
+          <div class="candidate-item">
+            <strong>${escapeHtml(item.published_date || item.found_at || "待定日期")} · ${escapeHtml(item.source_level || "未分级")} · ${escapeHtml(item.source_type || "source")}</strong>
+            <a href="${escapeHtml(item.source_url)}" target="_blank" rel="noreferrer">${escapeHtml(item.source_title || item.candidate_id)}</a>
+            <p>${escapeHtml(mainText)}</p>
+            <p>建议动作：${escapeHtml(item.recommended_action || "needs_more_sources")} · 状态：${escapeHtml(item.status || "candidate")}</p>
+          </div>
+        `;
+      }).join("") : `<div class="empty">暂无历史候选来源。</div>`;
+    }
+
+    function selectCompany(id) {
+      selectedId = id;
+      const company = companies.find(item => item.id === selectedId) || companies[0];
+      const logo = document.querySelector("#companyLogo");
+      if (company.logo) {
+        logo.src = company.logo;
+        logo.alt = `${company.name} logo`;
+        logo.hidden = false;
+      } else {
+        logo.removeAttribute("src");
+        logo.alt = "";
+        logo.hidden = true;
+      }
+
+      setText("#companyTitle", company.name);
+      setText("#companySubtitle", `${company.en} · ${company.region} · ${company.industry}`);
+      setText("#companyNote", company.research);
+      setStatement("#missionText", company.mission);
+      setStatement("#visionText", company.vision);
+      setStatement("#valuesText", company.values, { values: true });
+      setText("#otherText", company.other);
+      setText("#researchText", company.research);
+      setText("#reviewedAt", `确认日期 ${company.reviewed}`);
+      setText("#confidence", `可信度 ${company.confidence}`);
+
+      const status = document.querySelector("#statusBadge");
+      status.textContent = company.typeLabel;
+      status.className = `status ${statusClass(company.type)}`;
+
+      renderOfficialSources(company);
+
+      const profile = document.querySelector("#profileLink");
+      profile.href = company.profile;
+      profile.textContent = company.profile;
+
+      const version = document.querySelector("#versionLink");
+      version.href = company.version;
+      version.textContent = company.version || "暂无版本记录";
+      version.toggleAttribute("aria-disabled", !company.version);
+
+      const visual = document.querySelector("#evidenceVisual");
+      visual.innerHTML = company.evidence
+        ? `<img class="shot" src="${company.evidence}" alt="${company.name} 官方页面证据截图">`
+        : `<div class="shot-placeholder">该条目暂未留存截图<br>请以官方来源与版本记录为准</div>`;
+
+      renderTimeline(company);
+      renderCandidates(company);
+
+      document.querySelectorAll(".company-button").forEach(button => {
+        button.classList.toggle("active", button.dataset.id === selectedId);
+      });
+    }
+
+    function render() {
+      const list = visibleCompanies();
+      visibleCount.textContent = `${list.length}`;
+      if (!list.some(company => company.id === selectedId) && list.length) {
+        selectedId = list[0].id;
+      }
+
+      listEl.innerHTML = list.length ? list.map(company => `
+        <button class="company-button ${company.id === selectedId ? "active" : ""}" type="button" data-id="${escapeHtml(company.id)}">
+          <strong>${escapeHtml(company.name)}</strong>
+          <span>${escapeHtml(company.en)} · ${escapeHtml(company.typeLabel)}</span>
+        </button>
+      `).join("") : `<div class="empty">没有匹配的企业。</div>`;
+
+      compareRows.innerHTML = list.map(company => `
+        <tr>
+          <td><a href="#" data-compare-id="${escapeHtml(company.id)}">${escapeHtml(company.name)}</a><br><span class="tag">${escapeHtml(company.en)}</span></td>
+          <td><span class="status ${statusClass(company.type)}">${escapeHtml(company.typeLabel)}</span></td>
+          <td>${statementHtml(company.mission)}</td>
+          <td>${statementHtml(company.vision)}</td>
+          <td>${statementHtml(company.values, { values: true })}</td>
+        </tr>
+      `).join("");
+
+      document.querySelectorAll(".company-button").forEach(button => {
+        button.addEventListener("click", () => selectCompany(button.dataset.id));
+      });
+      document.querySelectorAll("[data-compare-id]").forEach(link => {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          selectCompany(link.dataset.compareId);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+
+      if (list.length) {
+        selectCompany(selectedId);
+      }
+    }
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        filterButtons.forEach(item => item.classList.toggle("active", item === button));
+        render();
+      });
+    });
+
+    searchInput.addEventListener("input", render);
+    render();
+  </script>
+</body>
+</html>

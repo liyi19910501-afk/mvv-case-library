@@ -1,0 +1,12 @@
+{
+  "source_url": "https://www.oppo.com/en/about/",
+  "source_note": "OPPO About header logo",
+  "capture_method": "in_app_browser_header_crop",
+  "clip": {
+    "x": 28,
+    "y": 16,
+    "width": 112,
+    "height": 42
+  },
+  "captured_at": "2026-05-15T15:33:20.320Z"
+}

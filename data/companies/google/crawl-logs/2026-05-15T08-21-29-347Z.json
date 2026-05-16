@@ -1,0 +1,59 @@
+{
+  "company_id": "google",
+  "captured_at": "2026-05-15T08:21:29.347Z",
+  "change_status": "new",
+  "comparison": {
+    "change_status": "new",
+    "previous_hash": "",
+    "next_hash": "93d8e579ef1c31bb3f2c6e5304c79ebe986abc3fb2c4999f236dda28aa6ac843",
+    "changed_fields": [
+      "mission"
+    ]
+  },
+  "current": {
+    "company_id": "google",
+    "company_name_cn": "谷歌",
+    "company_name_en": "Google",
+    "captured_at": "2026-05-15T08:21:29.347Z",
+    "captured_date": "2026-05-15",
+    "primary_language": "en",
+    "classification": "partial_mvv",
+    "structured": {
+      "mission": "Our mission is to organize the world’s information and make it universally accessible and useful.",
+      "vision": "",
+      "values": [],
+      "raw_terms": {
+        "mission": "profile_verified"
+      }
+    },
+    "normalized_mvv_hash": "93d8e579ef1c31bb3f2c6e5304c79ebe986abc3fb2c4999f236dda28aa6ac843",
+    "source_urls": [
+      {
+        "url": "https://about.google/intl/en_us/company-info/",
+        "final_url": "https://about.google/intl/en_us/company-info/",
+        "title": "About Google: History, office locations, commitments, initiatives - About Google",
+        "status": 200,
+        "text_length": 2550
+      }
+    ],
+    "evidence_assets": [
+      "evidence/2026-05-15/page-text-about-google-history-office-locations-commitments-initiatives-about-go.txt",
+      "evidence/2026-05-15/mission-about-google-history-office-locations-commitments-initiatives-about-go.png",
+      "evidence/2026-05-15/metadata.json"
+    ],
+    "confidence_level": "high",
+    "review_status": "reviewed",
+    "analyst_note": "谷歌 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。"
+  },
+  "sources": [
+    {
+      "url": "https://about.google/intl/en_us/company-info/",
+      "final_url": "https://about.google/intl/en_us/company-info/",
+      "status": 200,
+      "ok": true,
+      "title": "About Google: History, office locations, commitments, initiatives - About Google",
+      "text_length": 2550,
+      "error": ""
+    }
+  ]
+}

@@ -1,0 +1,795 @@
+{
+  "generated_at": "2026-05-16T02:04:32.246Z",
+  "companies": [
+    {
+      "id": "anker-innovations",
+      "name": "安克创新",
+      "en": "Anker Innovations",
+      "region": "China",
+      "industry": "Consumer Electronics / Brand Company",
+      "type": "complete",
+      "typeLabel": "标准 MVV",
+      "classification": "standard_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-15",
+      "capturedAt": "2026-05-15T08:21:26.465Z",
+      "mission": "极致创新，激发可能",
+      "vision": "搭建一个互相激发的创造者乐园，成为全球消费者热爱的品牌",
+      "values": "第一性；求极致；共成长",
+      "research": "安克创新 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。",
+      "source": "https://www.anker.com.cn/story",
+      "sourceTitle": "关于我们 - 安克创新",
+      "officialSources": [
+        {
+          "url": "https://www.anker.com.cn/story",
+          "title": "关于我们 - 安克创新",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.anker.com.cn/pages/about?locale=zh-CN",
+          "title": "",
+          "level": "official",
+          "type": "profile"
+        },
+        {
+          "url": "https://www.anker.com.cn/pages/5-about",
+          "title": "",
+          "level": "official",
+          "type": "profile"
+        },
+        {
+          "url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223379891.PDF#page=10",
+          "title": "安克创新 2024 年年度报告",
+          "level": "A",
+          "type": "annual_report"
+        }
+      ],
+      "logo": "data/companies/anker-innovations/assets/logo.svg",
+      "logoSource": "https://www.anker.com.cn/story",
+      "profile": "data/companies/anker-innovations/profile.md",
+      "version": "data/companies/anker-innovations/versions/2026-05-15-current.md",
+      "evidence": "data/companies/anker-innovations/evidence/2026-05-15/mission-关于我们-安克创新.png",
+      "evidenceAssets": [
+        "data/companies/anker-innovations/evidence/2026-05-15/page-text-关于我们-安克创新.txt",
+        "data/companies/anker-innovations/evidence/2026-05-15/mission-关于我们-安克创新.png",
+        "data/companies/anker-innovations/evidence/2026-05-15/vision-关于我们-安克创新.png",
+        "data/companies/anker-innovations/evidence/2026-05-15/values-关于我们-安克创新.png",
+        "data/companies/anker-innovations/evidence/2026-05-15/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2024-12-31",
+          "changeType": "update",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "standard_mvv",
+          "sourceTitle": "安克创新 2024 年年度报告",
+          "sourceUrl": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223379891.PDF#page=10",
+          "note": "安克这次表述把“创新”从产品能力提升为组织使命，并用“创造者乐园”定义组织形态，说明公司文化叙事从单一硬件品牌走向全球化、多品类、人才与组织机制共同驱动的阶段。",
+          "file": "data/companies/anker-innovations/versions/2024-12-31-annual-report-mvv-upgrade.md"
+        },
+        {
+          "date": "2026-05-05",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "",
+          "sourceTitle": "关于我们 - 安克创新",
+          "sourceUrl": "https://www.anker.com.cn/pages/about?locale=zh-CN",
+          "note": "本条仅记录当前官方页面可直接确认的文本",
+          "file": "data/companies/anker-innovations/versions/2026-05-05-current.md"
+        },
+        {
+          "date": "2026-05-15",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "standard_mvv",
+          "sourceTitle": "关于我们 - 安克创新",
+          "sourceUrl": "https://www.anker.com.cn/story",
+          "note": "安克创新 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。",
+          "file": "data/companies/anker-innovations/versions/2026-05-15-current.md"
+        }
+      ],
+      "candidates": [
+        {
+          "candidate_id": "anker-2024-annual-report-mvv",
+          "found_at": "2026-05-15",
+          "source_level": "A",
+          "source_type": "annual_report",
+          "source_title": "安克创新 2024 年年度报告",
+          "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223379891.PDF#page=10",
+          "source_org": "安克创新科技股份有限公司",
+          "published_date": "2025-04-29",
+          "language": "zh",
+          "raw_mission": "极致创新，激发可能",
+          "raw_vision": "搭建一个互相激发的创造者乐园，成为全球消费者热爱的品牌",
+          "raw_values": "第一性；求极致；共成长",
+          "verification_note": "官方年度报告披露 2024 年组织使命与愿景升级，是当前官网 MVV 的高可信历史锚点。",
+          "recommended_action": "create_version",
+          "status": "promoted"
+        }
+      ]
+    },
+    {
+      "id": "china-resources-group",
+      "name": "华润集团",
+      "en": "China Resources Group",
+      "region": "China",
+      "industry": "Conglomerate / Service and Consumer Ecosystem",
+      "type": "complete",
+      "typeLabel": "标准 MVV",
+      "classification": "standard_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-05",
+      "capturedAt": "2026-05-05T00:00:00.000Z",
+      "mission": "引领商业进步 共创美好生活",
+      "vision": "成为大众信赖和喜爱的世界一流企业",
+      "values": "诚实守信；业绩导向；以人为本；合作共赢",
+      "research": "华润集团 当前官方表述基线；当前记录以官方新闻与企业文化体系页面交叉确认。",
+      "source": "https://winfo.crc.com.cn/news/crc_dynamic/2024-12-17/1544976.html",
+      "sourceTitle": "华润官方新闻：使命表述交叉确认",
+      "officialSources": [
+        {
+          "url": "https://winfo.crc.com.cn/news/crc_dynamic/2024-12-17/1544976.html",
+          "title": "华润官方新闻：使命表述交叉确认",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://prepsite.crc.com.cn/site_36/sw_culture/index.html",
+          "title": "华润企业文化理念体系",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://winfo.crc.com.cn/news/crc_dynamic/2016-04-15/1180471.html",
+          "title": "华润集团举办企业文化理念体系发布会",
+          "level": "official",
+          "type": "current"
+        }
+      ],
+      "logo": "data/companies/china-resources-group/assets/logo.png",
+      "logoSource": "https://winfo.crc.com.cn/news/crc_dynamic/2016-04-15/1180471.html",
+      "profile": "data/companies/china-resources-group/profile.md",
+      "version": "data/companies/china-resources-group/versions/2026-05-05-current.md",
+      "evidence": "data/companies/china-resources-group/evidence/2026-05-15/candidates/china-resources-2016-culture-system/screenshot-华润集团欢迎您-中国华润有限公司.png",
+      "evidenceAssets": [],
+      "history": [
+        {
+          "date": "2016-04-15",
+          "changeType": "update",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "standard_mvv",
+          "sourceTitle": "华润集团举办企业文化理念体系发布会",
+          "sourceUrl": "https://winfo.crc.com.cn/news/crc_dynamic/2016-04-15/1180471.html",
+          "note": "2016 版文化体系服务于“十三五”战略落地，重点是全球化、创新发展和组织协同。与当前“世界一流企业”和“合作共赢”相比，后续表达明显从规模全球化转向信任、品质与生态关系。",
+          "file": "data/companies/china-resources-group/versions/2016-04-15-culture-system.md"
+        },
+        {
+          "date": "2026-05-05",
+          "changeType": "new",
+          "confidence": "medium",
+          "reviewStatus": "reviewed",
+          "classification": "",
+          "sourceTitle": "华润企业文化理念体系 / 华润官方新闻",
+          "sourceUrl": "https://winfo.crc.com.cn/news/crc_dynamic/2024-12-17/1544976.html",
+          "note": "当前使命表述已被 2024 华润官方新闻再次确认，整套理念体系待浏览器复核后再升为 confirmed",
+          "file": "data/companies/china-resources-group/versions/2026-05-05-current.md"
+        }
+      ],
+      "candidates": [
+        {
+          "candidate_id": "china-resources-2016-culture-system",
+          "found_at": "2026-05-15",
+          "source_level": "A",
+          "source_type": "official_news",
+          "source_title": "华润集团举办企业文化理念体系发布会",
+          "source_url": "https://winfo.crc.com.cn/news/crc_dynamic/2016-04-15/1180471.html",
+          "source_org": "华润集团",
+          "published_date": "2016-04-15",
+          "language": "zh",
+          "raw_mission": "引领商业进步，共创美好生活",
+          "raw_vision": "成为最受大众信赖和喜爱的全球化企业",
+          "raw_values": "诚实守信；业绩导向；以人为本；创新发展",
+          "verification_note": "华润官方新闻完整列出 2016 年文化理念体系，可作为当前版本之前的重要正式历史版本。",
+          "recommended_action": "create_version",
+          "status": "promoted"
+        }
+      ]
+    },
+    {
+      "id": "google",
+      "name": "谷歌",
+      "en": "Google",
+      "region": "United States",
+      "industry": "Brand / Technology",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-15",
+      "capturedAt": "2026-05-15T08:21:29.347Z",
+      "mission": "Our mission is to organize the world’s information and make it universally accessible and useful.",
+      "vision": "当前 reviewed 官方页面未单列 `Vision` 字段。",
+      "values": "当前 reviewed 官方页面未单列 `Values` 字段。",
+      "research": "谷歌 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+      "source": "https://about.google/intl/en_us/company-info/",
+      "sourceTitle": "About Google: History, office locations, commitments, initiatives - About Google",
+      "officialSources": [
+        {
+          "url": "https://about.google/intl/en_us/company-info/",
+          "title": "About Google: History, office locations, commitments, initiatives - About Google",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://about.google/company-info/our-story/",
+          "title": "How we started and where we are today - Google - About Google",
+          "level": "A",
+          "type": "official_history"
+        }
+      ],
+      "logo": "data/companies/google/assets/logo.svg",
+      "logoSource": "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg",
+      "profile": "data/companies/google/profile.md",
+      "version": "data/companies/google/versions/2026-05-15-current.md",
+      "evidence": "data/companies/google/evidence/2026-05-15/mission-about-google-history-office-locations-commitments-initiatives-about-go.png",
+      "evidenceAssets": [
+        "data/companies/google/evidence/2026-05-15/page-text-about-google-history-office-locations-commitments-initiatives-about-go.txt",
+        "data/companies/google/evidence/2026-05-15/mission-about-google-history-office-locations-commitments-initiatives-about-go.png",
+        "data/companies/google/evidence/2026-05-15/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "1998-09-04",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "partial_mvv",
+          "sourceTitle": "How we started and where we are today - Google - About Google",
+          "sourceUrl": "https://about.google/company-info/our-story/",
+          "note": "Google 的历史 mission 与当前 mission 在核心语义上高度连续，说明其最稳定的文化资产不是价值观清单，而是“组织信息并让其普遍可用”的长期问题定义。后续跟踪重点应放在 mission 是否被 AI、产品生态或责任叙事重新解释，而不是期待其标准化补出 Vision / Values。",
+          "file": "data/companies/google/versions/1998-09-04-founding-mission.md"
+        },
+        {
+          "date": "2026-05-05",
+          "changeType": "record",
+          "confidence": "",
+          "reviewStatus": "",
+          "classification": "",
+          "sourceTitle": "About Google: History, office locations, commitments, initiatives - About Google",
+          "sourceUrl": "https://about.google/intl/en_us/company-info/",
+          "note": "",
+          "file": "data/companies/google/versions/2026-05-05-current.md"
+        },
+        {
+          "date": "2026-05-15",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "partial_mvv",
+          "sourceTitle": "About Google: History, office locations, commitments, initiatives - About Google",
+          "sourceUrl": "https://about.google/intl/en_us/company-info/",
+          "note": "谷歌 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+          "file": "data/companies/google/versions/2026-05-15-current.md"
+        }
+      ],
+      "candidates": [
+        {
+          "candidate_id": "google-1998-founding-mission",
+          "found_at": "2026-05-15",
+          "source_level": "A",
+          "source_type": "official_history",
+          "source_title": "How we started and where we are today",
+          "source_url": "https://about.google/company-info/our-story/",
+          "source_org": "Google",
+          "published_date": "1998",
+          "language": "en",
+          "raw_mission": "to organize the world’s information and make it universally accessible and useful",
+          "raw_vision": "",
+          "raw_values": "",
+          "verification_note": "Official Google history page links the founding story to Larry and Sergey’s mission. Treat as a high-confidence historical anchor for the mission wording, but add screenshot evidence before promoting to confirmed version.",
+          "recommended_action": "create_version",
+          "status": "promoted"
+        }
+      ]
+    },
+    {
+      "id": "ikea",
+      "name": "宜家",
+      "en": "IKEA",
+      "region": "Global",
+      "industry": "Retail / Home Furnishing",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-05",
+      "capturedAt": "2026-05-05T00:00:00.000Z",
+      "mission": "当前官方页面未单列 `Mission` 字段。",
+      "vision": "To create a better everyday life for the many people.",
+      "values": "Togetherness；Caring for people and planet；Cost-consciousness；Simplicity；Renew and improve；Different with a meaning；Give and take responsibility；Lead by example.",
+      "research": "宜家 当前官方表述基线；官方页面提供 vision 与 values，mission 空缺。",
+      "source": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+      "sourceTitle": "The IKEA vision and values",
+      "officialSources": [
+        {
+          "url": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+          "title": "The IKEA vision and values",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.ikea.com/global/en/stories/our-roots/ingvar-kamprad-100-years-260330/",
+          "title": "One man, One vision, 100 years",
+          "level": "A",
+          "type": "official_history"
+        }
+      ],
+      "logo": "data/companies/ikea/assets/logo.png",
+      "logoSource": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+      "profile": "data/companies/ikea/profile.md",
+      "version": "data/companies/ikea/versions/2026-05-05-current.md",
+      "evidence": "data/companies/ikea/assets/2026-05-15-current-vision-values.png",
+      "evidenceAssets": [
+        "data/companies/ikea/assets/2026-05-15-current-vision-values.png"
+      ],
+      "history": [
+        {
+          "date": "1976-01-01",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "partial_mvv",
+          "sourceTitle": "One man, One vision, 100 years",
+          "sourceUrl": "https://www.ikea.com/global/en/stories/our-roots/ingvar-kamprad-100-years-260330/",
+          "note": "IKEA 的核心连续性很强：从创始语境到当前官网，中心始终是“many people”的日常生活改善。这是一种高度稳定的社会普惠型愿景，后续价值观更像围绕该愿景展开的组织行为规范。",
+          "file": "data/companies/ikea/versions/1976-01-01-founder-vision.md"
+        },
+        {
+          "date": "2026-05-05",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "partial_mvv",
+          "sourceTitle": "The IKEA vision and values",
+          "sourceUrl": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+          "note": "",
+          "file": "data/companies/ikea/versions/2026-05-05-current.md"
+        }
+      ],
+      "candidates": [
+        {
+          "candidate_id": "ikea-1976-testament-vision-principles",
+          "found_at": "2026-05-15",
+          "source_level": "A",
+          "source_type": "official_history",
+          "source_title": "One man, One vision, 100 years",
+          "source_url": "https://www.ikea.com/global/en/stories/our-roots/ingvar-kamprad-100-years-260330/",
+          "source_org": "Inter IKEA Systems B.V.",
+          "published_date": "2026-03-30",
+          "language": "en",
+          "raw_mission": "",
+          "raw_vision": "To contribute to a better everyday life for the many people",
+          "raw_values": "",
+          "verification_note": "Official IKEA history story. Use it as a high-confidence historical anchor for the founding vision; do not promote exact 1976 values until the PDF can be captured without Cloudflare blocking.",
+          "recommended_action": "create_version",
+          "status": "promoted"
+        }
+      ]
+    },
+    {
+      "id": "nike",
+      "name": "耐克",
+      "en": "Nike",
+      "region": "United States",
+      "industry": "Brand / Sportswear",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-05",
+      "capturedAt": "2026-05-05T00:00:00.000Z",
+      "mission": "TO BRING INSPIRATION AND INNOVATION TO EVERY ATHLETE* IN THE WORLD.",
+      "vision": "当前 reviewed 官方页面未单列 `Vision` 字段。",
+      "values": "当前 reviewed 官方页面未单列 `Values` 字段。",
+      "research": "耐克 当前官方表述基线；官方 mission 页提供使命表述，vision 与 values 空缺。",
+      "source": "https://about.nike.com/en/mission",
+      "sourceTitle": "Nike - Mission — NIKE, Inc.",
+      "officialSources": [
+        {
+          "url": "https://about.nike.com/en/mission",
+          "title": "Nike - Mission — NIKE, Inc.",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018721000028/nke-20210531.htm",
+          "title": "NIKE, Inc. 2021 Form 10-K",
+          "level": "A",
+          "type": "sec_filing"
+        }
+      ],
+      "logo": "data/companies/nike/assets/logo.svg",
+      "logoSource": "https://commons.wikimedia.org/wiki/File:Nike_wordmark.svg",
+      "profile": "data/companies/nike/profile.md",
+      "version": "data/companies/nike/versions/2026-05-05-current.md",
+      "evidence": "data/companies/nike/assets/2026-05-05-current-mission.png",
+      "evidenceAssets": [
+        "data/companies/nike/assets/2026-05-05-current-mission.png"
+      ],
+      "history": [
+        {
+          "date": "2021-07-20",
+          "changeType": "record",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "partial_mvv",
+          "sourceTitle": "NIKE, Inc. 2021 Form 10-K",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320187/000032018721000028/nke-20210531.htm",
+          "note": "Nike 的使命表述在 2021 到当前之间保持稳定，说明核心品牌角色没有明显改写：仍以 athlete 的广义定义扩展目标人群。真正变化更可能发生在执行议题上，如可持续、多元团队和社区影响，而不是使命句本身。",
+          "file": "data/companies/nike/versions/2021-07-20-form-10-k-mission.md"
+        },
+        {
+          "date": "2026-05-05",
+          "changeType": "record",
+          "confidence": "",
+          "reviewStatus": "",
+          "classification": "",
+          "sourceTitle": "Nike - Mission — NIKE, Inc.",
+          "sourceUrl": "https://about.nike.com/en/mission",
+          "note": "",
+          "file": "data/companies/nike/versions/2026-05-05-current.md"
+        }
+      ],
+      "candidates": [
+        {
+          "candidate_id": "nike-2021-annual-report-mission",
+          "found_at": "2026-05-15",
+          "source_level": "A",
+          "source_type": "sec_filing",
+          "source_title": "NIKE, Inc. 2021 Form 10-K",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/320187/000032018721000028/nke-20210531.htm",
+          "source_org": "NIKE, Inc. / U.S. SEC",
+          "published_date": "2021-07-20",
+          "language": "en",
+          "raw_mission": "Our mission is to bring inspiration and innovation to every athlete in the world.",
+          "raw_vision": "",
+          "raw_values": "",
+          "verification_note": "SEC-hosted official 10-K filing confirms the mission wording before the current 2026 capture. Values are referenced as Maxims but not enumerated on the page, so this remains a partial MVV record.",
+          "recommended_action": "create_version",
+          "status": "promoted"
+        }
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "en": "OpenAI",
+      "region": "United States",
+      "industry": "AI Brand / Foundation Model",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-05",
+      "capturedAt": "2026-05-05T00:00:00.000Z",
+      "mission": "Our mission is to ensure that artificial general intelligence benefits all of humanity.",
+      "vision": "当前官方页面使用了 `Our vision for the future of AGI` 作为节标题，但未提供独立的 vision sentence。",
+      "values": "当前 reviewed 官方页面未单列 `Values` 字段。",
+      "research": "OpenAI 当前官方表述基线；About 页面提供 mission，vision 与 values 空缺。",
+      "source": "https://openai.com/about/",
+      "sourceTitle": "About | OpenAI",
+      "officialSources": [
+        {
+          "url": "https://openai.com/about/",
+          "title": "About | OpenAI",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://openai.com/charter/",
+          "title": "OpenAI Charter",
+          "level": "A",
+          "type": "official_charter"
+        },
+        {
+          "url": "https://openai.com/index/introducing-openai/",
+          "title": "Introducing OpenAI",
+          "level": "A",
+          "type": "official_blog"
+        }
+      ],
+      "logo": "data/companies/openai/assets/logo.svg",
+      "logoSource": "https://commons.wikimedia.org/wiki/File:OpenAI_logo_2025_(symbol).svg",
+      "profile": "data/companies/openai/profile.md",
+      "version": "data/companies/openai/versions/2026-05-05-current.md",
+      "evidence": "data/companies/openai/assets/2026-05-05-current-about.png",
+      "evidenceAssets": [
+        "data/companies/openai/assets/2026-05-05-current-about.png"
+      ],
+      "history": [
+        {
+          "date": "2015-12-11",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "partial_mvv",
+          "sourceTitle": "Introducing OpenAI",
+          "sourceUrl": "https://openai.com/index/introducing-openai/",
+          "note": "OpenAI 2015 年的表述重点是“推进数字智能并使其整体有益于人类”，组织形态上强调非营利和不受财务回报约束。这一阶段的文化核心更像研究机构的公共利益承诺，而不是后来围绕 AGI 安全与治理展开的正式 mission/principles 体系。",
+          "file": "data/companies/openai/versions/2015-12-11-founding-goal.md"
+        },
+        {
+          "date": "2018-04-09",
+          "changeType": "update",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "partial_mvv",
+          "sourceTitle": "OpenAI Charter",
+          "sourceUrl": "https://openai.com/charter/",
+          "note": "2018 Charter 是 OpenAI 使命表达的一次结构化升级：对象从较宽泛的“digital intelligence”收束为 AGI，责任对象仍是 humanity，但执行逻辑转向安全、技术领导与合作导向。这说明 OpenAI 的文化表述从研究理想进入了治理约束与长期风险管理框架。",
+          "file": "data/companies/openai/versions/2018-04-09-charter-mission.md"
+        },
+        {
+          "date": "2026-05-05",
+          "changeType": "record",
+          "confidence": "",
+          "reviewStatus": "",
+          "classification": "",
+          "sourceTitle": "About | OpenAI",
+          "sourceUrl": "https://openai.com/about/",
+          "note": "",
+          "file": "data/companies/openai/versions/2026-05-05-current.md"
+        }
+      ],
+      "candidates": [
+        {
+          "candidate_id": "openai-2015-founding-goal",
+          "found_at": "2026-05-15",
+          "source_level": "A",
+          "source_type": "official_blog",
+          "source_title": "Introducing OpenAI",
+          "source_url": "https://openai.com/index/introducing-openai/",
+          "source_org": "OpenAI",
+          "published_date": "2015-12-11",
+          "language": "en",
+          "raw_mission": "advance digital intelligence in the way that is most likely to benefit humanity as a whole",
+          "raw_vision": "",
+          "raw_values": "",
+          "verification_note": "Official founding announcement. This is an early goal statement rather than the later AGI mission wording. Add screenshot evidence before confirmed promotion.",
+          "recommended_action": "create_version",
+          "status": "promoted"
+        },
+        {
+          "candidate_id": "openai-2018-charter-mission",
+          "found_at": "2026-05-15",
+          "source_level": "A",
+          "source_type": "official_charter",
+          "source_title": "OpenAI Charter",
+          "source_url": "https://openai.com/charter/",
+          "source_org": "OpenAI",
+          "published_date": "2018-04-09",
+          "language": "en",
+          "raw_mission": "ensure that artificial general intelligence benefits all of humanity",
+          "raw_vision": "",
+          "raw_values": "Broadly distributed benefits; Long-term safety; Technical leadership; Cooperative orientation",
+          "verification_note": "Official Charter. Publication date is supported by OpenAI policy/legal citations; capture page evidence before confirmed promotion.",
+          "recommended_action": "create_version",
+          "status": "promoted"
+        }
+      ]
+    },
+    {
+      "id": "oppo",
+      "name": "OPPO",
+      "en": "OPPO",
+      "region": "China",
+      "industry": "Consumer Electronics / Smartphone Brand",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-05",
+      "capturedAt": "2026-05-05T00:00:00.000Z",
+      "mission": "OPPO empowers everyone to create and embrace the beauty of life by cutting-edge technology, paving the way for freedom and fulfilment.",
+      "vision": "当前官网未单列 `Vision` 标签。",
+      "values": "\"Benfen\" is our core value and unwavering belief, user-centricity is our rock-solid principle and a passion for creating is our continuous driving force.",
+      "research": "OPPO 当前官方表述基线；当前页面以品牌叙事表达 mission 与 core value，vision 空缺。",
+      "source": "https://www.oppo.com/en/about/",
+      "sourceTitle": "About OPPO",
+      "officialSources": [
+        {
+          "url": "https://www.oppo.com/en/about/",
+          "title": "About OPPO",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.oppo.com/en/newsroom/press/oppo-showcases-three-concept-products-at-inno-day-2020/",
+          "title": "OPPO Showcases Three Concept Products at INNO DAY 2020",
+          "level": "A",
+          "type": "official_press_release"
+        }
+      ],
+      "logo": "data/companies/oppo/assets/logo.svg",
+      "logoSource": "https://commons.wikimedia.org/wiki/File:Oppo_(2019).svg",
+      "profile": "data/companies/oppo/profile.md",
+      "version": "data/companies/oppo/versions/2026-05-05-current.md",
+      "evidence": "data/companies/oppo/assets/2026-05-15-current-about.png",
+      "evidenceAssets": [
+        "data/companies/oppo/assets/2026-05-15-current-about.png"
+      ],
+      "history": [
+        {
+          "date": "2020-11-17",
+          "changeType": "update",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "partial_mvv",
+          "sourceTitle": "OPPO Showcases Three Concept Products at INNO DAY 2020",
+          "sourceUrl": "https://www.oppo.com/en/newsroom/press/oppo-showcases-three-concept-products-at-inno-day-2020/",
+          "note": "2020 年 OPPO 把使命表达从产品能力推进到“人本科技”和善意创新，说明品牌叙事开始服务于更大的技术生态战略，而不仅是手机硬件。它也解释了当前官网为何更像品牌信念叙事，而非传统 MVV 列表。",
+          "file": "data/companies/oppo/versions/2020-11-17-brand-mission.md"
+        },
+        {
+          "date": "2026-05-05",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "",
+          "sourceTitle": "About OPPO",
+          "sourceUrl": "https://www.oppo.com/en/about/",
+          "note": "本条只记录当前官网可直接确认的原文，不将其强行改写成标准 MVV",
+          "file": "data/companies/oppo/versions/2026-05-05-current.md"
+        }
+      ],
+      "candidates": [
+        {
+          "candidate_id": "oppo-2020-brand-mission",
+          "found_at": "2026-05-15",
+          "source_level": "A",
+          "source_type": "official_press_release",
+          "source_title": "OPPO Showcases Three Concept Products at INNO DAY 2020",
+          "source_url": "https://www.oppo.com/en/newsroom/press/oppo-showcases-three-concept-products-at-inno-day-2020/",
+          "source_org": "OPPO",
+          "published_date": "2020-11-17",
+          "language": "en",
+          "raw_mission": "Technology for Mankind, Kindness for the World",
+          "raw_vision": "",
+          "raw_values": "",
+          "verification_note": "Official OPPO press release. Treat brand mission as Mission/Purpose under the simplified MVV rule; do not infer a separate Vision.",
+          "recommended_action": "create_version",
+          "status": "promoted"
+        }
+      ]
+    },
+    {
+      "id": "patagonia",
+      "name": "巴塔哥尼亚",
+      "en": "Patagonia",
+      "region": "United States",
+      "industry": "Brand / Outdoor Apparel",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-15",
+      "capturedAt": "2026-05-15T00:00:00.000Z",
+      "mission": "We're in business to save our home planet.",
+      "vision": "当前 reviewed 官方页面未单列 `Vision` 字段。",
+      "values": "Quality；Integrity；Environmentalism；Justice；Not bound by convention.",
+      "research": "巴塔哥尼亚 当前官方表述基线；mission 与 core values 分别来自两个官方页面。",
+      "source": "https://www.patagonia.com/footer-quote.html",
+      "sourceTitle": "Patagonia mission statement",
+      "officialSources": [
+        {
+          "url": "https://www.patagonia.com/footer-quote.html",
+          "title": "Patagonia mission statement",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.patagonia.com/core-values/",
+          "title": "Patagonia core values",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.patagonia.com/stories/planet/activism/how-were-reducing-our-carbon-footprint/story-74099.html",
+          "title": "How We’re Reducing Our Carbon Footprint",
+          "level": "A",
+          "type": "official_story"
+        }
+      ],
+      "logo": "data/companies/patagonia/assets/logo.svg",
+      "logoSource": "https://commons.wikimedia.org/wiki/File:Patagonia_(Unternehmen)_logo.svg",
+      "profile": "data/companies/patagonia/profile.md",
+      "version": "data/companies/patagonia/versions/2026-05-15-current.md",
+      "evidence": "data/companies/patagonia/evidence/2026-05-15/candidates/patagonia-2022-core-values-update/screenshot-core-values.png",
+      "evidenceAssets": [],
+      "history": [
+        {
+          "date": "2018",
+          "changeType": "update",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "partial_mvv",
+          "sourceTitle": "How We’re Reducing Our Carbon Footprint",
+          "sourceUrl": "https://www.patagonia.com/stories/planet/activism/how-were-reducing-our-carbon-footprint/story-74099.html",
+          "note": "2018 年的 mission change 把 Patagonia 的环境立场从品牌价值偏好推到企业存在理由层面。它不是普通口号更新，而是把商业活动的合法性绑定到“拯救家园星球”的公共议题上，为后续所有产品、供应链和行动主义叙事提供了最高层级的解释框架。",
+          "file": "data/companies/patagonia/versions/2018-mission-change.md"
+        },
+        {
+          "date": "2022",
+          "changeType": "update",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "partial_mvv",
+          "sourceTitle": "Our Core Values",
+          "sourceUrl": "https://www.patagonia.com/core-values/",
+          "note": "2022 年的核心价值观更新把 Patagonia 的价值观从传统产品/环保导向扩展到更明确的社会正义与反惯例表达。这与 2018 年使命升级相互呼应：使命给出最高目的，价值观则把组织在产品质量、环境责任、社会议题和商业非惯例路径上的行为边界说清楚。",
+          "file": "data/companies/patagonia/versions/2022-core-values-update.md"
+        },
+        {
+          "date": "2026-05-15",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "confirmed",
+          "classification": "",
+          "sourceTitle": "Patagonia Mission / Our Core Values",
+          "sourceUrl": "https://www.patagonia.com/footer-quote.html",
+          "note": "官网对无头浏览器会显示等待页；本轮使用 in-app browser 读取官方页面 DOM 后导出并截图留档，链接在真实浏览器中可访问。",
+          "file": "data/companies/patagonia/versions/2026-05-15-current.md"
+        }
+      ],
+      "candidates": [
+        {
+          "candidate_id": "patagonia-2018-mission-change",
+          "found_at": "2026-05-15",
+          "source_level": "A",
+          "source_type": "official_story",
+          "source_title": "How We’re Reducing Our Carbon Footprint",
+          "source_url": "https://www.patagonia.com/stories/planet/activism/how-were-reducing-our-carbon-footprint/story-74099.html",
+          "source_org": "Patagonia",
+          "published_date": "2019-09-18",
+          "language": "en",
+          "raw_mission": "We’re in business to save our home planet.",
+          "raw_vision": "",
+          "raw_values": "",
+          "verification_note": "Official Patagonia story explicitly dates the mission change to 2018. Add screenshot/PDF evidence before confirmed promotion.",
+          "recommended_action": "create_version",
+          "status": "promoted"
+        },
+        {
+          "candidate_id": "patagonia-2022-core-values-update",
+          "found_at": "2026-05-15",
+          "source_level": "A",
+          "source_type": "official_values_page",
+          "source_title": "Our Core Values",
+          "source_url": "https://www.patagonia.com/core-values/",
+          "source_org": "Patagonia",
+          "published_date": "2022",
+          "language": "en",
+          "raw_mission": "",
+          "raw_vision": "",
+          "raw_values": "Quality; Integrity; Environmentalism; Justice; Not bound by convention",
+          "verification_note": "Official Patagonia values page. Current version already records these values; use this candidate to anchor the 2022 change date after screenshot capture.",
+          "recommended_action": "create_version",
+          "status": "promoted"
+        }
+      ]
+    }
+  ]
+}

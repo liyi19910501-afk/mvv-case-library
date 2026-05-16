@@ -1,0 +1,12 @@
+{
+  "source_url": "https://about.nike.com/en/mission",
+  "source_note": "NIKE About header logo",
+  "capture_method": "in_app_browser_header_crop",
+  "clip": {
+    "x": 22,
+    "y": 12,
+    "width": 138,
+    "height": 46
+  },
+  "captured_at": "2026-05-15T15:32:55.835Z"
+}

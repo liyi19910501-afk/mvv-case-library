@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ikea",
+    "label": "IKEA vision and values",
+    "url": "https://www.ikea.com/us/en/this-is-ikea/about-us/the-ikea-vision-and-values-pub9aa779d0/",
+    "status": 200,
+    "ok": true,
+    "textFound": true,
+    "output": "data/companies/ikea/assets/2026-05-15-current-vision-values.png",
+    "elapsedMs": 20772
+  },
+  {
+    "id": "anker-innovations",
+    "label": "Anker mission vision values",
+    "url": "https://www.anker.com.cn/pages/about?locale=zh-CN",
+    "status": 200,
+    "ok": true,
+    "textFound": true,
+    "output": "data/companies/anker-innovations/assets/2026-05-15-current-about.png",
+    "elapsedMs": 11188
+  },
+  {
+    "id": "oppo",
+    "label": "OPPO about",
+    "url": "https://www.oppo.com/en/about/",
+    "status": 200,
+    "ok": true,
+    "textFound": false,
+    "output": "data/companies/oppo/assets/2026-05-15-current-about.png",
+    "elapsedMs": 23323
+  },
+  {
+    "id": "china-resources-group",
+    "label": "China Resources culture",
+    "url": "https://prepsite.crc.com.cn/site_36/sw_culture/index.html",
+    "status": 404,
+    "ok": false,
+    "textFound": false,
+    "output": "data/companies/china-resources-group/assets/2026-05-15-current-culture.png",
+    "elapsedMs": 6013
+  },
+  {
+    "id": "nike",
+    "label": "Nike mission",
+    "url": "https://about.nike.com/en/mission",
+    "status": 200,
+    "ok": true,
+    "textFound": true,
+    "output": "data/companies/nike/assets/2026-05-15-current-mission.png",
+    "elapsedMs": 8255
+  },
+  {
+    "id": "danone",
+    "label": "Danone mission",
+    "url": "https://www.danone.com/group/about-us/our-mission.html",
+    "status": 200,
+    "ok": true,
+    "textFound": true,
+    "output": "data/companies/danone/assets/2026-05-15-current-mission.png",
+    "elapsedMs": 8319
+  },
+  {
+    "id": "danone",
+    "label": "Danone vision",
+    "url": "https://www.danone.com/group/about-us.html",
+    "status": 200,
+    "ok": true,
+    "textFound": true,
+    "output": "data/companies/danone/assets/2026-05-15-current-vision.png",
+    "elapsedMs": 17656
+  },
+  {
+    "id": "danone",
+    "label": "Danone values",
+    "url": "https://www.danone.com/group/about-us/our-history.html",
+    "status": 200,
+    "ok": true,
+    "textFound": true,
+    "output": "data/companies/danone/assets/2026-05-15-current-values.png",
+    "elapsedMs": 8713
+  },
+  {
+    "id": "google",
+    "label": "Google mission",
+    "url": "https://about.google/intl/en_us/company-info/",
+    "status": 200,
+    "ok": true,
+    "textFound": false,
+    "output": "data/companies/google/assets/2026-05-15-current-mission.png",
+    "elapsedMs": 9624
+  },
+  {
+    "id": "openai",
+    "label": "OpenAI mission",
+    "url": "https://openai.com/about/",
+    "status": 403,
+    "ok": false,
+    "textFound": false,
+    "output": "data/companies/openai/assets/2026-05-15-current-about.png",
+    "elapsedMs": 17998
+  },
+  {
+    "id": "patagonia",
+    "label": "Patagonia mission",
+    "url": "https://www.patagonia.com/footer-quote.html",
+    "status": 200,
+    "ok": true,
+    "textFound": false,
+    "output": "data/companies/patagonia/assets/2026-05-15-current-mission.png",
+    "elapsedMs": 9391
+  },
+  {
+    "id": "patagonia",
+    "label": "Patagonia core values",
+    "url": "https://www.patagonia.com/core-values/",
+    "status": 200,
+    "ok": true,
+    "textFound": false,
+    "output": "data/companies/patagonia/assets/2026-05-15-current-core-values.png",
+    "elapsedMs": 7989
+  }
+]

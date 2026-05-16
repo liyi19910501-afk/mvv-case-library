@@ -1,0 +1,33 @@
+{
+  "company_id": "openai",
+  "company_name_cn": "OpenAI",
+  "company_name_en": "OpenAI",
+  "captured_at": "2026-05-05T00:00:00.000Z",
+  "captured_date": "2026-05-05",
+  "primary_language": "en",
+  "classification": "partial_mvv",
+  "structured": {
+    "mission": "Our mission is to ensure that artificial general intelligence benefits all of humanity.",
+    "vision": "",
+    "values": [],
+    "raw_terms": {
+      "mission": "version_verified"
+    }
+  },
+  "normalized_mvv_hash": "c21205ebe67029a7a12ad3768489714b5e94e953a910017bab925292715bd684",
+  "source_urls": [
+    {
+      "url": "https://openai.com/about/",
+      "final_url": "https://openai.com/about/",
+      "title": "About | OpenAI",
+      "status": null,
+      "text_length": 0
+    }
+  ],
+  "evidence_assets": [
+    "assets/2026-05-05-current-about.png"
+  ],
+  "confidence_level": "high",
+  "review_status": "reviewed",
+  "analyst_note": "OpenAI 当前官方表述基线；About 页面提供 mission，vision 与 values 空缺。"
+}

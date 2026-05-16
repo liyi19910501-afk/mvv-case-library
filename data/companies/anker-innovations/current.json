@@ -1,0 +1,43 @@
+{
+  "company_id": "anker-innovations",
+  "company_name_cn": "安克创新",
+  "company_name_en": "Anker Innovations",
+  "captured_at": "2026-05-15T08:21:26.465Z",
+  "captured_date": "2026-05-15",
+  "primary_language": "zh",
+  "classification": "standard_mvv",
+  "structured": {
+    "mission": "极致创新，激发可能",
+    "vision": "搭建一个互相激发的创造者乐园，成为全球消费者热爱的品牌",
+    "values": [
+      "第一性",
+      "求极致",
+      "共成长"
+    ],
+    "raw_terms": {
+      "mission": "profile_verified",
+      "vision": "profile_verified",
+      "values": "profile_verified"
+    }
+  },
+  "normalized_mvv_hash": "36ae50dae12d765f0c902b084a9ceed38c22557596f9f241efc676b2a04c96c5",
+  "source_urls": [
+    {
+      "url": "https://www.anker.com.cn/pages/about?locale=zh-CN",
+      "final_url": "https://www.anker.com.cn/story",
+      "title": "关于我们 - 安克创新",
+      "status": 200,
+      "text_length": 2119
+    }
+  ],
+  "evidence_assets": [
+    "evidence/2026-05-15/page-text-关于我们-安克创新.txt",
+    "evidence/2026-05-15/mission-关于我们-安克创新.png",
+    "evidence/2026-05-15/vision-关于我们-安克创新.png",
+    "evidence/2026-05-15/values-关于我们-安克创新.png",
+    "evidence/2026-05-15/metadata.json"
+  ],
+  "confidence_level": "high",
+  "review_status": "reviewed",
+  "analyst_note": "安克创新 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。"
+}
