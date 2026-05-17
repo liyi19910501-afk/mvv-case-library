@@ -3,6 +3,7 @@ company_id: "china-resources-group"
 company_name_cn: "华润集团"
 company_name_en: "China Resources Group"
 country_or_region: "China"
+category_label: "综合集团"
 industry_primary: "Conglomerate"
 industry_secondary: "Service and Consumer Ecosystem"
 pool_type: core

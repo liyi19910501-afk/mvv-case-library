@@ -3,6 +3,7 @@ company_id: "anker-innovations"
 company_name_cn: "安克创新"
 company_name_en: "Anker Innovations"
 country_or_region: "China"
+category_label: "消费品牌"
 industry_primary: "Consumer Electronics"
 industry_secondary: "Brand Company"
 pool_type: core

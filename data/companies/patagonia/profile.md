@@ -3,6 +3,7 @@ company_id: "patagonia"
 company_name_cn: "巴塔哥尼亚"
 company_name_en: "Patagonia"
 country_or_region: "United States"
+category_label: "运动/户外"
 industry_primary: "Brand"
 industry_secondary: "Outdoor Apparel"
 pool_type: core

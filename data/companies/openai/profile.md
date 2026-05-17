@@ -3,6 +3,7 @@ company_id: "openai"
 company_name_cn: "OpenAI"
 company_name_en: "OpenAI"
 country_or_region: "United States"
+category_label: "AI/科技"
 industry_primary: "AI Brand"
 industry_secondary: "Foundation Model"
 pool_type: core

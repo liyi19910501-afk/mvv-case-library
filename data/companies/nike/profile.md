@@ -3,6 +3,7 @@ company_id: "nike"
 company_name_cn: "耐克"
 company_name_en: "Nike"
 country_or_region: "United States"
+category_label: "运动/户外"
 industry_primary: "Brand"
 industry_secondary: "Sportswear"
 pool_type: core

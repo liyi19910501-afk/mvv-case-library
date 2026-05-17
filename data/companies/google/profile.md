@@ -3,6 +3,7 @@ company_id: "google"
 company_name_cn: "谷歌"
 company_name_en: "Google"
 country_or_region: "United States"
+category_label: "互联网/科技"
 industry_primary: "Brand"
 industry_secondary: "Technology"
 pool_type: core

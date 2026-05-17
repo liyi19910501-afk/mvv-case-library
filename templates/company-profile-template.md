@@ -3,6 +3,7 @@ company_id: ""
 company_name_cn: ""
 company_name_en: ""
 country_or_region: ""
+category_label: ""
 industry_primary: ""
 industry_secondary: ""
 pool_type: core
@@ -22,6 +23,7 @@ last_reviewed_at: ""
 - 公司中文名：
 - 公司英文名：
 - 国家/地区：
+- 公司大类：
 - 一级行业：
 - 二级行业：
 - 所属池：

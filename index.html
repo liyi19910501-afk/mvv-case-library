@@ -147,14 +147,21 @@
       color: var(--ink);
     }
 
-    .filter-row {
+    .filter-row,
+    .category-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       justify-content: flex-end;
     }
 
-    .filter-button {
+    .category-row {
+      grid-column: 1 / -1;
+      justify-content: flex-start;
+    }
+
+    .filter-button,
+    .category-button {
       height: 42px;
       padding: 0 12px;
       border: 1px solid var(--line);
@@ -165,7 +172,13 @@
       font-size: 13px;
     }
 
-    .filter-button.active {
+    .category-button {
+      height: 34px;
+      font-size: 12px;
+    }
+
+    .filter-button.active,
+    .category-button.active {
       border-color: #9acac0;
       background: var(--teal-soft);
       color: var(--teal);
@@ -335,6 +348,11 @@
     .status.review {
       background: var(--red-soft);
       color: var(--red);
+    }
+
+    .status.planned {
+      background: var(--blue-soft);
+      color: var(--blue);
     }
 
     .statement-grid {
@@ -633,6 +651,7 @@
 
       .top-meta,
       .filter-row,
+      .category-row,
       .hero-meta {
         justify-content: flex-start;
         justify-items: start;
@@ -676,7 +695,7 @@
       }
 
       .compare-table {
-        min-width: 760px;
+        min-width: 860px;
       }
     }
   </style>
@@ -705,7 +724,9 @@
         <button class="filter-button" type="button" data-filter="complete">标准 MVV</button>
         <button class="filter-button" type="button" data-filter="partial">非标准 MVV</button>
         <button class="filter-button" type="button" data-filter="review">需复核</button>
+        <button class="filter-button" type="button" data-filter="planned">待建档</button>
       </div>
+      <div class="category-row" id="categoryFilters" aria-label="公司大类筛选"></div>
     </section>
 
     <section class="workspace">
@@ -804,6 +825,7 @@
         <thead>
           <tr>
             <th>企业</th>
+            <th>大类</th>
             <th>表达类型</th>
             <th>Mission</th>
             <th>Vision</th>
@@ -822,26 +844,35 @@
     const listEl = document.querySelector("#companyList");
     const compareRows = document.querySelector("#compareRows");
     const searchInput = document.querySelector("#searchInput");
-    const filterButtons = [...document.querySelectorAll(".filter-button")];
+    const categoryFilters = document.querySelector("#categoryFilters");
+    const filterButtons = [...document.querySelectorAll("[data-filter]")];
     const visibleCount = document.querySelector("#visibleCount");
     let activeFilter = "all";
+    let activeCategory = "all";
     let selectedId = "ikea";
 
     function statusClass(type) {
       if (type === "complete") return "complete";
       if (type === "partial") return "partial";
       if (type === "review") return "review";
+      if (type === "planned") return "planned";
       return "partial";
+    }
+
+    function companyCategory(company) {
+      return company.categoryLabel || "未分类";
     }
 
     function visibleCompanies() {
       const keyword = searchInput.value.trim().toLowerCase();
       return companies.filter(company => {
         const filterMatch = activeFilter === "all" || company.type === activeFilter;
+        const categoryMatch = activeCategory === "all" || companyCategory(company) === activeCategory;
         const text = [
           company.name,
           company.en,
           company.region,
+          companyCategory(company),
           company.industry,
           company.typeLabel,
           company.mission,
@@ -850,7 +881,7 @@
           company.other,
           company.research
         ].join(" ").toLowerCase();
-        return filterMatch && (!keyword || text.includes(keyword));
+        return filterMatch && categoryMatch && (!keyword || text.includes(keyword));
       });
     }
 
@@ -940,6 +971,27 @@
         : `<span class="missing-statement">/</span>`;
     }
 
+    function renderCategoryFilters() {
+      const categories = [...new Set(companies.map(companyCategory))].sort((a, b) => a.localeCompare(b, "zh-CN"));
+      const buttons = [
+        { label: "全部大类", value: "all" },
+        ...categories.map(category => ({ label: category, value: category }))
+      ];
+      categoryFilters.innerHTML = buttons.map(button => `
+        <button class="category-button ${button.value === activeCategory ? "active" : ""}" type="button" data-category="${escapeHtml(button.value)}">
+          ${escapeHtml(button.label)}
+        </button>
+      `).join("");
+
+      categoryFilters.querySelectorAll("[data-category]").forEach(button => {
+        button.addEventListener("click", () => {
+          activeCategory = button.dataset.category;
+          renderCategoryFilters();
+          render();
+        });
+      });
+    }
+
     function renderTimeline(company) {
       const timeline = document.querySelector("#timelineList");
       const history = company.history || [];
@@ -986,15 +1038,15 @@
       }
 
       setText("#companyTitle", company.name);
-      setText("#companySubtitle", `${company.en} · ${company.region} · ${company.industry}`);
+      setText("#companySubtitle", `${company.en} · ${companyCategory(company)} · ${company.region} · ${company.industry}`);
       setText("#companyNote", company.research);
       setStatement("#missionText", company.mission);
       setStatement("#visionText", company.vision);
       setStatement("#valuesText", company.values, { values: true });
       setText("#otherText", company.other);
       setText("#researchText", company.research);
-      setText("#reviewedAt", `确认日期 ${company.reviewed}`);
-      setText("#confidence", `可信度 ${company.confidence}`);
+      setText("#reviewedAt", `确认日期 ${company.reviewed || "/"}`);
+      setText("#confidence", `可信度 ${company.confidence || "/"}`);
 
       const status = document.querySelector("#statusBadge");
       status.textContent = company.typeLabel;
@@ -1007,7 +1059,7 @@
       profile.textContent = company.profile;
 
       const version = document.querySelector("#versionLink");
-      version.href = company.version;
+      version.href = company.version || "#";
       version.textContent = company.version || "暂无版本记录";
       version.toggleAttribute("aria-disabled", !company.version);
 
@@ -1034,13 +1086,14 @@
       listEl.innerHTML = list.length ? list.map(company => `
         <button class="company-button ${company.id === selectedId ? "active" : ""}" type="button" data-id="${escapeHtml(company.id)}">
           <strong>${escapeHtml(company.name)}</strong>
-          <span>${escapeHtml(company.en)} · ${escapeHtml(company.typeLabel)}</span>
+          <span>${escapeHtml(company.en)} · ${escapeHtml(companyCategory(company))} · ${escapeHtml(company.typeLabel)}</span>
         </button>
       `).join("") : `<div class="empty">没有匹配的企业。</div>`;
 
       compareRows.innerHTML = list.map(company => `
         <tr>
           <td><a href="#" data-compare-id="${escapeHtml(company.id)}">${escapeHtml(company.name)}</a><br><span class="tag">${escapeHtml(company.en)}</span></td>
+          <td><span class="tag">${escapeHtml(companyCategory(company))}</span></td>
           <td><span class="status ${statusClass(company.type)}">${escapeHtml(company.typeLabel)}</span></td>
           <td>${statementHtml(company.mission)}</td>
           <td>${statementHtml(company.vision)}</td>
@@ -1076,6 +1129,7 @@
       if (!companies.some(company => company.id === selectedId) && companies.length) {
         selectedId = companies[0].id;
       }
+      renderCategoryFilters();
       render();
     }
 

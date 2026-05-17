@@ -3,6 +3,7 @@ company_id: "oppo"
 company_name_cn: "OPPO"
 company_name_en: "OPPO"
 country_or_region: "China"
+category_label: "消费品牌"
 industry_primary: "Consumer Electronics"
 industry_secondary: "Smartphone Brand"
 pool_type: core

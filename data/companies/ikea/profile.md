@@ -3,6 +3,7 @@ company_id: "ikea"
 company_name_cn: "宜家"
 company_name_en: "IKEA"
 country_or_region: "Global"
+category_label: "消费品牌"
 industry_primary: "Retail"
 industry_secondary: "Home Furnishing"
 pool_type: core

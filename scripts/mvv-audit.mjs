@@ -118,20 +118,25 @@ async function auditCompany(slug, issues) {
   const profile = await fs.readFile(profilePath, "utf8");
   const meta = parseFrontmatter(profile);
   const companyId = meta.company_id || slug;
+  const isPlanned = meta.status === "planned";
+
+  if (!meta.category_label) {
+    addIssue(issues, "warn", "missing_category_label", `${companyId} has no category_label.`, rel(profilePath));
+  }
 
   if (!arrayValue(meta.official_urls).length) {
     addIssue(issues, "error", "missing_official_urls", `${companyId} has no official_urls.`, rel(profilePath));
   }
 
   if (!meta.logo_asset) {
-    addIssue(issues, "warn", "missing_logo_asset", `${companyId} has no logo_asset.`, rel(profilePath));
+    if (!isPlanned) addIssue(issues, "warn", "missing_logo_asset", `${companyId} has no logo_asset.`, rel(profilePath));
   } else if (!(await pathExists(path.join(companyDir, meta.logo_asset)))) {
     addIssue(issues, "error", "missing_logo_file", `${companyId} logo file is missing: ${meta.logo_asset}`, rel(profilePath));
   }
 
   const currentPath = path.join(companyDir, "current.json");
   if (!(await pathExists(currentPath))) {
-    addIssue(issues, "error", "missing_current_json", `${companyId} has no current.json.`, rel(companyDir));
+    if (!isPlanned) addIssue(issues, "error", "missing_current_json", `${companyId} has no current.json.`, rel(companyDir));
   } else {
     const current = JSON.parse(await fs.readFile(currentPath, "utf8"));
     const structured = current.structured || {};
@@ -149,7 +154,7 @@ async function auditCompany(slug, issues) {
 
   const versions = await listFiles(path.join(companyDir, "versions"), (file) => file.endsWith(".md"));
   if (!versions.length) {
-    addIssue(issues, "warn", "missing_versions", `${companyId} has no version records.`, rel(companyDir));
+    if (!isPlanned) addIssue(issues, "warn", "missing_versions", `${companyId} has no version records.`, rel(companyDir));
   }
 
   for (const fileName of versions) {
@@ -210,12 +215,15 @@ async function auditUi(companies, issues) {
   }
 
   for (const company of uiCompanies) {
+    if (!company.categoryLabel) {
+      addIssue(issues, "warn", "missing_ui_category_label", `${company.id} has no UI categoryLabel.`, rel(uiDataPath));
+    }
     for (const key of ["logo", "profile", "version", "evidence"]) {
       if (company[key] && !(await pathExists(path.join(rootDir, company[key])))) {
         addIssue(issues, "error", "missing_ui_asset", `${company.id} UI ${key} is missing: ${company[key]}`, rel(uiDataPath));
       }
     }
-    if (!["标准 MVV", "非标准 MVV", "需复核"].includes(company.typeLabel)) {
+    if (!["标准 MVV", "非标准 MVV", "需复核", "待建档"].includes(company.typeLabel)) {
       addIssue(issues, "error", "bad_ui_type_label", `${company.id} has unexpected typeLabel: ${company.typeLabel}`, rel(uiDataPath));
     }
     if ((company.evidence || "").includes("/assets/logo.")) {
@@ -252,8 +260,13 @@ function auditDatabase(companies, issues) {
     if (counts.companies !== companies.length) {
       addIssue(issues, "error", "db_company_count_mismatch", `SQLite has ${counts.companies} companies, file data has ${companies.length}.`, rel(dbPath));
     }
-    if (counts.current_snapshots !== companies.length) {
-      addIssue(issues, "error", "db_current_count_mismatch", `SQLite has ${counts.current_snapshots} current snapshots, expected ${companies.length}.`, rel(dbPath));
+    const activeCompanies = companies.filter((slug) => {
+      const profilePath = path.join(companiesDir, slug, "profile.md");
+      const profile = fsSync.readFileSync(profilePath, "utf8");
+      return parseFrontmatter(profile).status !== "planned";
+    });
+    if (counts.current_snapshots !== activeCompanies.length) {
+      addIssue(issues, "error", "db_current_count_mismatch", `SQLite has ${counts.current_snapshots} current snapshots, expected ${activeCompanies.length}.`, rel(dbPath));
     }
     return counts;
   } finally {

@@ -155,6 +155,7 @@ function createSchema(db) {
       company_name_cn TEXT,
       company_name_en TEXT,
       country_or_region TEXT,
+      category_label TEXT,
       industry_primary TEXT,
       industry_secondary TEXT,
       pool_type TEXT,
@@ -264,17 +265,18 @@ function insertCompany(db, company) {
   db.prepare(`
     INSERT INTO companies (
       company_id, slug, company_name_cn, company_name_en, country_or_region,
-      industry_primary, industry_secondary, pool_type, status, priority_level,
+      category_label, industry_primary, industry_secondary, pool_type, status, priority_level,
       tracking_start_date, language_scope_json, official_urls_json, logo_asset,
       logo_source_url, related_terms_json,
       profile_path, last_reviewed_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `).run(
     company.company_id,
     company.slug,
     company.company_name_cn || "",
     company.company_name_en || "",
     company.country_or_region || "",
+    company.category_label || "",
     company.industry_primary || "",
     company.industry_secondary || "",
     company.pool_type || "",
@@ -620,30 +622,42 @@ function buildUiData(db) {
         AND asset_path NOT LIKE '%/assets/logo.%'
       ORDER BY captured_date DESC, id DESC
     `, company.company_id)?.asset_path || "";
+    const isPlanned = company.status === "planned";
     const hasStandardFields = isMeaningfulStatement(mission) && isMeaningfulStatement(vision) && isMeaningfulStatement(valuesText);
-    const type = company.review_status === "needs_review"
-      ? "review"
-      : company.classification === "standard_mvv" || hasStandardFields
-        ? "complete"
-        : "partial";
+    const type = isPlanned
+      ? "planned"
+      : company.review_status === "needs_review"
+        ? "review"
+        : company.classification === "standard_mvv" || hasStandardFields
+          ? "complete"
+          : "partial";
+    const typeLabel = type === "complete"
+      ? "标准 MVV"
+      : type === "review"
+        ? "需复核"
+        : type === "planned"
+          ? "待建档"
+          : "非标准 MVV";
 
     return {
       id: company.company_id,
       name: company.company_name_cn,
       en: company.company_name_en,
       region: company.country_or_region,
+      categoryLabel: company.category_label || "未分类",
       industry: [company.industry_primary, company.industry_secondary].filter(Boolean).join(" / "),
       type,
-      typeLabel: type === "complete" ? "标准 MVV" : type === "review" ? "需复核" : "非标准 MVV",
+      typeLabel,
+      trackingStatus: company.status || "",
       classification: company.classification || "",
-      confidence: company.confidence_level || "high",
+      confidence: company.confidence_level || (isPlanned ? "" : "high"),
       reviewStatus: company.review_status || "",
       reviewed: company.captured_date || company.last_reviewed_at || "",
       capturedAt: company.captured_at || "",
       mission,
       vision,
       values: valuesText,
-      research: company.analyst_note || "",
+      research: company.analyst_note || (isPlanned ? "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。" : ""),
       source,
       sourceTitle: officialSources[0]?.title || "",
       officialSources,
