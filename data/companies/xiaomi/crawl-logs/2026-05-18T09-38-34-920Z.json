@@ -1,0 +1,159 @@
+{
+  "company_id": "xiaomi",
+  "captured_at": "2026-05-18T09:39:20.851Z",
+  "change_status": "unchanged",
+  "comparison": {
+    "change_status": "unchanged",
+    "previous_hash": "818639ef2eeb968889b63e1d158c36b327aceb9b967e53745805839dd4d86871",
+    "next_hash": "818639ef2eeb968889b63e1d158c36b327aceb9b967e53745805839dd4d86871",
+    "changed_fields": []
+  },
+  "current": {
+    "company_id": "xiaomi",
+    "company_name_cn": "小米",
+    "company_name_en": "Xiaomi",
+    "captured_at": "2026-05-18T09:39:20.851Z",
+    "captured_date": "2026-05-18",
+    "primary_language": "zh",
+    "classification": "partial_mvv",
+    "structured": {
+      "mission": "Build amazing products with honest prices to let everyone in the world enjoy a better life through innovative technology.",
+      "vision": "Make friends with users and be the coolest company in the users’ hearts.",
+      "values": [],
+      "raw_terms": {
+        "mission": "profile_verified",
+        "vision": "profile_verified"
+      }
+    },
+    "normalized_mvv_hash": "818639ef2eeb968889b63e1d158c36b327aceb9b967e53745805839dd4d86871",
+    "source_urls": [
+      {
+        "url": "https://www.mi.com/en/about/",
+        "final_url": "https://www.mi.com/global/about/",
+        "title": "About Us - Xiaomi Global",
+        "status": 200,
+        "text_length": 3753,
+        "source_tier": "official_website",
+        "source_weight": 80
+      },
+      {
+        "url": "https://www.mi.com/about/",
+        "final_url": "https://www.mi.com/about",
+        "title": "小米科技",
+        "status": 200,
+        "text_length": 1728,
+        "source_tier": "official_website",
+        "source_weight": 80
+      },
+      {
+        "url": "https://www.mi.com/ir/",
+        "final_url": "https://www.mi.com/ir",
+        "title": "关于小米",
+        "status": 200,
+        "text_length": 5984,
+        "source_tier": "annual_report_or_ir",
+        "source_weight": 15
+      }
+    ],
+    "evidence_assets": [
+      "evidence/2026-05-18/page-text-about-us-xiaomi-global.txt",
+      "evidence/2026-05-18/mission-about-us-xiaomi-global.png",
+      "evidence/2026-05-18/vision-about-us-xiaomi-global.png",
+      "evidence/2026-05-18/page-text-小米科技.txt",
+      "evidence/2026-05-18/page-text-关于小米.txt",
+      "evidence/2026-05-18/metadata.json"
+    ],
+    "confidence_level": "high",
+    "review_status": "reviewed",
+    "analyst_note": "本轮复核未发现结构化 MVV 表述发生实质变化。"
+  },
+  "sources": [
+    {
+      "url": "https://www.mi.com/en/about/",
+      "final_url": "https://www.mi.com/global/about/",
+      "status": 200,
+      "ok": true,
+      "title": "About Us - Xiaomi Global",
+      "text_length": 3753,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 126,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": true,
+        "hasValues": false,
+        "textLength": 3753,
+        "urlLooksRelevant": true,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://www.mi.com/about/",
+      "final_url": "https://www.mi.com/about",
+      "status": 200,
+      "ok": true,
+      "title": "小米科技",
+      "text_length": 1728,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 104,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": false,
+        "hasVision": false,
+        "hasValues": false,
+        "textLength": 1728,
+        "urlLooksRelevant": true,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://www.mi.com/ir/",
+      "final_url": "https://www.mi.com/ir",
+      "status": 200,
+      "ok": true,
+      "title": "关于小米",
+      "text_length": 5984,
+      "transport": "fetch",
+      "fallback_from": "browser_error",
+      "score": 31,
+      "score_signals": {
+        "sourceTier": "annual_report_or_ir",
+        "sourceWeight": 15,
+        "transport": "fetch",
+        "ok": true,
+        "hasMission": false,
+        "hasVision": false,
+        "hasValues": false,
+        "textLength": 5984,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    }
+  ]
+}

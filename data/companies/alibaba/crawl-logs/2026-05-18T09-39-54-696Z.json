@@ -1,0 +1,131 @@
+{
+  "company_id": "alibaba",
+  "captured_at": "2026-05-18T09:40:25.671Z",
+  "change_status": "unchanged",
+  "comparison": {
+    "change_status": "unchanged",
+    "previous_hash": "11005f57929b366da6623a125c15b8b6e822c64e1a08a7c5a4176f8ce9a907af",
+    "next_hash": "11005f57929b366da6623a125c15b8b6e822c64e1a08a7c5a4176f8ce9a907af",
+    "changed_fields": []
+  },
+  "current": {
+    "company_id": "alibaba",
+    "company_name_cn": "阿里巴巴",
+    "company_name_en": "Alibaba Group",
+    "captured_at": "2026-05-18T09:40:25.671Z",
+    "captured_date": "2026-05-18",
+    "primary_language": "zh",
+    "classification": "standard_mvv",
+    "structured": {
+      "mission": "To make it easy to do business anywhere",
+      "vision": "We do not pursue size or power; we aspire to be a good company that will last for 102 years.",
+      "values": [
+        "Customers first, employees second, shareholders third",
+        "Trust makes everything simple",
+        "Change is the only constant",
+        "Today's best performance is tomorrow's baseline",
+        "If not now, when? If not me, who?",
+        "Live seriously, work happily"
+      ],
+      "raw_terms": {
+        "mission": "profile_verified",
+        "vision": "profile_verified",
+        "values": "profile_verified"
+      }
+    },
+    "normalized_mvv_hash": "11005f57929b366da6623a125c15b8b6e822c64e1a08a7c5a4176f8ce9a907af",
+    "source_urls": [
+      {
+        "url": "https://www.alibabagroup.com/en-US/about-alibaba",
+        "final_url": "https://www.alibabagroup.com/en-US/about-alibaba",
+        "title": "Introduction to Alibaba Group - Alibaba Group",
+        "status": 200,
+        "text_length": 6351,
+        "source_tier": "official_website",
+        "source_weight": 80
+      },
+      {
+        "url": "https://www.alibabagroup.com/en-US/about-alibaba-memorabilia-1494037166496415744",
+        "final_url": "https://www.alibabagroup.com/en-US/about-alibaba-memorabilia-1494037166496415744",
+        "title": "",
+        "status": 200,
+        "text_length": 4403,
+        "source_tier": "official_website",
+        "source_weight": 80
+      }
+    ],
+    "evidence_assets": [
+      "evidence/2026-05-18/page-text-introduction-to-alibaba-group-alibaba-group.txt",
+      "evidence/2026-05-18/mission-introduction-to-alibaba-group-alibaba-group.png",
+      "evidence/2026-05-18/vision-introduction-to-alibaba-group-alibaba-group.png",
+      "evidence/2026-05-18/values-introduction-to-alibaba-group-alibaba-group.png",
+      "evidence/2026-05-18/page-text-www-alibabagroup-com.txt",
+      "evidence/2026-05-18/mission-www-alibabagroup-com.png",
+      "evidence/2026-05-18/values-www-alibabagroup-com.png",
+      "evidence/2026-05-18/metadata.json"
+    ],
+    "confidence_level": "high",
+    "review_status": "reviewed",
+    "analyst_note": "本轮复核未发现结构化 MVV 表述发生实质变化。"
+  },
+  "sources": [
+    {
+      "url": "https://www.alibabagroup.com/en-US/about-alibaba",
+      "final_url": "https://www.alibabagroup.com/en-US/about-alibaba",
+      "status": 200,
+      "ok": true,
+      "title": "Introduction to Alibaba Group - Alibaba Group",
+      "text_length": 6351,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 138,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": true,
+        "hasValues": true,
+        "textLength": 6351,
+        "urlLooksRelevant": true,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://www.alibabagroup.com/en-US/about-alibaba-memorabilia-1494037166496415744",
+      "final_url": "https://www.alibabagroup.com/en-US/about-alibaba-memorabilia-1494037166496415744",
+      "status": 200,
+      "ok": true,
+      "title": "",
+      "text_length": 4403,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 128,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": false,
+        "hasValues": true,
+        "textLength": 4403,
+        "urlLooksRelevant": true,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    }
+  ]
+}

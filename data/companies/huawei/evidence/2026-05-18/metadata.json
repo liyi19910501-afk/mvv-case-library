@@ -1,0 +1,70 @@
+[
+  {
+    "url": "https://www.huawei.com/cn/about-huawei",
+    "final_url": "https://www.huawei.com/cn/about-huawei",
+    "title": "关于华为",
+    "status": 200,
+    "text_length": 586,
+    "transport": "browser",
+    "fallback_from": "",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界",
+      "vision": "",
+      "values": [],
+      "raw_terms": {
+        "mission": "profile_verified"
+      }
+    }
+  },
+  {
+    "url": "https://www.huawei.com/cn/corporate-governance",
+    "final_url": "https://www.huawei.com/cn/corporate-governance",
+    "title": "公司治理 - 关于华为",
+    "status": 200,
+    "text_length": 2357,
+    "transport": "browser",
+    "fallback_from": "",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "",
+      "vision": "",
+      "values": [
+        "以客户为中心，为客户创造价值"
+      ],
+      "raw_terms": {
+        "values": "profile_verified"
+      }
+    }
+  },
+  {
+    "url": "https://www.huawei.com/cn/corporate-information",
+    "final_url": "https://www.huawei.com/cn/corporate-information",
+    "title": "公司简介 - 关于华为",
+    "status": 200,
+    "text_length": 10558,
+    "transport": "browser",
+    "fallback_from": "",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界",
+      "vision": "",
+      "values": [],
+      "raw_terms": {
+        "mission": "profile_verified"
+      }
+    }
+  }
+]

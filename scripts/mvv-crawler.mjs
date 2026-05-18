@@ -3,6 +3,8 @@
 import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
+import os from "node:os";
+import { spawn } from "node:child_process";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 
@@ -198,7 +200,13 @@ function isMeaningfulValue(value) {
   if (!value) return false;
   const normalized = value.trim();
   if (!normalized) return false;
+  if (["/", "无", "none", "n/a"].includes(normalized.toLowerCase())) return false;
   return !missingPatterns.some((pattern) => normalized.includes(pattern));
+}
+
+function blocksInference(value) {
+  const normalized = (value || "").trim().toLowerCase();
+  return normalized === "/" || normalized === "无" || normalized === "none" || normalized === "n/a";
 }
 
 function normalizeText(text) {
@@ -255,6 +263,26 @@ function classifyStructured(structured) {
   return hasMission && hasVision && hasValues ? "standard_mvv" : "partial_mvv";
 }
 
+function sourceTier(resultOrUrl = "") {
+  const url = typeof resultOrUrl === "string" ? resultOrUrl : resultOrUrl.url || "";
+  const finalUrl = typeof resultOrUrl === "string" ? "" : resultOrUrl.final_url || "";
+  const title = typeof resultOrUrl === "string" ? "" : resultOrUrl.title || "";
+  const transport = typeof resultOrUrl === "string" ? "" : resultOrUrl.transport || "";
+  const combined = `${url} ${finalUrl} ${title} ${transport}`.toLowerCase();
+
+  if (/annual|report|results|financial|investor|\/ir\b|\/ir\/|filing|20-f|10-k|esef|pdf|fetch_pdf/.test(combined)) {
+    return "annual_report_or_ir";
+  }
+  return "official_website";
+}
+
+function sourceWeight(resultOrUrl) {
+  const tier = sourceTier(resultOrUrl);
+  if (tier === "official_website") return 80;
+  if (tier === "annual_report_or_ir") return 15;
+  return 5;
+}
+
 function splitCandidateValues(text) {
   return text
     .split(/[;；|｜、]/)
@@ -299,15 +327,33 @@ function cleanCandidateText(text) {
 }
 
 function isFieldLabel(line, field) {
+  if (field === "mission" && /\bpurpose\s*[-—–]\s*led\b/i.test(line)) return false;
   const normalized = normalizeText(line);
-  return fieldTerms[field].some((term) => normalized.includes(normalizeText(term)));
+  if (field === "vision" && /[\u4e00-\u9fff]/.test(normalized) && normalized.includes("使命")) return false;
+  return fieldTerms[field].some((term) => {
+    const normalizedTerm = normalizeText(term);
+    if (!normalizedTerm) return false;
+    if (normalized === normalizedTerm) return true;
+    if (normalized.startsWith(`${normalizedTerm} `)) return true;
+    if (normalized.startsWith(`our ${normalizedTerm}`)) return true;
+    if (/[\u4e00-\u9fff]/.test(normalizedTerm)) {
+      return normalized.includes(normalizedTerm) && normalized.length <= 14;
+    }
+    return false;
+  });
 }
 
 function extractAfterLabel(line, field) {
+  if (field === "mission" && /\bpurpose\s*[-—–]\s*led\b/i.test(line)) return "";
   for (const term of fieldTerms[field]) {
     const pattern = new RegExp(`${escapeRegExp(term)}\\s*[:：\\-—–]?\\s*(.+)$`, "i");
     const match = line.match(pattern);
-    if (match) return cleanCandidateText(match[1]);
+    if (match) {
+      const extracted = cleanCandidateText(match[1]);
+      const normalized = normalizeText(extracted);
+      if (/^(and|or|mission|vision|purpose|values|使命|愿景|价值观|及使命|与使命)$/.test(normalized)) return "";
+      return extracted;
+    }
   }
   return "";
 }
@@ -357,6 +403,96 @@ function stripHtmlToText(html) {
     .replace(/\n\s+/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
+}
+
+function isPdfUrl(url = "", contentType = "") {
+  return /\.pdf(?:$|[?#])/i.test(url) || /application\/pdf/i.test(contentType);
+}
+
+function extractPdfWithPython(pdfPath, imagePath, targets) {
+  const script = `
+import json
+import re
+import sys
+
+try:
+    import fitz
+except Exception as exc:
+    print(json.dumps({"ok": False, "error": f"PyMuPDF unavailable: {exc}"}))
+    sys.exit(0)
+
+pdf_path, image_path, targets_json = sys.argv[1], sys.argv[2], sys.argv[3]
+targets = [t for t in json.loads(targets_json) if t]
+
+def norm(value):
+    value = (value or "").lower()
+    value = re.sub(r"[^0-9a-z\\u4e00-\\u9fff]+", "", value)
+    return value
+
+try:
+    doc = fitz.open(pdf_path)
+    pages = [page.get_text("text") or "" for page in doc]
+    compact_pages = [norm(page) for page in pages]
+    compact_targets = [norm(target) for target in targets if norm(target)]
+    best_page = 0
+    for idx, page_text in enumerate(compact_pages):
+        if any(target and target in page_text for target in compact_targets):
+            best_page = idx
+            break
+    rendered = False
+    if len(doc) > 0:
+        page = doc[best_page]
+        pix = page.get_pixmap(matrix=fitz.Matrix(1.6, 1.6), alpha=False)
+        pix.save(image_path)
+        rendered = True
+    print(json.dumps({
+        "ok": True,
+        "text": "\\n\\n".join(pages),
+        "page_count": len(doc),
+        "evidence_page": best_page + 1 if len(doc) else 0,
+        "rendered": rendered
+    }, ensure_ascii=False))
+except Exception as exc:
+    print(json.dumps({"ok": False, "error": str(exc)}))
+`;
+
+  return new Promise((resolve) => {
+    const child = spawn("/usr/bin/python3", ["-c", script, pdfPath, imagePath, JSON.stringify(targets)], {
+      stdio: ["ignore", "pipe", "pipe"]
+    });
+    let stdout = "";
+    let stderr = "";
+    child.stdout.on("data", (chunk) => { stdout += chunk.toString(); });
+    child.stderr.on("data", (chunk) => { stderr += chunk.toString(); });
+    child.on("close", () => {
+      try {
+        const parsed = JSON.parse(stdout.trim() || "{}");
+        resolve(parsed.ok ? parsed : { ok: false, error: parsed.error || stderr.trim() || "PDF extraction failed." });
+      } catch {
+        resolve({ ok: false, error: stderr.trim() || stdout.trim() || "PDF extraction failed." });
+      }
+    });
+    child.on("error", (error) => {
+      resolve({ ok: false, error: error.message });
+    });
+  });
+}
+
+async function extractPdfEvidence(pdfBuffer, company) {
+  const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "mvv-pdf-"));
+  const pdfPath = path.join(tempDir, "source.pdf");
+  const imagePath = path.join(tempDir, "evidence-page.png");
+  await fs.writeFile(pdfPath, pdfBuffer);
+
+  const targets = [
+    company.profileValues?.mission,
+    company.profileValues?.vision,
+    company.profileValues?.values,
+    ...(company.profileValues?.values ? splitCandidateValues(company.profileValues.values) : [])
+  ].filter(isMeaningfulValue);
+
+  const result = await extractPdfWithPython(pdfPath, imagePath, targets);
+  return result.ok ? { ...result, image_path: imagePath } : result;
 }
 
 function extractHtmlTitle(html) {
@@ -415,10 +551,11 @@ function buildStructuredFromText(pageText, profileValues) {
 
   for (const field of ["mission", "vision"]) {
     const expected = profileValues[field];
+    if (blocksInference(expected)) continue;
     if (isMeaningfulValue(expected) && containsFuzzy(pageText, expected)) {
       structured[field] = expected;
       structured.raw_terms[field] = "profile_verified";
-    } else {
+    } else if (!isMeaningfulValue(expected)) {
       const extracted = extractByNearbyLabels(pageText, field);
       if (isMeaningfulValue(extracted)) {
         structured[field] = extracted;
@@ -428,10 +565,11 @@ function buildStructuredFromText(pageText, profileValues) {
   }
 
   const expectedValues = profileValues.values;
+  if (blocksInference(expectedValues)) return structured;
   if (isMeaningfulValue(expectedValues) && containsFuzzy(pageText, expectedValues)) {
     structured.values = splitCandidateValues(expectedValues);
     structured.raw_terms.values = "profile_verified";
-  } else {
+  } else if (!isMeaningfulValue(expectedValues)) {
     const extracted = extractByNearbyLabels(pageText, "values");
     if (isMeaningfulValue(extracted)) {
       structured.values = splitCandidateValues(extracted);
@@ -621,9 +759,17 @@ async function crawlUrlFetch(company, url, args, fallbackFrom = "") {
       },
       redirect: "follow"
     });
-    const body = await response.text();
-    const title = extractHtmlTitle(body);
-    const pageText = stripHtmlToText(body);
+    const contentType = response.headers.get("content-type") || "";
+    const bodyBuffer = Buffer.from(await response.arrayBuffer());
+    const isPdf = isPdfUrl(response.url || url, contentType);
+    const pdfEvidence = isPdf ? await extractPdfEvidence(bodyBuffer, company) : null;
+    const body = isPdf ? "" : bodyBuffer.toString("utf8");
+    const title = isPdf
+      ? `${path.basename(new URL(response.url || url).pathname) || "PDF source"}`
+      : extractHtmlTitle(body);
+    const pageText = isPdf && pdfEvidence?.ok
+      ? pdfEvidence.text
+      : stripHtmlToText(body);
     const structured = buildStructuredFromText(pageText, company.profileValues);
     const classification = classifyStructured(structured);
     const failureType = response.ok ? "" : classifyFailure("", response.status);
@@ -639,8 +785,12 @@ async function crawlUrlFetch(company, url, args, fallbackFrom = "") {
       page_text: pageText,
       structured,
       classification,
-      transport: "fetch",
+      transport: isPdf ? "fetch_pdf" : "fetch",
       fallback_from: fallbackFrom,
+      pdf_evidence_path: pdfEvidence?.rendered ? pdfEvidence.image_path || "" : "",
+      pdf_evidence_page: pdfEvidence?.evidence_page || 0,
+      pdf_page_count: pdfEvidence?.page_count || 0,
+      pdf_error: pdfEvidence?.ok === false ? pdfEvidence.error || "" : "",
       failure_type: failureType,
       failure_reason: failureType ? `HTTP ${response.status}` : ""
     };
@@ -732,11 +882,12 @@ async function crawlUrl(browser, company, url, args) {
 }
 
 function scoreCrawlResult(result) {
-  let score = 0;
-  if (result.ok) score += 20;
-  if (result.structured.mission) score += 35;
-  if (result.structured.vision) score += 25;
-  if (result.structured.values?.length) score += 30;
+  const hasAnyField = Boolean(result.structured.mission || result.structured.vision || result.structured.values?.length);
+  let score = hasAnyField ? sourceWeight(result) : 0;
+  if (result.ok) score += 8;
+  if (result.structured.mission) score += 12;
+  if (result.structured.vision) score += 10;
+  if (result.structured.values?.length) score += 12;
   if (result.text_length > 1000) score += 8;
   if (/about|culture|mission|values|vision|company/i.test(result.url)) score += 8;
   if (result.status && result.status >= 400) score -= 40;
@@ -746,6 +897,8 @@ function scoreCrawlResult(result) {
 
 function sourceScoreSignals(result) {
   return {
+    sourceTier: sourceTier(result),
+    sourceWeight: sourceWeight(result),
     transport: result.transport || "",
     ok: Boolean(result.ok),
     hasMission: Boolean(result.structured?.mission),
@@ -860,12 +1013,15 @@ function analystNote(status, changedFields, structured, company) {
 function buildCurrentRecord(company, structured, classification, comparison, sourceResults, evidenceAssets) {
   const sourceUrls = sourceResults
     .filter((result) => result.ok || result.text_length > 0)
+    .sort((a, b) => scoreCrawlResult(b) - scoreCrawlResult(a))
     .map((result) => ({
       url: result.url,
       final_url: result.final_url,
       title: result.title,
       status: result.status,
-      text_length: result.text_length
+      text_length: result.text_length,
+      source_tier: sourceTier(result),
+      source_weight: sourceWeight(result)
     }));
 
   return {
@@ -917,6 +1073,13 @@ async function saveEvidence(company, sourceResults, structured, comparison, args
     await fs.writeFile(textPath, result.page_text, "utf8");
     evidenceAssets.push(path.relative(company.companyDir, textPath));
 
+    if (result.pdf_evidence_path && await pathExists(result.pdf_evidence_path)) {
+      const pageSuffix = result.pdf_evidence_page ? `p${result.pdf_evidence_page}-` : "";
+      const screenshotPath = path.join(evidenceDir, `pdf-${pageSuffix}${sourceSlug}.png`);
+      await fs.copyFile(result.pdf_evidence_path, screenshotPath);
+      evidenceAssets.push(path.relative(company.companyDir, screenshotPath));
+    }
+
     if (result.page) {
       const targets = [
         ["mission", structured.mission],
@@ -944,6 +1107,9 @@ async function saveEvidence(company, sourceResults, structured, comparison, args
       fallback_from: result.fallback_from || "",
       failure_type: result.failure_type || "",
       failure_reason: result.failure_reason || "",
+      pdf_evidence_page: result.pdf_evidence_page || 0,
+      pdf_page_count: result.pdf_page_count || 0,
+      pdf_error: result.pdf_error || "",
       structured: result.structured
     });
   }
@@ -1047,12 +1213,19 @@ async function writeOutputs(company, currentRecord, comparison, sourceResults, a
       score_signals: sourceScoreSignals(result),
       failure_type: result.failure_type || "",
       failure_reason: result.failure_reason || "",
+      pdf_evidence_page: result.pdf_evidence_page || 0,
+      pdf_page_count: result.pdf_page_count || 0,
+      pdf_error: result.pdf_error || "",
       error: result.error || ""
     }))
   };
   await fs.writeFile(logPath, JSON.stringify(logRecord, null, 2), "utf8");
 
   if (comparison.change_status === "unchanged" || comparison.change_status === "failed") {
+    if (comparison.change_status === "unchanged" && args.saveUnchangedEvidence) {
+      const currentPath = path.join(company.companyDir, "current.json");
+      await fs.writeFile(currentPath, JSON.stringify(currentRecord, null, 2), "utf8");
+    }
     return {
       version_file: "",
       log_file: path.relative(rootDir, logPath)
@@ -1136,6 +1309,9 @@ async function crawlCompany(browser, dirName, args) {
       score_signals: sourceScoreSignals(result),
       failure_type: result.failure_type || "",
       failure_reason: result.failure_reason || "",
+      pdf_evidence_page: result.pdf_evidence_page || 0,
+      pdf_page_count: result.pdf_page_count || 0,
+      pdf_error: result.pdf_error || "",
       error: result.error || ""
     }))
   };

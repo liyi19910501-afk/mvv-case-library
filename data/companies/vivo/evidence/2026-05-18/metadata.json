@@ -1,0 +1,62 @@
+[
+  {
+    "url": "https://www.vivo.com.cn/brand/about",
+    "final_url": "https://www.vivo.com.cn/brand/about",
+    "title": "vivo-智能手机官方网站",
+    "status": 200,
+    "text_length": 2009,
+    "transport": "browser",
+    "fallback_from": "",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "为用户，创造伟大的产品；为员工，营造快乐进取的氛围；为伙伴，建立互信共赢的平台；为股东，提供长期稳健的回报",
+      "vision": "成为更健康、更长久的世界一流企业",
+      "values": [
+        "本分",
+        "用户导向",
+        "设计驱动",
+        "学习",
+        "团队"
+      ],
+      "raw_terms": {
+        "mission": "profile_verified",
+        "vision": "profile_verified",
+        "values": "profile_verified"
+      }
+    }
+  },
+  {
+    "url": "https://m.vivo.com.cn/brand/about",
+    "final_url": "https://m.vivo.com.cn/brand/about",
+    "title": "vivo-智能手机官方网站",
+    "status": 200,
+    "text_length": 2009,
+    "transport": "browser",
+    "fallback_from": "",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "为用户，创造伟大的产品；为员工，营造快乐进取的氛围；为伙伴，建立互信共赢的平台；为股东，提供长期稳健的回报",
+      "vision": "成为更健康、更长久的世界一流企业",
+      "values": [
+        "本分",
+        "用户导向",
+        "设计驱动",
+        "学习",
+        "团队"
+      ],
+      "raw_terms": {
+        "mission": "profile_verified",
+        "vision": "profile_verified",
+        "values": "profile_verified"
+      }
+    }
+  }
+]

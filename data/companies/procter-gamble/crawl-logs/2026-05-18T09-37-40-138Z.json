@@ -1,0 +1,127 @@
+{
+  "company_id": "procter-gamble",
+  "captured_at": "2026-05-18T09:38:08.940Z",
+  "change_status": "unchanged",
+  "comparison": {
+    "change_status": "unchanged",
+    "previous_hash": "3699a9c87ef814f89d45f9f08e1c25c8f8dc6981e8288d8eda529ac914ba6bd0",
+    "next_hash": "3699a9c87ef814f89d45f9f08e1c25c8f8dc6981e8288d8eda529ac914ba6bd0",
+    "changed_fields": []
+  },
+  "current": {
+    "company_id": "procter-gamble",
+    "company_name_cn": "宝洁",
+    "company_name_en": "Procter & Gamble",
+    "captured_at": "2026-05-18T09:38:08.940Z",
+    "captured_date": "2026-05-18",
+    "primary_language": "en",
+    "classification": "partial_mvv",
+    "structured": {
+      "mission": "We will provide branded products and services of superior quality and value that improve the lives of the world’s consumers, now and for generations to come.",
+      "vision": "",
+      "values": [
+        "Integrity",
+        "Leadership",
+        "Ownership",
+        "Passion for Winning",
+        "Trust"
+      ],
+      "raw_terms": {
+        "mission": "profile_verified",
+        "values": "profile_verified"
+      }
+    },
+    "normalized_mvv_hash": "3699a9c87ef814f89d45f9f08e1c25c8f8dc6981e8288d8eda529ac914ba6bd0",
+    "source_urls": [
+      {
+        "url": "https://us.pg.com/policies-and-practices/purpose-values-and-principles/",
+        "final_url": "https://us.pg.com/policies-and-practices/purpose-values-and-principles/",
+        "title": "P&G purpose, values and principles",
+        "status": 200,
+        "text_length": 5917,
+        "source_tier": "official_website",
+        "source_weight": 80
+      },
+      {
+        "url": "https://us.pg.com/ethics-and-corporate-responsibility/",
+        "final_url": "https://us.pg.com/ethics-and-corporate-responsibility/",
+        "title": "Our Purpose, Values and Principles | P&G",
+        "status": 200,
+        "text_length": 4809,
+        "source_tier": "official_website",
+        "source_weight": 80
+      }
+    ],
+    "evidence_assets": [
+      "evidence/2026-05-18/page-text-p-g-purpose-values-and-principles.txt",
+      "evidence/2026-05-18/mission-p-g-purpose-values-and-principles.png",
+      "evidence/2026-05-18/values-p-g-purpose-values-and-principles.png",
+      "evidence/2026-05-18/page-text-our-purpose-values-and-principles-p-g.txt",
+      "evidence/2026-05-18/values-our-purpose-values-and-principles-p-g.png",
+      "evidence/2026-05-18/metadata.json"
+    ],
+    "confidence_level": "high",
+    "review_status": "reviewed",
+    "analyst_note": "本轮复核未发现结构化 MVV 表述发生实质变化。"
+  },
+  "sources": [
+    {
+      "url": "https://us.pg.com/policies-and-practices/purpose-values-and-principles/",
+      "final_url": "https://us.pg.com/policies-and-practices/purpose-values-and-principles/",
+      "status": 200,
+      "ok": true,
+      "title": "P&G purpose, values and principles",
+      "text_length": 5917,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 128,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": false,
+        "hasValues": true,
+        "textLength": 5917,
+        "urlLooksRelevant": true,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://us.pg.com/ethics-and-corporate-responsibility/",
+      "final_url": "https://us.pg.com/ethics-and-corporate-responsibility/",
+      "status": 200,
+      "ok": true,
+      "title": "Our Purpose, Values and Principles | P&G",
+      "text_length": 4809,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 120,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": false,
+        "hasValues": true,
+        "textLength": 4809,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    }
+  ]
+}

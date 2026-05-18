@@ -7,10 +7,14 @@ category_label: "运动/户外"
 industry_primary: "Brand"
 industry_secondary: "Sportswear"
 pool_type: wave2
-status: planned
+status: active
 priority_level: P2
+logo_asset: "assets/logo.svg"
+logo_source_url: "https://www.anta.com/"
 tracking_start_date: "2026-05-16"
 official_urls:
+  - "https://ir.anta.com/sc/news_detail.php?id=159082"
+  - "https://ir.anta.com/sc/news_detail.php?id=126812"
   - "https://www.anta.com/"
 related_terms:
   - "使命"
@@ -21,7 +25,7 @@ competitor_group: []
 language_scope:
   - "zh"
   - "en"
-last_reviewed_at: "2026-05-16"
+last_reviewed_at: "2026-05-17"
 ---
 
 # 安踏公司档案
@@ -38,6 +42,22 @@ last_reviewed_at: "2026-05-16"
 
 ## 为什么跟踪这家公司
 - 中国运动品牌代表，可与 Nike、Patagonia 对照使命、品牌精神与价值观表达。
+
+## 当前 MVV 概览
+### Mission
+- 当前正式表述：将“超越自我”的体育精神融入每个人的生活
+- 最近确认日期：2026-05-17
+- 当前主来源：https://ir.anta.com/sc/news_detail.php?id=159082
+
+### Vision
+- 当前正式表述：成为世界领先的多品牌体育用品集团
+- 最近确认日期：2026-05-17
+- 当前主来源：https://ir.anta.com/sc/news_detail.php?id=159082
+
+### Values
+- 当前正式表述：/
+- 最近确认日期：
+- 当前主来源：
 
 ## 来源策略说明
 - 当前版本优先核验官网、投资者关系、企业文化、ESG/年报与招聘文化页面。

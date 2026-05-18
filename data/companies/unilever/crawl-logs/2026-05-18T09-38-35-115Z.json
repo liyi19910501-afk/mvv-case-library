@@ -1,0 +1,245 @@
+{
+  "company_id": "unilever",
+  "captured_at": "2026-05-18T09:39:40.472Z",
+  "change_status": "unchanged",
+  "comparison": {
+    "change_status": "unchanged",
+    "previous_hash": "d540df57e9a53a510ffe6144ec67d2ce5f62ed0fa48fa176957d2a76df7b762c",
+    "next_hash": "d540df57e9a53a510ffe6144ec67d2ce5f62ed0fa48fa176957d2a76df7b762c",
+    "changed_fields": []
+  },
+  "current": {
+    "company_id": "unilever",
+    "company_name_cn": "联合利华",
+    "company_name_en": "Unilever",
+    "captured_at": "2026-05-18T09:39:40.472Z",
+    "captured_date": "2026-05-18",
+    "primary_language": "en",
+    "classification": "standard_mvv",
+    "structured": {
+      "mission": "make sustainable living commonplace",
+      "vision": "To deliver winning performance by being the global leader in sustainable business.",
+      "values": [
+        "Respect",
+        "Integrity",
+        "Pioneering",
+        "Responsibility"
+      ],
+      "raw_terms": {
+        "mission": "profile_verified",
+        "vision": "profile_verified",
+        "values": "profile_verified"
+      }
+    },
+    "normalized_mvv_hash": "d540df57e9a53a510ffe6144ec67d2ce5f62ed0fa48fa176957d2a76df7b762c",
+    "source_urls": [
+      {
+        "url": "https://careers.unilever.com/en/job/el-segundo/finance-and-commercial-lead-new-venture-wellbeing-collective/34155/95061646032",
+        "final_url": "https://careers.unilever.com/en/job/el-segundo/finance-and-commercial-lead-new-venture-wellbeing-collective/34155/95061646032",
+        "title": "Finance and Commercial Lead New Venture, Wellbeing Collective at Unilever",
+        "status": 200,
+        "text_length": 12475,
+        "source_tier": "official_website",
+        "source_weight": 80
+      },
+      {
+        "url": "https://careers.unilever.com/en/human-resources",
+        "final_url": "https://careers.unilever.com/en/human-resources",
+        "title": "Human Resources",
+        "status": 200,
+        "text_length": 7153,
+        "source_tier": "official_website",
+        "source_weight": 80
+      },
+      {
+        "url": "https://www.unilever.com/our-company/",
+        "final_url": "https://www.unilever.com/our-company/",
+        "title": "Our company | Unilever",
+        "status": 200,
+        "text_length": 6602,
+        "source_tier": "official_website",
+        "source_weight": 80
+      },
+      {
+        "url": "https://www.unilever.com/files/esef-nl-2025.html",
+        "final_url": "https://www.unilever.com/files/esef-nl-2025.html",
+        "title": "ul-2025-12-31-1-en",
+        "status": 200,
+        "text_length": 1349530,
+        "source_tier": "annual_report_or_ir",
+        "source_weight": 15
+      },
+      {
+        "url": "https://www.unilever.com/files/8f9a3825-2101-411f-9a31-7e6f176393a4/the-unilever-compass.pdf",
+        "final_url": "https://www.unilever.com/files/8f9a3825-2101-411f-9a31-7e6f176393a4/the-unilever-compass.pdf",
+        "title": "the-unilever-compass.pdf",
+        "status": 200,
+        "text_length": 5259,
+        "source_tier": "annual_report_or_ir",
+        "source_weight": 15
+      }
+    ],
+    "evidence_assets": [
+      "evidence/2026-05-18/page-text-finance-and-commercial-lead-new-venture-wellbeing-collective-at-unilev.txt",
+      "evidence/2026-05-18/mission-finance-and-commercial-lead-new-venture-wellbeing-collective-at-unilev.png",
+      "evidence/2026-05-18/values-finance-and-commercial-lead-new-venture-wellbeing-collective-at-unilev.png",
+      "evidence/2026-05-18/page-text-human-resources.txt",
+      "evidence/2026-05-18/values-human-resources.png",
+      "evidence/2026-05-18/page-text-our-company-unilever.txt",
+      "evidence/2026-05-18/page-text-the-unilever-compass-pdf.txt",
+      "evidence/2026-05-18/pdf-p1-the-unilever-compass-pdf.png",
+      "evidence/2026-05-18/page-text-ul-2025-12-31-1-en.txt",
+      "evidence/2026-05-18/metadata.json"
+    ],
+    "confidence_level": "high",
+    "review_status": "reviewed",
+    "analyst_note": "本轮复核未发现结构化 MVV 表述发生实质变化。"
+  },
+  "sources": [
+    {
+      "url": "https://careers.unilever.com/en/job/el-segundo/finance-and-commercial-lead-new-venture-wellbeing-collective/34155/95061646032",
+      "final_url": "https://careers.unilever.com/en/job/el-segundo/finance-and-commercial-lead-new-venture-wellbeing-collective/34155/95061646032",
+      "status": 200,
+      "ok": true,
+      "title": "Finance and Commercial Lead New Venture, Wellbeing Collective at Unilever",
+      "text_length": 12475,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 118,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": true,
+        "hasValues": false,
+        "textLength": 12475,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://careers.unilever.com/en/human-resources",
+      "final_url": "https://careers.unilever.com/en/human-resources",
+      "status": 200,
+      "ok": true,
+      "title": "Human Resources",
+      "text_length": 7153,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 118,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": false,
+        "hasVision": true,
+        "hasValues": true,
+        "textLength": 7153,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://www.unilever.com/our-company/",
+      "final_url": "https://www.unilever.com/our-company/",
+      "status": 200,
+      "ok": true,
+      "title": "Our company | Unilever",
+      "text_length": 6602,
+      "transport": "fetch",
+      "fallback_from": "browser_error",
+      "score": 104,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "fetch",
+        "ok": true,
+        "hasMission": false,
+        "hasVision": false,
+        "hasValues": false,
+        "textLength": 6602,
+        "urlLooksRelevant": true,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://www.unilever.com/files/8f9a3825-2101-411f-9a31-7e6f176393a4/the-unilever-compass.pdf",
+      "final_url": "https://www.unilever.com/files/8f9a3825-2101-411f-9a31-7e6f176393a4/the-unilever-compass.pdf",
+      "status": 200,
+      "ok": true,
+      "title": "the-unilever-compass.pdf",
+      "text_length": 5259,
+      "transport": "fetch_pdf",
+      "fallback_from": "browser_error",
+      "score": 41,
+      "score_signals": {
+        "sourceTier": "annual_report_or_ir",
+        "sourceWeight": 15,
+        "transport": "fetch_pdf",
+        "ok": true,
+        "hasMission": false,
+        "hasVision": true,
+        "hasValues": false,
+        "textLength": 5259,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 1,
+      "pdf_page_count": 2,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://www.unilever.com/files/esef-nl-2025.html",
+      "final_url": "https://www.unilever.com/files/esef-nl-2025.html",
+      "status": 200,
+      "ok": true,
+      "title": "ul-2025-12-31-1-en",
+      "text_length": 1349530,
+      "transport": "fetch",
+      "fallback_from": "browser_error",
+      "score": 53,
+      "score_signals": {
+        "sourceTier": "annual_report_or_ir",
+        "sourceWeight": 15,
+        "transport": "fetch",
+        "ok": true,
+        "hasMission": false,
+        "hasVision": true,
+        "hasValues": true,
+        "textLength": 1349530,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    }
+  ]
+}

@@ -7,10 +7,13 @@ category_label: "消费品牌"
 industry_primary: "Consumer Goods"
 industry_secondary: "Designer Toy & IP Retail"
 pool_type: wave2
-status: planned
+status: active
 priority_level: P2
+logo_asset: "assets/logo.svg"
+logo_source_url: "https://www.popmart.com/"
 tracking_start_date: "2026-05-16"
 official_urls:
+  - "https://prod-out-res.popmart.com/cms/ANNUAL_REPORT_2023_c2e4bab1ae.pdf"
   - "https://www.popmart.com/"
   - "https://ir.popmart.com/"
 related_terms:
@@ -22,7 +25,7 @@ competitor_group: []
 language_scope:
   - "zh"
   - "en"
-last_reviewed_at: "2026-05-16"
+last_reviewed_at: "2026-05-17"
 ---
 
 # 泡泡玛特公司档案
@@ -39,6 +42,22 @@ last_reviewed_at: "2026-05-16"
 
 ## 为什么跟踪这家公司
 - 新消费与 IP 零售代表，可能更多使用品牌理念、愿景或文化表达而非标准 MVV，适合测试灵活分类。
+
+## 当前 MVV 概览
+### Mission
+- 当前正式表述：To light up passion and bring joy.
+- 最近确认日期：2026-05-17
+- 当前主来源：https://prod-out-res.popmart.com/cms/ANNUAL_REPORT_2023_c2e4bab1ae.pdf
+
+### Vision
+- 当前正式表述：To be the world’s leading fashion culture and entertainment company.
+- 最近确认日期：2026-05-17
+- 当前主来源：https://prod-out-res.popmart.com/cms/ANNUAL_REPORT_2023_c2e4bab1ae.pdf
+
+### Values
+- 当前正式表述：Responsibility；Cooperation；Perfection；Innovation；Integrity
+- 最近确认日期：2026-05-17
+- 当前主来源：https://prod-out-res.popmart.com/cms/ANNUAL_REPORT_2023_c2e4bab1ae.pdf
 
 ## 来源策略说明
 - 当前版本优先核验官网、投资者关系、招股书/年报、ESG 报告和招聘文化页面。

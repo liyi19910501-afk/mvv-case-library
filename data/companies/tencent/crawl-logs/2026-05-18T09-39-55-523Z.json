@@ -1,0 +1,127 @@
+{
+  "company_id": "tencent",
+  "captured_at": "2026-05-18T09:40:20.801Z",
+  "change_status": "unchanged",
+  "comparison": {
+    "change_status": "unchanged",
+    "previous_hash": "7957ae22d6cdbdc40901b4e2ebbd498740365968e699ec5adf6f8e70eab1b2af",
+    "next_hash": "7957ae22d6cdbdc40901b4e2ebbd498740365968e699ec5adf6f8e70eab1b2af",
+    "changed_fields": []
+  },
+  "current": {
+    "company_id": "tencent",
+    "company_name_cn": "腾讯",
+    "company_name_en": "Tencent",
+    "captured_at": "2026-05-18T09:40:20.801Z",
+    "captured_date": "2026-05-18",
+    "primary_language": "zh",
+    "classification": "partial_mvv",
+    "structured": {
+      "mission": "用户为本，科技向善",
+      "vision": "",
+      "values": [
+        "正直",
+        "进取",
+        "协作",
+        "创造"
+      ],
+      "raw_terms": {
+        "mission": "profile_verified",
+        "values": "profile_verified"
+      }
+    },
+    "normalized_mvv_hash": "7957ae22d6cdbdc40901b4e2ebbd498740365968e699ec5adf6f8e70eab1b2af",
+    "source_urls": [
+      {
+        "url": "https://www.tencent.com/zh-cn/about",
+        "final_url": "https://www.tencent.com/zh-cn/about",
+        "title": "腾讯公司 - Tencent 腾讯",
+        "status": 200,
+        "text_length": 4881,
+        "source_tier": "official_website",
+        "source_weight": 80
+      },
+      {
+        "url": "https://www.tencent.com/zh-cn/articles/2200913.html",
+        "final_url": "https://www.tencent.com/zh-cn/articles/2200913.html",
+        "title": "用户为本，科技向善 - Tencent 腾讯",
+        "status": 200,
+        "text_length": 1722,
+        "source_tier": "official_website",
+        "source_weight": 80
+      }
+    ],
+    "evidence_assets": [
+      "evidence/2026-05-18/page-text-腾讯公司-tencent-腾讯.txt",
+      "evidence/2026-05-18/mission-腾讯公司-tencent-腾讯.png",
+      "evidence/2026-05-18/values-腾讯公司-tencent-腾讯.png",
+      "evidence/2026-05-18/page-text-用户为本-科技向善-tencent-腾讯.txt",
+      "evidence/2026-05-18/mission-用户为本-科技向善-tencent-腾讯.png",
+      "evidence/2026-05-18/values-用户为本-科技向善-tencent-腾讯.png",
+      "evidence/2026-05-18/metadata.json"
+    ],
+    "confidence_level": "high",
+    "review_status": "reviewed",
+    "analyst_note": "本轮复核未发现结构化 MVV 表述发生实质变化。"
+  },
+  "sources": [
+    {
+      "url": "https://www.tencent.com/zh-cn/about",
+      "final_url": "https://www.tencent.com/zh-cn/about",
+      "status": 200,
+      "ok": true,
+      "title": "腾讯公司 - Tencent 腾讯",
+      "text_length": 4881,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 128,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": false,
+        "hasValues": true,
+        "textLength": 4881,
+        "urlLooksRelevant": true,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://www.tencent.com/zh-cn/articles/2200913.html",
+      "final_url": "https://www.tencent.com/zh-cn/articles/2200913.html",
+      "status": 200,
+      "ok": true,
+      "title": "用户为本，科技向善 - Tencent 腾讯",
+      "text_length": 1722,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 120,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": false,
+        "hasValues": true,
+        "textLength": 1722,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-label="Xiaomi logo">
+  <rect width="320" height="96" fill="#ffffff"/>
+  <rect x="25" y="19" width="58" height="58" rx="14" fill="#ff6900"/>
+  <text x="54" y="58" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" fill="#ffffff">mi</text>
+  <text x="104" y="59" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#222222">XIAOMI</text>
+</svg>

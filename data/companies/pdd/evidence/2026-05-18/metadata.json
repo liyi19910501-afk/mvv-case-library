@@ -1,0 +1,64 @@
+[
+  {
+    "url": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+    "final_url": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+    "title": "PDD Holdings Announces First Quarter 2024 Unaudited Financial Results | PDD Holdings",
+    "status": 200,
+    "text_length": 20234,
+    "transport": "fetch",
+    "fallback_from": "unknown_error",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "PDD Holdings aims to bring more businesses and people into the digital economy so that local communities and small businesses can benefit from the increased productivity and new opportunities.",
+      "vision": "",
+      "values": [],
+      "raw_terms": {
+        "mission": "profile_verified"
+      }
+    }
+  },
+  {
+    "url": "https://investor.pddholdings.com/financial-information/annual-reports/",
+    "final_url": "https://investor.pddholdings.com/financial-information/annual-reports/",
+    "title": "Annual Reports | PDD Holdings",
+    "status": 200,
+    "text_length": 996,
+    "transport": "fetch",
+    "fallback_from": "unknown_error",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "",
+      "vision": "",
+      "values": [],
+      "raw_terms": {}
+    }
+  },
+  {
+    "url": "https://www.pddholdings.com/",
+    "final_url": "https://www.pddholdings.com/",
+    "title": "PDD Holdings",
+    "status": 200,
+    "text_length": 138,
+    "transport": "browser",
+    "fallback_from": "",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "",
+      "vision": "",
+      "values": [],
+      "raw_terms": {}
+    }
+  }
+]

@@ -7,11 +7,14 @@ category_label: "消费品牌"
 industry_primary: "Consumer Goods"
 industry_secondary: "Household & Personal Care"
 pool_type: wave2
-status: planned
+status: active
 priority_level: P2
+logo_asset: "assets/logo.svg"
+logo_source_url: "https://us.pg.com/"
 tracking_start_date: "2026-05-16"
 official_urls:
-  - "https://us.pg.com/who-we-are/"
+  - "https://us.pg.com/policies-and-practices/purpose-values-and-principles/"
+  - "https://us.pg.com/ethics-and-corporate-responsibility/"
 related_terms:
   - "purpose"
   - "values"
@@ -19,7 +22,7 @@ related_terms:
 competitor_group: []
 language_scope:
   - "en"
-last_reviewed_at: "2026-05-16"
+last_reviewed_at: "2026-05-17"
 ---
 
 # 宝洁公司档案
@@ -36,6 +39,22 @@ last_reviewed_at: "2026-05-16"
 
 ## 为什么跟踪这家公司
 - 经典多品牌消费品集团，长期使用 purpose / values / principles 体系，适合检验非标准 MVV 的分类规则。
+
+## 当前 MVV 概览
+### Mission
+- 当前正式表述：We will provide branded products and services of superior quality and value that improve the lives of the world’s consumers, now and for generations to come.
+- 最近确认日期：2026-05-17
+- 当前主来源：https://us.pg.com/policies-and-practices/purpose-values-and-principles/
+
+### Vision
+- 当前正式表述：/
+- 最近确认日期：
+- 当前主来源：
+
+### Values
+- 当前正式表述：Integrity；Leadership；Ownership；Passion for Winning；Trust
+- 最近确认日期：2026-05-17
+- 当前主来源：https://us.pg.com/policies-and-practices/purpose-values-and-principles/
 
 ## 来源策略说明
 - 当前版本优先核验官网 Who We Are、Purpose / Values / Principles 页面。

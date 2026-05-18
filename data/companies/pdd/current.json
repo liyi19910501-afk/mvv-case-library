@@ -1,0 +1,57 @@
+{
+  "company_id": "pdd",
+  "company_name_cn": "拼多多 / PDD Holdings",
+  "company_name_en": "PDD Holdings",
+  "captured_at": "2026-05-18T09:44:48.357Z",
+  "captured_date": "2026-05-18",
+  "primary_language": "zh",
+  "classification": "partial_mvv",
+  "structured": {
+    "mission": "PDD Holdings aims to bring more businesses and people into the digital economy so that local communities and small businesses can benefit from the increased productivity and new opportunities.",
+    "vision": "",
+    "values": [],
+    "raw_terms": {
+      "mission": "profile_verified"
+    }
+  },
+  "normalized_mvv_hash": "a404831d43e030fb55382865e3dc772c4a3cb2123391f869d1bb5c64e1d9d01e",
+  "source_urls": [
+    {
+      "url": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+      "final_url": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+      "title": "PDD Holdings Announces First Quarter 2024 Unaudited Financial Results | PDD Holdings",
+      "status": 200,
+      "text_length": 20234,
+      "source_tier": "annual_report_or_ir",
+      "source_weight": 15
+    },
+    {
+      "url": "https://investor.pddholdings.com/financial-information/annual-reports/",
+      "final_url": "https://investor.pddholdings.com/financial-information/annual-reports/",
+      "title": "Annual Reports | PDD Holdings",
+      "status": 200,
+      "text_length": 996,
+      "source_tier": "annual_report_or_ir",
+      "source_weight": 15
+    },
+    {
+      "url": "https://www.pddholdings.com/",
+      "final_url": "https://www.pddholdings.com/",
+      "title": "PDD Holdings",
+      "status": 200,
+      "text_length": 138,
+      "source_tier": "official_website",
+      "source_weight": 80
+    }
+  ],
+  "evidence_assets": [
+    "evidence/2026-05-18/page-text-pdd-holdings-announces-first-quarter-2024-unaudited-financial-results-.txt",
+    "evidence/2026-05-18/page-text-annual-reports-pdd-holdings.txt",
+    "evidence/2026-05-18/page-text-pdd-holdings.txt",
+    "evidence/2026-05-18/mission-pdd-holdings-ir-chrome-fullpage.jpg",
+    "evidence/2026-05-18/metadata.json"
+  ],
+  "confidence_level": "high",
+  "review_status": "reviewed",
+  "analyst_note": "拼多多 / PDD Holdings 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。"
+}

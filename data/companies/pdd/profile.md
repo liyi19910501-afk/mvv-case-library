@@ -7,10 +7,14 @@ category_label: "互联网/科技"
 industry_primary: "Internet"
 industry_secondary: "E-commerce"
 pool_type: wave2
-status: planned
+status: active
 priority_level: P2
+logo_asset: "assets/logo.svg"
+logo_source_url: "https://www.pddholdings.com/"
 tracking_start_date: "2026-05-16"
 official_urls:
+  - "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/"
+  - "https://investor.pddholdings.com/financial-information/annual-reports/"
   - "https://www.pddholdings.com/"
 related_terms:
   - "使命"
@@ -21,7 +25,7 @@ competitor_group: []
 language_scope:
   - "zh"
   - "en"
-last_reviewed_at: "2026-05-16"
+last_reviewed_at: "2026-05-18"
 ---
 
 # 拼多多 / PDD Holdings 公司档案
@@ -38,6 +42,22 @@ last_reviewed_at: "2026-05-16"
 
 ## 为什么跟踪这家公司
 - 中国电商平台代表，公开 MVV 表述可能分散在官网、年报、招股书和创始人信中，适合测试难抓取场景。
+
+## 当前 MVV 概览
+### Mission
+- 当前正式表述：PDD Holdings aims to bring more businesses and people into the digital economy so that local communities and small businesses can benefit from the increased productivity and new opportunities.
+- 最近确认日期：2026-05-17
+- 当前主来源：https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/
+
+### Vision
+- 当前正式表述：/
+- 最近确认日期：
+- 当前主来源：
+
+### Values
+- 当前正式表述：/
+- 最近确认日期：
+- 当前主来源：
 
 ## 来源策略说明
 - 当前版本优先核验集团官网、投资者关系、年报与 ESG 材料。

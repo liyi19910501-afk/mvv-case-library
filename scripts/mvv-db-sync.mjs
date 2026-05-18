@@ -390,6 +390,8 @@ function insertEvidence(db, companyId, recordId, assetPath, capturedDate = "") {
 
 function isMeaningfulStatement(value) {
   if (!value) return false;
+  const normalized = String(value).trim().toLowerCase();
+  if (["/", "无", "none", "n/a"].includes(normalized)) return false;
   return ![
     "未单列",
     "未明确",

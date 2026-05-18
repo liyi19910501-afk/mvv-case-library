@@ -1,0 +1,56 @@
+{
+  "company_id": "pop-mart",
+  "company_name_cn": "泡泡玛特",
+  "company_name_en": "Pop Mart",
+  "captured_at": "2026-05-18T09:38:09.187Z",
+  "captured_date": "2026-05-18",
+  "primary_language": "zh",
+  "classification": "standard_mvv",
+  "structured": {
+    "mission": "To light up passion and bring joy.",
+    "vision": "To be the world’s leading fashion culture and entertainment company.",
+    "values": [
+      "Responsibility",
+      "Cooperation",
+      "Perfection",
+      "Innovation",
+      "Integrity"
+    ],
+    "raw_terms": {
+      "mission": "profile_verified",
+      "vision": "profile_verified",
+      "values": "profile_verified"
+    }
+  },
+  "normalized_mvv_hash": "71527d75d44a9d4484bec7bfa554e78cc9b3d75a24c47fc58ac9477ff23b4881",
+  "source_urls": [
+    {
+      "url": "https://www.popmart.com/",
+      "final_url": "https://www.popmart.com.cn/home",
+      "title": "泡泡玛特全球官方网站——创造潮流，传递美好",
+      "status": 200,
+      "text_length": 1363,
+      "source_tier": "official_website",
+      "source_weight": 80
+    },
+    {
+      "url": "https://prod-out-res.popmart.com/cms/ANNUAL_REPORT_2023_c2e4bab1ae.pdf",
+      "final_url": "https://prod-out-res.popmart.com/cms/ANNUAL_REPORT_2023_c2e4bab1ae.pdf",
+      "title": "ANNUAL_REPORT_2023_c2e4bab1ae.pdf",
+      "status": 200,
+      "text_length": 656983,
+      "source_tier": "annual_report_or_ir",
+      "source_weight": 15
+    }
+  ],
+  "evidence_assets": [
+    "evidence/2026-05-18/page-text-annual-report-2023-c2e4bab1ae-pdf.txt",
+    "evidence/2026-05-18/pdf-p11-annual-report-2023-c2e4bab1ae-pdf.png",
+    "evidence/2026-05-18/page-text-泡泡玛特全球官方网站-创造潮流-传递美好.txt",
+    "evidence/2026-05-18/mission-泡泡玛特全球官方网站-创造潮流-传递美好.png",
+    "evidence/2026-05-18/metadata.json"
+  ],
+  "confidence_level": "high",
+  "review_status": "reviewed",
+  "analyst_note": "本轮复核未发现结构化 MVV 表述发生实质变化。"
+}

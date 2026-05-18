@@ -1,0 +1,58 @@
+{
+  "company_id": "starbucks",
+  "company_name_cn": "星巴克",
+  "company_name_en": "Starbucks",
+  "captured_at": "2026-05-18T09:38:22.660Z",
+  "captured_date": "2026-05-18",
+  "primary_language": "en",
+  "classification": "standard_mvv",
+  "structured": {
+    "mission": "To be the premier purveyor of the finest coffee in the world, inspiring and nurturing the human spirit — one person, one cup and one neighborhood at a time.",
+    "vision": "Our aspiration is to be people positive – investing in humanity and the well-being of everyone we connect with, from our partners to coffee farmers to the customers in our stores and beyond.",
+    "values": [
+      "Craft",
+      "Results",
+      "Courage",
+      "Belonging",
+      "Joy"
+    ],
+    "raw_terms": {
+      "mission": "profile_verified",
+      "values": "profile_verified",
+      "vision": "profile_verified"
+    }
+  },
+  "normalized_mvv_hash": "92e7a7753954f055a166764e8eef56f4248c2b49590361401bd0e82ecc71a5c1",
+  "source_urls": [
+    {
+      "url": "https://about.starbucks.com/mission/",
+      "final_url": "https://about.starbucks.com/mission/",
+      "title": "Our Mission",
+      "status": 200,
+      "text_length": 2356,
+      "source_tier": "official_website",
+      "source_weight": 80
+    },
+    {
+      "url": "https://www.starbucks.com/about-us/",
+      "final_url": "https://www.starbucks.com/about-us/",
+      "title": "About Us: Starbucks Coffee Company",
+      "status": 200,
+      "text_length": 4321,
+      "source_tier": "official_website",
+      "source_weight": 80
+    }
+  ],
+  "evidence_assets": [
+    "evidence/2026-05-18/page-text-our-mission.txt",
+    "evidence/2026-05-18/mission-our-mission.png",
+    "evidence/2026-05-18/values-our-mission.png",
+    "evidence/2026-05-18/page-text-about-us-starbucks-coffee-company.txt",
+    "evidence/2026-05-18/vision-about-us-starbucks-coffee-company.png",
+    "evidence/2026-05-18/values-about-us-starbucks-coffee-company.png",
+    "evidence/2026-05-18/metadata.json"
+  ],
+  "confidence_level": "high",
+  "review_status": "reviewed",
+  "analyst_note": "本轮复核未发现结构化 MVV 表述发生实质变化。"
+}

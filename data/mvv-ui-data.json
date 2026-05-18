@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T02:55:12.778Z",
+  "generated_at": "2026-05-18T09:47:32.610Z",
   "companies": [
     {
       "id": "alibaba",
@@ -8,35 +8,62 @@
       "region": "China",
       "categoryLabel": "互联网/科技",
       "industry": "Internet / E-commerce & Cloud",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://www.alibabagroup.com/about-alibaba",
-      "sourceTitle": "",
+      "type": "complete",
+      "typeLabel": "标准 MVV",
+      "trackingStatus": "active",
+      "classification": "standard_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:40:25.671Z",
+      "mission": "To make it easy to do business anywhere",
+      "vision": "We do not pursue size or power; we aspire to be a good company that will last for 102 years.",
+      "values": "Customers first, employees second, shareholders third；Trust makes everything simple；Change is the only constant；Today's best performance is tomorrow's baseline；If not now, when? If not me, who?；Live seriously, work happily",
+      "research": "本轮复核未发现结构化 MVV 表述发生实质变化。",
+      "source": "https://www.alibabagroup.com/en-US/about-alibaba",
+      "sourceTitle": "Introduction to Alibaba Group - Alibaba Group",
       "officialSources": [
         {
-          "url": "https://www.alibabagroup.com/about-alibaba",
+          "url": "https://www.alibabagroup.com/en-US/about-alibaba",
+          "title": "Introduction to Alibaba Group - Alibaba Group",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.alibabagroup.com/en-US/about-alibaba-memorabilia-1494037166496415744",
           "title": "",
           "level": "official",
-          "type": "profile"
+          "type": "current"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/alibaba/assets/logo.svg",
+      "logoSource": "https://www.alibabagroup.com/",
       "profile": "data/companies/alibaba/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/alibaba/versions/2026-05-18-current.md",
+      "evidence": "data/companies/alibaba/evidence/2026-05-18/mission-introduction-to-alibaba-group-alibaba-group.png",
+      "evidenceAssets": [
+        "data/companies/alibaba/evidence/2026-05-18/page-text-introduction-to-alibaba-group-alibaba-group.txt",
+        "data/companies/alibaba/evidence/2026-05-18/mission-introduction-to-alibaba-group-alibaba-group.png",
+        "data/companies/alibaba/evidence/2026-05-18/vision-introduction-to-alibaba-group-alibaba-group.png",
+        "data/companies/alibaba/evidence/2026-05-18/values-introduction-to-alibaba-group-alibaba-group.png",
+        "data/companies/alibaba/evidence/2026-05-18/page-text-www-alibabagroup-com.txt",
+        "data/companies/alibaba/evidence/2026-05-18/mission-www-alibabagroup-com.png",
+        "data/companies/alibaba/evidence/2026-05-18/values-www-alibabagroup-com.png",
+        "data/companies/alibaba/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "standard_mvv",
+          "sourceTitle": "Introduction to Alibaba Group - Alibaba Group",
+          "sourceUrl": "https://www.alibabagroup.com/en-US/about-alibaba",
+          "note": "阿里巴巴 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。",
+          "file": "data/companies/alibaba/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     },
     {
@@ -160,35 +187,67 @@
       "region": "China",
       "categoryLabel": "运动/户外",
       "industry": "Brand / Sportswear",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://www.anta.com/",
-      "sourceTitle": "",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "trackingStatus": "active",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:42:25.723Z",
+      "mission": "将“超越自我”的体育精神融入每个人的生活",
+      "vision": "成为世界领先的多品牌体育用品集团",
+      "values": "/",
+      "research": "本轮复核未发现结构化 MVV 表述发生实质变化。",
+      "source": "https://ir.anta.com/sc/news_detail.php?id=159082",
+      "sourceTitle": "安踏体育用品有限公司",
       "officialSources": [
         {
-          "url": "https://www.anta.com/",
-          "title": "",
+          "url": "https://ir.anta.com/sc/news_detail.php?id=159082",
+          "title": "安踏体育用品有限公司",
           "level": "official",
-          "type": "profile"
+          "type": "current"
+        },
+        {
+          "url": "https://ir.anta.com/sc/news_detail.php?id=126812",
+          "title": "安踏体育用品有限公司",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.anta.com/",
+          "title": "【安踏官方商城】-永不止步Keep Moving",
+          "level": "official",
+          "type": "current"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/anta/assets/logo.svg",
+      "logoSource": "https://www.anta.com/",
       "profile": "data/companies/anta/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/anta/versions/2026-05-18-current.md",
+      "evidence": "data/companies/anta/evidence/2026-05-18/mission-安踏体育用品有限公司.png",
+      "evidenceAssets": [
+        "data/companies/anta/evidence/2026-05-18/page-text-安踏体育用品有限公司.txt",
+        "data/companies/anta/evidence/2026-05-18/mission-安踏体育用品有限公司.png",
+        "data/companies/anta/evidence/2026-05-18/vision-安踏体育用品有限公司.png",
+        "data/companies/anta/evidence/2026-05-18/page-text-安踏体育用品有限公司.txt",
+        "data/companies/anta/evidence/2026-05-18/mission-安踏体育用品有限公司.png",
+        "data/companies/anta/evidence/2026-05-18/page-text-安踏官方商城-永不止步keep-moving.txt",
+        "data/companies/anta/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "partial_mvv",
+          "sourceTitle": "安踏体育用品有限公司",
+          "sourceUrl": "https://ir.anta.com/sc/news_detail.php?id=159082",
+          "note": "安踏 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+          "file": "data/companies/anta/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     },
     {
@@ -389,35 +448,67 @@
       "region": "China",
       "categoryLabel": "互联网/科技",
       "industry": "Technology / ICT & Consumer Electronics",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://www.huawei.com/cn/corporate-information",
-      "sourceTitle": "",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "trackingStatus": "active",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:39:39.365Z",
+      "mission": "把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界",
+      "vision": "/",
+      "values": "以客户为中心，为客户创造价值",
+      "research": "本轮复核未发现结构化 MVV 表述发生实质变化。",
+      "source": "https://www.huawei.com/cn/about-huawei",
+      "sourceTitle": "关于华为",
       "officialSources": [
         {
-          "url": "https://www.huawei.com/cn/corporate-information",
-          "title": "",
+          "url": "https://www.huawei.com/cn/about-huawei",
+          "title": "关于华为",
           "level": "official",
-          "type": "profile"
+          "type": "current"
+        },
+        {
+          "url": "https://www.huawei.com/cn/corporate-governance",
+          "title": "公司治理 - 关于华为",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.huawei.com/cn/corporate-information",
+          "title": "公司简介 - 关于华为",
+          "level": "official",
+          "type": "current"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/huawei/assets/logo.svg",
+      "logoSource": "https://www.huawei.com/cn/",
       "profile": "data/companies/huawei/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/huawei/versions/2026-05-18-current.md",
+      "evidence": "data/companies/huawei/evidence/2026-05-18/mission-关于华为.png",
+      "evidenceAssets": [
+        "data/companies/huawei/evidence/2026-05-18/page-text-关于华为.txt",
+        "data/companies/huawei/evidence/2026-05-18/mission-关于华为.png",
+        "data/companies/huawei/evidence/2026-05-18/page-text-公司治理-关于华为.txt",
+        "data/companies/huawei/evidence/2026-05-18/values-公司治理-关于华为.png",
+        "data/companies/huawei/evidence/2026-05-18/page-text-公司简介-关于华为.txt",
+        "data/companies/huawei/evidence/2026-05-18/mission-公司简介-关于华为.png",
+        "data/companies/huawei/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "partial_mvv",
+          "sourceTitle": "关于华为",
+          "sourceUrl": "https://www.huawei.com/cn/about-huawei",
+          "note": "华为 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+          "file": "data/companies/huawei/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     },
     {
@@ -928,35 +1019,65 @@
       "region": "China / Ireland",
       "categoryLabel": "互联网/科技",
       "industry": "Internet / E-commerce",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://www.pddholdings.com/",
-      "sourceTitle": "",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "trackingStatus": "active",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:44:48.357Z",
+      "mission": "PDD Holdings aims to bring more businesses and people into the digital economy so that local communities and small businesses can benefit from the increased productivity and new opportunities.",
+      "vision": "/",
+      "values": "/",
+      "research": "拼多多 / PDD Holdings 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+      "source": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+      "sourceTitle": "PDD Holdings Announces First Quarter 2024 Unaudited Financial Results | PDD Holdings",
       "officialSources": [
         {
-          "url": "https://www.pddholdings.com/",
-          "title": "",
+          "url": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+          "title": "PDD Holdings Announces First Quarter 2024 Unaudited Financial Results | PDD Holdings",
           "level": "official",
-          "type": "profile"
+          "type": "current"
+        },
+        {
+          "url": "https://investor.pddholdings.com/financial-information/annual-reports/",
+          "title": "Annual Reports | PDD Holdings",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.pddholdings.com/",
+          "title": "PDD Holdings",
+          "level": "official",
+          "type": "current"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/pdd/assets/logo.svg",
+      "logoSource": "https://www.pddholdings.com/",
       "profile": "data/companies/pdd/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/pdd/versions/2026-05-18-current.md",
+      "evidence": "data/companies/pdd/evidence/2026-05-18/mission-pdd-holdings-ir-chrome-fullpage.jpg",
+      "evidenceAssets": [
+        "data/companies/pdd/evidence/2026-05-18/page-text-pdd-holdings-announces-first-quarter-2024-unaudited-financial-results-.txt",
+        "data/companies/pdd/evidence/2026-05-18/page-text-annual-reports-pdd-holdings.txt",
+        "data/companies/pdd/evidence/2026-05-18/page-text-pdd-holdings.txt",
+        "data/companies/pdd/evidence/2026-05-18/mission-pdd-holdings-ir-chrome-fullpage.jpg",
+        "data/companies/pdd/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "partial_mvv",
+          "sourceTitle": "PDD Holdings Announces First Quarter 2024 Unaudited Financial Results | PDD Holdings",
+          "sourceUrl": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+          "note": "拼多多 / PDD Holdings 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+          "file": "data/companies/pdd/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     },
     {
@@ -966,21 +1087,33 @@
       "region": "China",
       "categoryLabel": "消费品牌",
       "industry": "Consumer Goods / Designer Toy & IP Retail",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://www.popmart.com/",
-      "sourceTitle": "",
+      "type": "complete",
+      "typeLabel": "标准 MVV",
+      "trackingStatus": "active",
+      "classification": "standard_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:38:09.187Z",
+      "mission": "To light up passion and bring joy.",
+      "vision": "To be the world’s leading fashion culture and entertainment company.",
+      "values": "Responsibility；Cooperation；Perfection；Innovation；Integrity",
+      "research": "本轮复核未发现结构化 MVV 表述发生实质变化。",
+      "source": "https://www.popmart.com.cn/home",
+      "sourceTitle": "泡泡玛特全球官方网站——创造潮流，传递美好",
       "officialSources": [
+        {
+          "url": "https://www.popmart.com.cn/home",
+          "title": "泡泡玛特全球官方网站——创造潮流，传递美好",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://prod-out-res.popmart.com/cms/ANNUAL_REPORT_2023_c2e4bab1ae.pdf",
+          "title": "ANNUAL_REPORT_2023_c2e4bab1ae.pdf",
+          "level": "official",
+          "type": "current"
+        },
         {
           "url": "https://www.popmart.com/",
           "title": "",
@@ -994,13 +1127,31 @@
           "type": "profile"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/pop-mart/assets/logo.svg",
+      "logoSource": "https://www.popmart.com/",
       "profile": "data/companies/pop-mart/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/pop-mart/versions/2026-05-18-current.md",
+      "evidence": "data/companies/pop-mart/evidence/2026-05-18/pdf-p11-annual-report-2023-c2e4bab1ae-pdf.png",
+      "evidenceAssets": [
+        "data/companies/pop-mart/evidence/2026-05-18/page-text-annual-report-2023-c2e4bab1ae-pdf.txt",
+        "data/companies/pop-mart/evidence/2026-05-18/pdf-p11-annual-report-2023-c2e4bab1ae-pdf.png",
+        "data/companies/pop-mart/evidence/2026-05-18/page-text-泡泡玛特全球官方网站-创造潮流-传递美好.txt",
+        "data/companies/pop-mart/evidence/2026-05-18/mission-泡泡玛特全球官方网站-创造潮流-传递美好.png",
+        "data/companies/pop-mart/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "standard_mvv",
+          "sourceTitle": "ANNUAL_REPORT_2023_c2e4bab1ae.pdf",
+          "sourceUrl": "https://prod-out-res.popmart.com/cms/ANNUAL_REPORT_2023_c2e4bab1ae.pdf",
+          "note": "泡泡玛特 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。",
+          "file": "data/companies/pop-mart/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     },
     {
@@ -1010,35 +1161,60 @@
       "region": "United States",
       "categoryLabel": "消费品牌",
       "industry": "Consumer Goods / Household & Personal Care",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://us.pg.com/who-we-are/",
-      "sourceTitle": "",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "trackingStatus": "active",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:38:08.940Z",
+      "mission": "We will provide branded products and services of superior quality and value that improve the lives of the world’s consumers, now and for generations to come.",
+      "vision": "/",
+      "values": "Integrity；Leadership；Ownership；Passion for Winning；Trust",
+      "research": "本轮复核未发现结构化 MVV 表述发生实质变化。",
+      "source": "https://us.pg.com/policies-and-practices/purpose-values-and-principles/",
+      "sourceTitle": "P&G purpose, values and principles",
       "officialSources": [
         {
-          "url": "https://us.pg.com/who-we-are/",
-          "title": "",
+          "url": "https://us.pg.com/policies-and-practices/purpose-values-and-principles/",
+          "title": "P&G purpose, values and principles",
           "level": "official",
-          "type": "profile"
+          "type": "current"
+        },
+        {
+          "url": "https://us.pg.com/ethics-and-corporate-responsibility/",
+          "title": "Our Purpose, Values and Principles | P&G",
+          "level": "official",
+          "type": "current"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/procter-gamble/assets/logo.svg",
+      "logoSource": "https://us.pg.com/",
       "profile": "data/companies/procter-gamble/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/procter-gamble/versions/2026-05-18-current.md",
+      "evidence": "data/companies/procter-gamble/evidence/2026-05-18/mission-p-g-purpose-values-and-principles.png",
+      "evidenceAssets": [
+        "data/companies/procter-gamble/evidence/2026-05-18/page-text-p-g-purpose-values-and-principles.txt",
+        "data/companies/procter-gamble/evidence/2026-05-18/mission-p-g-purpose-values-and-principles.png",
+        "data/companies/procter-gamble/evidence/2026-05-18/values-p-g-purpose-values-and-principles.png",
+        "data/companies/procter-gamble/evidence/2026-05-18/page-text-our-purpose-values-and-principles-p-g.txt",
+        "data/companies/procter-gamble/evidence/2026-05-18/values-our-purpose-values-and-principles-p-g.png",
+        "data/companies/procter-gamble/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "partial_mvv",
+          "sourceTitle": "P&G purpose, values and principles",
+          "sourceUrl": "https://us.pg.com/policies-and-practices/purpose-values-and-principles/",
+          "note": "宝洁 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+          "file": "data/companies/procter-gamble/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     },
     {
@@ -1048,35 +1224,61 @@
       "region": "United States",
       "categoryLabel": "消费品牌",
       "industry": "Food & Beverage / Coffee Retail",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://www.starbucks.com/about-us/",
-      "sourceTitle": "",
+      "type": "complete",
+      "typeLabel": "标准 MVV",
+      "trackingStatus": "active",
+      "classification": "standard_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:38:22.660Z",
+      "mission": "To be the premier purveyor of the finest coffee in the world, inspiring and nurturing the human spirit — one person, one cup and one neighborhood at a time.",
+      "vision": "Our aspiration is to be people positive – investing in humanity and the well-being of everyone we connect with, from our partners to coffee farmers to the customers in our stores and beyond.",
+      "values": "Craft；Results；Courage；Belonging；Joy",
+      "research": "本轮复核未发现结构化 MVV 表述发生实质变化。",
+      "source": "https://about.starbucks.com/mission/",
+      "sourceTitle": "Our Mission",
       "officialSources": [
         {
-          "url": "https://www.starbucks.com/about-us/",
-          "title": "",
+          "url": "https://about.starbucks.com/mission/",
+          "title": "Our Mission",
           "level": "official",
-          "type": "profile"
+          "type": "current"
+        },
+        {
+          "url": "https://www.starbucks.com/about-us/",
+          "title": "About Us: Starbucks Coffee Company",
+          "level": "official",
+          "type": "current"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/starbucks/assets/logo.svg",
+      "logoSource": "https://www.starbucks.com/",
       "profile": "data/companies/starbucks/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/starbucks/versions/2026-05-18-current.md",
+      "evidence": "data/companies/starbucks/evidence/2026-05-18/mission-our-mission.png",
+      "evidenceAssets": [
+        "data/companies/starbucks/evidence/2026-05-18/page-text-our-mission.txt",
+        "data/companies/starbucks/evidence/2026-05-18/mission-our-mission.png",
+        "data/companies/starbucks/evidence/2026-05-18/values-our-mission.png",
+        "data/companies/starbucks/evidence/2026-05-18/page-text-about-us-starbucks-coffee-company.txt",
+        "data/companies/starbucks/evidence/2026-05-18/vision-about-us-starbucks-coffee-company.png",
+        "data/companies/starbucks/evidence/2026-05-18/values-about-us-starbucks-coffee-company.png",
+        "data/companies/starbucks/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "standard_mvv",
+          "sourceTitle": "Our Mission",
+          "sourceUrl": "https://about.starbucks.com/mission/",
+          "note": "星巴克 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。",
+          "file": "data/companies/starbucks/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     },
     {
@@ -1086,35 +1288,61 @@
       "region": "China",
       "categoryLabel": "互联网/科技",
       "industry": "Internet / Social, Games & Cloud",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://www.tencent.com/zh-cn/about.html",
-      "sourceTitle": "",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "trackingStatus": "active",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:40:20.801Z",
+      "mission": "用户为本，科技向善",
+      "vision": "/",
+      "values": "正直；进取；协作；创造",
+      "research": "本轮复核未发现结构化 MVV 表述发生实质变化。",
+      "source": "https://www.tencent.com/zh-cn/about",
+      "sourceTitle": "腾讯公司 - Tencent 腾讯",
       "officialSources": [
         {
-          "url": "https://www.tencent.com/zh-cn/about.html",
-          "title": "",
+          "url": "https://www.tencent.com/zh-cn/about",
+          "title": "腾讯公司 - Tencent 腾讯",
           "level": "official",
-          "type": "profile"
+          "type": "current"
+        },
+        {
+          "url": "https://www.tencent.com/zh-cn/articles/2200913.html",
+          "title": "用户为本，科技向善 - Tencent 腾讯",
+          "level": "official",
+          "type": "current"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/tencent/assets/logo.svg",
+      "logoSource": "https://www.tencent.com/",
       "profile": "data/companies/tencent/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/tencent/versions/2026-05-18-current.md",
+      "evidence": "data/companies/tencent/evidence/2026-05-18/mission-腾讯公司-tencent-腾讯.png",
+      "evidenceAssets": [
+        "data/companies/tencent/evidence/2026-05-18/page-text-腾讯公司-tencent-腾讯.txt",
+        "data/companies/tencent/evidence/2026-05-18/mission-腾讯公司-tencent-腾讯.png",
+        "data/companies/tencent/evidence/2026-05-18/values-腾讯公司-tencent-腾讯.png",
+        "data/companies/tencent/evidence/2026-05-18/page-text-用户为本-科技向善-tencent-腾讯.txt",
+        "data/companies/tencent/evidence/2026-05-18/mission-用户为本-科技向善-tencent-腾讯.png",
+        "data/companies/tencent/evidence/2026-05-18/values-用户为本-科技向善-tencent-腾讯.png",
+        "data/companies/tencent/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "partial_mvv",
+          "sourceTitle": "腾讯公司 - Tencent 腾讯",
+          "sourceUrl": "https://www.tencent.com/zh-cn/about",
+          "note": "腾讯 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+          "file": "data/companies/tencent/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     },
     {
@@ -1124,35 +1352,82 @@
       "region": "United Kingdom / Netherlands",
       "categoryLabel": "消费品牌",
       "industry": "Consumer Goods / Food, Beauty & Home Care",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://www.unilever.com/our-company/",
-      "sourceTitle": "",
+      "type": "complete",
+      "typeLabel": "标准 MVV",
+      "trackingStatus": "active",
+      "classification": "standard_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:39:40.472Z",
+      "mission": "make sustainable living commonplace",
+      "vision": "To deliver winning performance by being the global leader in sustainable business.",
+      "values": "Respect；Integrity；Pioneering；Responsibility",
+      "research": "本轮复核未发现结构化 MVV 表述发生实质变化。",
+      "source": "https://careers.unilever.com/en/job/el-segundo/finance-and-commercial-lead-new-venture-wellbeing-collective/34155/95061646032",
+      "sourceTitle": "Finance and Commercial Lead New Venture, Wellbeing Collective at Unilever",
       "officialSources": [
         {
-          "url": "https://www.unilever.com/our-company/",
-          "title": "",
+          "url": "https://careers.unilever.com/en/job/el-segundo/finance-and-commercial-lead-new-venture-wellbeing-collective/34155/95061646032",
+          "title": "Finance and Commercial Lead New Venture, Wellbeing Collective at Unilever",
           "level": "official",
-          "type": "profile"
+          "type": "current"
+        },
+        {
+          "url": "https://careers.unilever.com/en/human-resources",
+          "title": "Human Resources",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.unilever.com/our-company/",
+          "title": "Our company | Unilever",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.unilever.com/files/esef-nl-2025.html",
+          "title": "ul-2025-12-31-1-en",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.unilever.com/files/8f9a3825-2101-411f-9a31-7e6f176393a4/the-unilever-compass.pdf",
+          "title": "the-unilever-compass.pdf",
+          "level": "official",
+          "type": "current"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/unilever/assets/logo.svg",
+      "logoSource": "https://www.unilever.com/",
       "profile": "data/companies/unilever/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/unilever/versions/2026-05-18-current.md",
+      "evidence": "data/companies/unilever/evidence/2026-05-18/mission-finance-and-commercial-lead-new-venture-wellbeing-collective-at-unilev.png",
+      "evidenceAssets": [
+        "data/companies/unilever/evidence/2026-05-18/page-text-finance-and-commercial-lead-new-venture-wellbeing-collective-at-unilev.txt",
+        "data/companies/unilever/evidence/2026-05-18/mission-finance-and-commercial-lead-new-venture-wellbeing-collective-at-unilev.png",
+        "data/companies/unilever/evidence/2026-05-18/values-finance-and-commercial-lead-new-venture-wellbeing-collective-at-unilev.png",
+        "data/companies/unilever/evidence/2026-05-18/page-text-human-resources.txt",
+        "data/companies/unilever/evidence/2026-05-18/values-human-resources.png",
+        "data/companies/unilever/evidence/2026-05-18/page-text-our-company-unilever.txt",
+        "data/companies/unilever/evidence/2026-05-18/page-text-the-unilever-compass-pdf.txt",
+        "data/companies/unilever/evidence/2026-05-18/pdf-p1-the-unilever-compass-pdf.png",
+        "data/companies/unilever/evidence/2026-05-18/page-text-ul-2025-12-31-1-en.txt",
+        "data/companies/unilever/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "standard_mvv",
+          "sourceTitle": "Finance and Commercial Lead New Venture, Wellbeing Collective at Unilever",
+          "sourceUrl": "https://careers.unilever.com/en/job/el-segundo/finance-and-commercial-lead-new-venture-wellbeing-collective/34155/95061646032",
+          "note": "联合利华 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。",
+          "file": "data/companies/unilever/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     },
     {
@@ -1162,35 +1437,63 @@
       "region": "China",
       "categoryLabel": "消费品牌",
       "industry": "Consumer Electronics / Smartphone Brand",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://www.vivo.com.cn/about",
-      "sourceTitle": "",
+      "type": "complete",
+      "typeLabel": "标准 MVV",
+      "trackingStatus": "active",
+      "classification": "standard_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:40:24.161Z",
+      "mission": "为用户，创造伟大的产品；为员工，营造快乐进取的氛围；为伙伴，建立互信共赢的平台；为股东，提供长期稳健的回报",
+      "vision": "成为更健康、更长久的世界一流企业",
+      "values": "本分；用户导向；设计驱动；学习；团队",
+      "research": "本轮复核未发现结构化 MVV 表述发生实质变化。",
+      "source": "https://www.vivo.com.cn/brand/about",
+      "sourceTitle": "vivo-智能手机官方网站",
       "officialSources": [
         {
-          "url": "https://www.vivo.com.cn/about",
-          "title": "",
+          "url": "https://www.vivo.com.cn/brand/about",
+          "title": "vivo-智能手机官方网站",
           "level": "official",
-          "type": "profile"
+          "type": "current"
+        },
+        {
+          "url": "https://m.vivo.com.cn/brand/about",
+          "title": "vivo-智能手机官方网站",
+          "level": "official",
+          "type": "current"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/vivo/assets/logo.svg",
+      "logoSource": "https://www.vivo.com.cn/",
       "profile": "data/companies/vivo/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/vivo/versions/2026-05-18-current.md",
+      "evidence": "data/companies/vivo/evidence/2026-05-18/mission-vivo-智能手机官方网站.png",
+      "evidenceAssets": [
+        "data/companies/vivo/evidence/2026-05-18/page-text-vivo-智能手机官方网站.txt",
+        "data/companies/vivo/evidence/2026-05-18/mission-vivo-智能手机官方网站.png",
+        "data/companies/vivo/evidence/2026-05-18/vision-vivo-智能手机官方网站.png",
+        "data/companies/vivo/evidence/2026-05-18/values-vivo-智能手机官方网站.png",
+        "data/companies/vivo/evidence/2026-05-18/page-text-vivo-智能手机官方网站.txt",
+        "data/companies/vivo/evidence/2026-05-18/mission-vivo-智能手机官方网站.png",
+        "data/companies/vivo/evidence/2026-05-18/vision-vivo-智能手机官方网站.png",
+        "data/companies/vivo/evidence/2026-05-18/values-vivo-智能手机官方网站.png",
+        "data/companies/vivo/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "standard_mvv",
+          "sourceTitle": "vivo-智能手机官方网站",
+          "sourceUrl": "https://www.vivo.com.cn/brand/about",
+          "note": "vivo 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。",
+          "file": "data/companies/vivo/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     },
     {
@@ -1200,21 +1503,51 @@
       "region": "China",
       "categoryLabel": "消费品牌",
       "industry": "Consumer Electronics / Smartphone & IoT",
-      "type": "planned",
-      "typeLabel": "待建档",
-      "trackingStatus": "planned",
-      "classification": "",
-      "confidence": "",
-      "reviewStatus": "",
-      "reviewed": "2026-05-16",
-      "capturedAt": "",
-      "mission": "",
-      "vision": "",
-      "values": "",
-      "research": "已进入 Wave 2 建档队列，尚未完成官方 MVV 抓取与人工确认。",
-      "source": "https://www.mi.com/about/",
-      "sourceTitle": "",
+      "type": "partial",
+      "typeLabel": "非标准 MVV",
+      "trackingStatus": "active",
+      "classification": "partial_mvv",
+      "confidence": "high",
+      "reviewStatus": "reviewed",
+      "reviewed": "2026-05-18",
+      "capturedAt": "2026-05-18T09:39:20.851Z",
+      "mission": "Build amazing products with honest prices to let everyone in the world enjoy a better life through innovative technology.",
+      "vision": "Make friends with users and be the coolest company in the users’ hearts.",
+      "values": "/",
+      "research": "本轮复核未发现结构化 MVV 表述发生实质变化。",
+      "source": "https://www.mi.com/global/about/",
+      "sourceTitle": "About Us - Xiaomi Global",
       "officialSources": [
+        {
+          "url": "https://www.mi.com/global/about/",
+          "title": "About Us - Xiaomi Global",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.mi.com/about",
+          "title": "小米科技",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.mi.com/ir",
+          "title": "关于小米",
+          "level": "official",
+          "type": "current"
+        },
+        {
+          "url": "https://www.mi.com/en/about/",
+          "title": "",
+          "level": "official",
+          "type": "profile"
+        },
+        {
+          "url": "https://www.mi.com/ir/",
+          "title": "",
+          "level": "official",
+          "type": "profile"
+        },
         {
           "url": "https://www.mi.com/about/",
           "title": "",
@@ -1222,13 +1555,32 @@
           "type": "profile"
         }
       ],
-      "logo": "",
-      "logoSource": "",
+      "logo": "data/companies/xiaomi/assets/logo.svg",
+      "logoSource": "https://www.mi.com/",
       "profile": "data/companies/xiaomi/profile.md",
-      "version": "",
-      "evidence": "",
-      "evidenceAssets": [],
-      "history": [],
+      "version": "data/companies/xiaomi/versions/2026-05-18-current.md",
+      "evidence": "data/companies/xiaomi/evidence/2026-05-18/mission-about-us-xiaomi-global.png",
+      "evidenceAssets": [
+        "data/companies/xiaomi/evidence/2026-05-18/page-text-about-us-xiaomi-global.txt",
+        "data/companies/xiaomi/evidence/2026-05-18/mission-about-us-xiaomi-global.png",
+        "data/companies/xiaomi/evidence/2026-05-18/vision-about-us-xiaomi-global.png",
+        "data/companies/xiaomi/evidence/2026-05-18/page-text-小米科技.txt",
+        "data/companies/xiaomi/evidence/2026-05-18/page-text-关于小米.txt",
+        "data/companies/xiaomi/evidence/2026-05-18/metadata.json"
+      ],
+      "history": [
+        {
+          "date": "2026-05-18",
+          "changeType": "new",
+          "confidence": "high",
+          "reviewStatus": "reviewed",
+          "classification": "partial_mvv",
+          "sourceTitle": "About Us - Xiaomi Global",
+          "sourceUrl": "https://www.mi.com/global/about/",
+          "note": "小米 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。",
+          "file": "data/companies/xiaomi/versions/2026-05-18-current.md"
+        }
+      ],
       "candidates": []
     }
   ]

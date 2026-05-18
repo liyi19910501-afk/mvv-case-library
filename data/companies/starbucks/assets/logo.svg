@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-label="Starbucks logo">
+  <rect width="320" height="96" fill="#ffffff"/>
+  <circle cx="50" cy="48" r="30" fill="#006241"/>
+  <text x="50" y="56" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">S</text>
+  <text x="94" y="58" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#1e3932">STARBUCKS</text>
+</svg>

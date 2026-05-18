@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://www.mi.com/en/about/",
+    "final_url": "https://www.mi.com/global/about/",
+    "title": "About Us - Xiaomi Global",
+    "status": 200,
+    "text_length": 3753,
+    "transport": "browser",
+    "fallback_from": "",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "Build amazing products with honest prices to let everyone in the world enjoy a better life through innovative technology.",
+      "vision": "Make friends with users and be the coolest company in the users’ hearts.",
+      "values": [],
+      "raw_terms": {
+        "mission": "profile_verified",
+        "vision": "profile_verified"
+      }
+    }
+  },
+  {
+    "url": "https://www.mi.com/about/",
+    "final_url": "https://www.mi.com/about",
+    "title": "小米科技",
+    "status": 200,
+    "text_length": 1728,
+    "transport": "browser",
+    "fallback_from": "",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "",
+      "vision": "",
+      "values": [],
+      "raw_terms": {}
+    }
+  },
+  {
+    "url": "https://www.mi.com/ir/",
+    "final_url": "https://www.mi.com/ir",
+    "title": "关于小米",
+    "status": 200,
+    "text_length": 5984,
+    "transport": "fetch",
+    "fallback_from": "browser_error",
+    "failure_type": "",
+    "failure_reason": "",
+    "pdf_evidence_page": 0,
+    "pdf_page_count": 0,
+    "pdf_error": "",
+    "structured": {
+      "mission": "",
+      "vision": "",
+      "values": [],
+      "raw_terms": {}
+    }
+  }
+]

@@ -1,0 +1,135 @@
+{
+  "company_id": "vivo",
+  "captured_at": "2026-05-18T09:33:32.035Z",
+  "change_status": "new",
+  "comparison": {
+    "change_status": "new",
+    "previous_hash": "",
+    "next_hash": "0c694ba972e4db8901d3368a1a44904f064cce6460b7e5b4d1f0b419a0132dab",
+    "changed_fields": [
+      "mission",
+      "vision",
+      "values"
+    ]
+  },
+  "current": {
+    "company_id": "vivo",
+    "company_name_cn": "vivo",
+    "company_name_en": "vivo",
+    "captured_at": "2026-05-18T09:33:32.035Z",
+    "captured_date": "2026-05-18",
+    "primary_language": "zh",
+    "classification": "standard_mvv",
+    "structured": {
+      "mission": "为用户，创造伟大的产品；为员工，营造快乐进取的氛围；为伙伴，建立互信共赢的平台；为股东，提供长期稳健的回报",
+      "vision": "成为更健康、更长久的世界一流企业",
+      "values": [
+        "本分",
+        "用户导向",
+        "设计驱动",
+        "学习",
+        "团队"
+      ],
+      "raw_terms": {
+        "mission": "profile_verified",
+        "vision": "profile_verified",
+        "values": "profile_verified"
+      }
+    },
+    "normalized_mvv_hash": "0c694ba972e4db8901d3368a1a44904f064cce6460b7e5b4d1f0b419a0132dab",
+    "source_urls": [
+      {
+        "url": "https://www.vivo.com.cn/brand/about",
+        "final_url": "https://www.vivo.com.cn/brand/about",
+        "title": "vivo-智能手机官方网站",
+        "status": 200,
+        "text_length": 2009,
+        "source_tier": "official_website",
+        "source_weight": 80
+      },
+      {
+        "url": "https://m.vivo.com.cn/brand/about",
+        "final_url": "https://m.vivo.com.cn/brand/about",
+        "title": "vivo-智能手机官方网站",
+        "status": 200,
+        "text_length": 2009,
+        "source_tier": "official_website",
+        "source_weight": 80
+      }
+    ],
+    "evidence_assets": [
+      "evidence/2026-05-18/page-text-vivo-智能手机官方网站.txt",
+      "evidence/2026-05-18/mission-vivo-智能手机官方网站.png",
+      "evidence/2026-05-18/vision-vivo-智能手机官方网站.png",
+      "evidence/2026-05-18/values-vivo-智能手机官方网站.png",
+      "evidence/2026-05-18/page-text-vivo-智能手机官方网站.txt",
+      "evidence/2026-05-18/mission-vivo-智能手机官方网站.png",
+      "evidence/2026-05-18/vision-vivo-智能手机官方网站.png",
+      "evidence/2026-05-18/values-vivo-智能手机官方网站.png",
+      "evidence/2026-05-18/metadata.json"
+    ],
+    "confidence_level": "high",
+    "review_status": "reviewed",
+    "analyst_note": "vivo 本轮建立当前官方表述基线。当前呈现为标准 MVV 结构。"
+  },
+  "sources": [
+    {
+      "url": "https://www.vivo.com.cn/brand/about",
+      "final_url": "https://www.vivo.com.cn/brand/about",
+      "status": 200,
+      "ok": true,
+      "title": "vivo-智能手机官方网站",
+      "text_length": 2009,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 138,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": true,
+        "hasValues": true,
+        "textLength": 2009,
+        "urlLooksRelevant": true,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://m.vivo.com.cn/brand/about",
+      "final_url": "https://m.vivo.com.cn/brand/about",
+      "status": 200,
+      "ok": true,
+      "title": "vivo-智能手机官方网站",
+      "text_length": 2009,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 138,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": true,
+        "hasValues": true,
+        "textLength": 2009,
+        "urlLooksRelevant": true,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    }
+  ]
+}

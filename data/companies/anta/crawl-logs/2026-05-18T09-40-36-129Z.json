@@ -1,0 +1,160 @@
+{
+  "company_id": "anta",
+  "captured_at": "2026-05-18T09:41:16.089Z",
+  "change_status": "unchanged",
+  "comparison": {
+    "change_status": "unchanged",
+    "previous_hash": "e88c8ae79ebf90f5c196be033db14fbcaa81c452bc5cb0cc6a85fb01369c9c37",
+    "next_hash": "e88c8ae79ebf90f5c196be033db14fbcaa81c452bc5cb0cc6a85fb01369c9c37",
+    "changed_fields": []
+  },
+  "current": {
+    "company_id": "anta",
+    "company_name_cn": "安踏",
+    "company_name_en": "ANTA",
+    "captured_at": "2026-05-18T09:41:16.089Z",
+    "captured_date": "2026-05-18",
+    "primary_language": "zh",
+    "classification": "partial_mvv",
+    "structured": {
+      "mission": "将“超越自我”的体育精神融入每个人的生活",
+      "vision": "成为世界领先的多品牌体育用品集团",
+      "values": [],
+      "raw_terms": {
+        "mission": "profile_verified",
+        "vision": "profile_verified"
+      }
+    },
+    "normalized_mvv_hash": "e88c8ae79ebf90f5c196be033db14fbcaa81c452bc5cb0cc6a85fb01369c9c37",
+    "source_urls": [
+      {
+        "url": "https://www.anta.com/",
+        "final_url": "https://www.anta.com/",
+        "title": "【安踏官方商城】-永不止步Keep Moving",
+        "status": 200,
+        "text_length": 304,
+        "source_tier": "official_website",
+        "source_weight": 80
+      },
+      {
+        "url": "https://ir.anta.com/sc/news_detail.php?id=159082",
+        "final_url": "https://ir.anta.com/sc/news_detail.php?id=159082",
+        "title": "安踏体育用品有限公司",
+        "status": 200,
+        "text_length": 2611,
+        "source_tier": "annual_report_or_ir",
+        "source_weight": 15
+      },
+      {
+        "url": "https://ir.anta.com/sc/news_detail.php?id=126812",
+        "final_url": "https://ir.anta.com/sc/news_detail.php?id=126812",
+        "title": "安踏体育用品有限公司",
+        "status": 200,
+        "text_length": 3516,
+        "source_tier": "annual_report_or_ir",
+        "source_weight": 15
+      }
+    ],
+    "evidence_assets": [
+      "evidence/2026-05-18/page-text-安踏体育用品有限公司.txt",
+      "evidence/2026-05-18/mission-安踏体育用品有限公司.png",
+      "evidence/2026-05-18/vision-安踏体育用品有限公司.png",
+      "evidence/2026-05-18/page-text-安踏体育用品有限公司.txt",
+      "evidence/2026-05-18/mission-安踏体育用品有限公司.png",
+      "evidence/2026-05-18/page-text-安踏官方商城-永不止步keep-moving.txt",
+      "evidence/2026-05-18/metadata.json"
+    ],
+    "confidence_level": "high",
+    "review_status": "reviewed",
+    "analyst_note": "本轮复核未发现结构化 MVV 表述发生实质变化。"
+  },
+  "sources": [
+    {
+      "url": "https://ir.anta.com/sc/news_detail.php?id=159082",
+      "final_url": "https://ir.anta.com/sc/news_detail.php?id=159082",
+      "status": 200,
+      "ok": true,
+      "title": "安踏体育用品有限公司",
+      "text_length": 2611,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 53,
+      "score_signals": {
+        "sourceTier": "annual_report_or_ir",
+        "sourceWeight": 15,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": true,
+        "hasValues": false,
+        "textLength": 2611,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://ir.anta.com/sc/news_detail.php?id=126812",
+      "final_url": "https://ir.anta.com/sc/news_detail.php?id=126812",
+      "status": 200,
+      "ok": true,
+      "title": "安踏体育用品有限公司",
+      "text_length": 3516,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 43,
+      "score_signals": {
+        "sourceTier": "annual_report_or_ir",
+        "sourceWeight": 15,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": false,
+        "hasValues": false,
+        "textLength": 3516,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://www.anta.com/",
+      "final_url": "https://www.anta.com/",
+      "status": 200,
+      "ok": true,
+      "title": "【安踏官方商城】-永不止步Keep Moving",
+      "text_length": 304,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 88,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": false,
+        "hasVision": false,
+        "hasValues": false,
+        "textLength": 304,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    }
+  ]
+}

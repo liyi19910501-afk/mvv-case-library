@@ -1,0 +1,158 @@
+{
+  "company_id": "pdd",
+  "captured_at": "2026-05-18T09:44:48.357Z",
+  "change_status": "new",
+  "comparison": {
+    "change_status": "new",
+    "previous_hash": "",
+    "next_hash": "a404831d43e030fb55382865e3dc772c4a3cb2123391f869d1bb5c64e1d9d01e",
+    "changed_fields": [
+      "mission"
+    ]
+  },
+  "current": {
+    "company_id": "pdd",
+    "company_name_cn": "拼多多 / PDD Holdings",
+    "company_name_en": "PDD Holdings",
+    "captured_at": "2026-05-18T09:44:48.357Z",
+    "captured_date": "2026-05-18",
+    "primary_language": "zh",
+    "classification": "partial_mvv",
+    "structured": {
+      "mission": "PDD Holdings aims to bring more businesses and people into the digital economy so that local communities and small businesses can benefit from the increased productivity and new opportunities.",
+      "vision": "",
+      "values": [],
+      "raw_terms": {
+        "mission": "profile_verified"
+      }
+    },
+    "normalized_mvv_hash": "a404831d43e030fb55382865e3dc772c4a3cb2123391f869d1bb5c64e1d9d01e",
+    "source_urls": [
+      {
+        "url": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+        "final_url": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+        "title": "PDD Holdings Announces First Quarter 2024 Unaudited Financial Results | PDD Holdings",
+        "status": 200,
+        "text_length": 20234,
+        "source_tier": "annual_report_or_ir",
+        "source_weight": 15
+      },
+      {
+        "url": "https://investor.pddholdings.com/financial-information/annual-reports/",
+        "final_url": "https://investor.pddholdings.com/financial-information/annual-reports/",
+        "title": "Annual Reports | PDD Holdings",
+        "status": 200,
+        "text_length": 996,
+        "source_tier": "annual_report_or_ir",
+        "source_weight": 15
+      },
+      {
+        "url": "https://www.pddholdings.com/",
+        "final_url": "https://www.pddholdings.com/",
+        "title": "PDD Holdings",
+        "status": 200,
+        "text_length": 138,
+        "source_tier": "official_website",
+        "source_weight": 80
+      }
+    ],
+    "evidence_assets": [
+      "evidence/2026-05-18/page-text-pdd-holdings-announces-first-quarter-2024-unaudited-financial-results-.txt",
+      "evidence/2026-05-18/page-text-annual-reports-pdd-holdings.txt",
+      "evidence/2026-05-18/page-text-pdd-holdings.txt",
+      "evidence/2026-05-18/metadata.json"
+    ],
+    "confidence_level": "high",
+    "review_status": "reviewed",
+    "analyst_note": "拼多多 / PDD Holdings 本轮建立当前官方表述基线。当前不是完整标准 MVV，按可确认字段记录，空缺字段不做推断。"
+  },
+  "sources": [
+    {
+      "url": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+      "final_url": "https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2024-unaudited-financial/",
+      "status": 200,
+      "ok": true,
+      "title": "PDD Holdings Announces First Quarter 2024 Unaudited Financial Results | PDD Holdings",
+      "text_length": 20234,
+      "transport": "fetch",
+      "fallback_from": "unknown_error",
+      "score": 43,
+      "score_signals": {
+        "sourceTier": "annual_report_or_ir",
+        "sourceWeight": 15,
+        "transport": "fetch",
+        "ok": true,
+        "hasMission": true,
+        "hasVision": false,
+        "hasValues": false,
+        "textLength": 20234,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://investor.pddholdings.com/financial-information/annual-reports/",
+      "final_url": "https://investor.pddholdings.com/financial-information/annual-reports/",
+      "status": 200,
+      "ok": true,
+      "title": "Annual Reports | PDD Holdings",
+      "text_length": 996,
+      "transport": "fetch",
+      "fallback_from": "unknown_error",
+      "score": 8,
+      "score_signals": {
+        "sourceTier": "annual_report_or_ir",
+        "sourceWeight": 15,
+        "transport": "fetch",
+        "ok": true,
+        "hasMission": false,
+        "hasVision": false,
+        "hasValues": false,
+        "textLength": 996,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    },
+    {
+      "url": "https://www.pddholdings.com/",
+      "final_url": "https://www.pddholdings.com/",
+      "status": 200,
+      "ok": true,
+      "title": "PDD Holdings",
+      "text_length": 138,
+      "transport": "browser",
+      "fallback_from": "",
+      "score": 8,
+      "score_signals": {
+        "sourceTier": "official_website",
+        "sourceWeight": 80,
+        "transport": "browser",
+        "ok": true,
+        "hasMission": false,
+        "hasVision": false,
+        "hasValues": false,
+        "textLength": 138,
+        "urlLooksRelevant": false,
+        "failureType": ""
+      },
+      "failure_type": "",
+      "failure_reason": "",
+      "pdf_evidence_page": 0,
+      "pdf_page_count": 0,
+      "pdf_error": "",
+      "error": ""
+    }
+  ]
+}
